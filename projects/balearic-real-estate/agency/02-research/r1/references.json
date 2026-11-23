@@ -1,0 +1,325 @@
+{
+  "directions": [],
+  "references": [
+    {
+      "id": "domusnova-com",
+      "name": "domusnova.com",
+      "url": "https://domusnova.com",
+      "shots": [
+        {
+          "file": "shots/domusnova-com-desktop.jpg",
+          "viewport": "1440x900",
+          "label": "desktop",
+          "frame": "home, first viewport"
+        },
+        {
+          "file": "shots/domusnova-com-desktop-s1.jpg",
+          "viewport": "1440x900",
+          "label": "desktop-s1",
+          "frame": "home, scrolled to about 22% (y=2147 of 9759)"
+        },
+        {
+          "file": "shots/domusnova-com-desktop-s2.jpg",
+          "viewport": "1440x900",
+          "label": "desktop-s2",
+          "frame": "home, scrolled to about 50% (y=4880 of 9759)"
+        },
+        {
+          "file": "shots/domusnova-com-mobile.jpg",
+          "viewport": "390x844",
+          "label": "mobile",
+          "frame": "home, first viewport"
+        }
+      ],
+      "cookie_banner": "dismissed (\"Accept All\")",
+      "title": "Luxury Estate Agency in London and Ibiza - Domus Nova",
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "\"NeueHaasGroteskText Pro\", sans-serif",
+          "fontSize": "16px",
+          "color": "rgb(51, 51, 51)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": {
+          "selector": "h1",
+          "text": "An independent estate agency specialising in London and Ibiz",
+          "fontFamily": "\"ITC Souvenir Std\", sans-serif",
+          "fontSize": "32px",
+          "fontWeight": "300",
+          "letterSpacing": "normal",
+          "color": "rgb(51, 51, 51)",
+          "textTransform": "none"
+        },
+        "h2": {
+          "selector": "h2",
+          "text": "Featured Rentals",
+          "fontFamily": "\"ITC Souvenir Std\", sans-serif",
+          "fontSize": "32px",
+          "fontWeight": "300",
+          "letterSpacing": "normal",
+          "color": "rgb(51, 51, 51)",
+          "textTransform": "none"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "London",
+          "fontFamily": "\"NeueHaasGroteskText Pro\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(51, 51, 51)",
+          "textTransform": "none"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "",
+          "fontFamily": "\"NeueHaasGroteskText Pro\", sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(51, 51, 51)",
+          "textTransform": "none"
+        }
+      },
+      "status": "inspected",
+      "captured_at": "2026-11-23T19:50:21.585Z"
+    },
+    {
+      "id": "inigo-com",
+      "name": "inigo.com",
+      "url": "https://www.inigo.com",
+      "shots": [
+        {
+          "file": "shots/inigo-com-desktop.jpg",
+          "viewport": "1440x900",
+          "label": "desktop",
+          "frame": "home, first viewport"
+        },
+        {
+          "file": "shots/inigo-com-desktop-s1.jpg",
+          "viewport": "1440x900",
+          "label": "desktop-s1",
+          "frame": "home, scrolled to about 22% (y=1100 of 4998)"
+        },
+        {
+          "file": "shots/inigo-com-desktop-s2.jpg",
+          "viewport": "1440x900",
+          "label": "desktop-s2",
+          "frame": "home, scrolled to about 50% (y=2499 of 4998)"
+        },
+        {
+          "file": "shots/inigo-com-mobile.jpg",
+          "viewport": "390x844",
+          "label": "mobile",
+          "frame": "home, first viewport"
+        }
+      ],
+      "cookie_banner": "dismissed (\"ACCEPT ALL\")",
+      "title": "Inigo | An Estate Agency For Historic Homes Across The UK",
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "adobe-caslon-pro, \"Adobe Caslon Pro\", Caslon, serif",
+          "fontSize": "16px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(223, 219, 220)"
+        },
+        "h1": {
+          "selector": "h1",
+          "text": "Wind in the Willows",
+          "fontFamily": "\"Big Caslon It\", Caslon, serif",
+          "fontSize": "66px",
+          "fontWeight": "400",
+          "letterSpacing": "1.2px",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "none"
+        },
+        "h2": {
+          "selector": "h2",
+          "text": "Like what you see?",
+          "fontFamily": "adobe-caslon-pro, \"Adobe Caslon Pro\", Caslon, serif",
+          "fontSize": "25.2px",
+          "fontWeight": "300",
+          "letterSpacing": "-1px",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "none"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "InigoInigo Logo",
+          "fontFamily": "adobe-caslon-pro, \"Adobe Caslon Pro\", Caslon, serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "textTransform": "none"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "We use cookies so that your experience of our site is as opt",
+          "fontFamily": "\"Soehne Web\", sans-serif",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "textTransform": "none"
+        }
+      },
+      "status": "inspected",
+      "captured_at": "2026-11-23T19:50:42.091Z"
+    },
+    {
+      "id": "hotelcorazon-com",
+      "name": "hotelcorazon.com",
+      "url": "https://www.hotelcorazon.com",
+      "shots": [
+        {
+          "file": "shots/hotelcorazon-com-desktop.jpg",
+          "viewport": "1440x900",
+          "label": "desktop",
+          "frame": "home, first viewport"
+        },
+        {
+          "file": "shots/hotelcorazon-com-desktop-s1.jpg",
+          "viewport": "1440x900",
+          "label": "desktop-s1",
+          "frame": "home, scrolled to about 22% (y=1075 of 4887)"
+        },
+        {
+          "file": "shots/hotelcorazon-com-desktop-s2.jpg",
+          "viewport": "1440x900",
+          "label": "desktop-s2",
+          "frame": "home, scrolled to about 50% (y=2444 of 4887)"
+        },
+        {
+          "file": "shots/hotelcorazon-com-mobile.jpg",
+          "viewport": "390x844",
+          "label": "mobile",
+          "frame": "home, first viewport"
+        }
+      ],
+      "title": "Hotel Corazón – Home",
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "Klinsman, sans-serif",
+          "fontSize": "18px",
+          "color": "rgb(55, 24, 16)",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "h1": null,
+        "h2": {
+          "selector": "h2",
+          "text": "HOTEL CORAZÓN",
+          "fontFamily": "Klinsman, sans-serif",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "letterSpacing": "-1px",
+          "color": "rgb(55, 24, 16)",
+          "textTransform": "uppercase"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "CONTACT",
+          "fontFamily": "Klinsman, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(55, 24, 16)",
+          "textTransform": "uppercase"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "WELCOME TO THE WORLD OF CORAZÓN",
+          "fontFamily": "Klinsman, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(55, 24, 16)",
+          "textTransform": "uppercase"
+        }
+      },
+      "status": "inspected",
+      "captured_at": "2026-11-23T19:50:57.097Z"
+    },
+    {
+      "id": "moredesign-es",
+      "name": "moredesign.es",
+      "url": "https://moredesign.es",
+      "shots": [
+        {
+          "file": "shots/moredesign-es-desktop.jpg",
+          "viewport": "1440x900",
+          "label": "desktop",
+          "frame": "home, first viewport"
+        },
+        {
+          "file": "shots/moredesign-es-desktop-s1.jpg",
+          "viewport": "1440x900",
+          "label": "desktop-s1",
+          "frame": "home, scrolled to about 22% (y=3062 of 13919)"
+        },
+        {
+          "file": "shots/moredesign-es-desktop-s2.jpg",
+          "viewport": "1440x900",
+          "label": "desktop-s2",
+          "frame": "home, scrolled to about 50% (y=6960 of 13919)"
+        },
+        {
+          "file": "shots/moredesign-es-mobile.jpg",
+          "viewport": "390x844",
+          "label": "mobile",
+          "frame": "home, first viewport"
+        }
+      ],
+      "title": "Moredesign",
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "freight-sans-pro",
+          "fontSize": "14px",
+          "color": "rgb(119, 119, 119)",
+          "background": "rgb(252, 252, 252)"
+        },
+        "h1": {
+          "selector": "h1",
+          "text": "",
+          "fontFamily": "\"Josefin Sans\"",
+          "fontSize": "22px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(34, 34, 34)",
+          "textTransform": "none"
+        },
+        "h2": null,
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "Home",
+          "fontFamily": "freight-sans-pro",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(17, 17, 17)",
+          "textTransform": "none"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "Moredesign is an architecture studio based in Mallorca, spec",
+          "fontFamily": "freight-sans-pro",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(119, 119, 119)",
+          "textTransform": "none"
+        }
+      },
+      "status": "inspected",
+      "captured_at": "2026-11-23T19:51:13.539Z"
+    }
+  ]
+}

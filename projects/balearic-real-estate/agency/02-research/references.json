@@ -1,0 +1,732 @@
+{
+  "project": "Balearic real estate one-pager",
+  "round": 1,
+  "built_at": "2026-11-23T20:14:35.680Z",
+  "directions": [
+    {
+      "id": "gallery-white",
+      "name": "Gallery White",
+      "idea": "The page behaves like a gallery wall: white ground, small quiet type, and photographs framed as objects with air around them."
+    },
+    {
+      "id": "almanac",
+      "name": "Almanac",
+      "idea": "The agency presents itself as a publication: a literary serif with italics, tinted paper-coloured blocks, homes given titles instead of reference numbers."
+    },
+    {
+      "id": "one-colour",
+      "name": "One Colour",
+      "idea": "A single saturated ground and a single typeface in capitals. The brand is an attitude before it is a catalogue."
+    },
+    {
+      "id": "full-bleed",
+      "name": "Full-Bleed Cinema",
+      "idea": "The image fills the screen and the interface almost disappears: small white capitals over film or photography."
+    }
+  ],
+  "references": [
+    {
+      "id": "domusnova-com",
+      "name": "Domus Nova",
+      "url": "https://domusnova.com",
+      "direction": "gallery-white",
+      "kind": "Live site · estate agency, London and Ibiza",
+      "found_via": "Web search (Ibiza agencies; Blakstad result linked to its design directory)",
+      "status": "inspected",
+      "coverage": "home page only: desktop 1440x900 (top and two scroll positions) and mobile 390x844 (top)",
+      "captured_at": "2026-11-23T19:50:21.585Z",
+      "cookie_banner": "dismissed (\"Accept All\")",
+      "screens": [
+        {
+          "label": "A1",
+          "file": "r1/shots/domusnova-com-desktop.jpg",
+          "frame": "Home, first viewport"
+        },
+        {
+          "label": "A2",
+          "file": "r1/shots/domusnova-com-desktop-s1.jpg",
+          "frame": "Home, “Featured Sales” row"
+        },
+        {
+          "label": "A3",
+          "file": "r1/shots/domusnova-com-mobile.jpg",
+          "frame": "Home, mobile 390px"
+        }
+      ],
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "\"NeueHaasGroteskText Pro\", sans-serif",
+          "fontSize": "16px",
+          "color": "rgb(51, 51, 51)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": {
+          "selector": "h1",
+          "text": "An independent estate agency specialising in London and Ibiz",
+          "fontFamily": "\"ITC Souvenir Std\", sans-serif",
+          "fontSize": "32px",
+          "fontWeight": "300",
+          "letterSpacing": "normal",
+          "color": "rgb(51, 51, 51)",
+          "textTransform": "none"
+        },
+        "h2": {
+          "selector": "h2",
+          "text": "Featured Rentals",
+          "fontFamily": "\"ITC Souvenir Std\", sans-serif",
+          "fontSize": "32px",
+          "fontWeight": "300",
+          "letterSpacing": "normal",
+          "color": "rgb(51, 51, 51)",
+          "textTransform": "none"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "London",
+          "fontFamily": "\"NeueHaasGroteskText Pro\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(51, 51, 51)",
+          "textTransform": "none"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "",
+          "fontFamily": "\"NeueHaasGroteskText Pro\", sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(51, 51, 51)",
+          "textTransform": "none"
+        }
+      },
+      "principle": "Frame the photograph, do not fill the screen with it. A caption split into “name” and “one-sentence character” is a strong listing pattern for a page with only 4–6 homes.",
+      "does_not_transfer": "The interiors are commissioned and distinctive. With stand-in images the frame draws attention to exactly what we have least of."
+    },
+    {
+      "id": "moredesign-es",
+      "name": "Moredesign",
+      "url": "https://moredesign.es",
+      "direction": "gallery-white",
+      "kind": "Live site · architecture studio, Mallorca",
+      "found_via": "Web search (Mediterranean architecture studios)",
+      "status": "inspected",
+      "coverage": "home page only: desktop 1440x900 (top and two scroll positions) and mobile 390x844 (top)",
+      "captured_at": "2026-11-23T19:51:13.539Z",
+      "cookie_banner": "none seen",
+      "screens": [
+        {
+          "label": "B1",
+          "file": "r1/shots/moredesign-es-desktop.jpg",
+          "frame": "Home, first viewport"
+        },
+        {
+          "label": "B2",
+          "file": "r1/shots/moredesign-es-desktop-s2.jpg",
+          "frame": "Home, project grid lower down"
+        },
+        {
+          "label": "B3",
+          "file": "r1/shots/moredesign-es-mobile.jpg",
+          "frame": "Home, mobile 390px"
+        }
+      ],
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "freight-sans-pro",
+          "fontSize": "14px",
+          "color": "rgb(119, 119, 119)",
+          "background": "rgb(252, 252, 252)"
+        },
+        "h1": {
+          "selector": "h1",
+          "text": "",
+          "fontFamily": "\"Josefin Sans\"",
+          "fontSize": "22px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(34, 34, 34)",
+          "textTransform": "none"
+        },
+        "h2": null,
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "Home",
+          "fontFamily": "freight-sans-pro",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(17, 17, 17)",
+          "textTransform": "none"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "Moredesign is an architecture studio based in Mallorca, spec",
+          "fontFamily": "freight-sans-pro",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(119, 119, 119)",
+          "textTransform": "none"
+        }
+      },
+      "principle": "The image vocabulary: materials and light instead of views and pools. Narrow column with generous margins reads as confidence.",
+      "does_not_transfer": "Grey 14px text fails comfortable reading and is borderline for AA contrast. And a site with no voice cannot persuade anyone to enquire; an architect can afford that, an agency cannot."
+    },
+    {
+      "id": "blakstadibiza-com",
+      "name": "Blakstad",
+      "url": "https://blakstadibiza.com",
+      "direction": "gallery-white",
+      "kind": "Live site · architects and design consultants, Ibiza",
+      "found_via": "Web search (Ibiza architecture)",
+      "status": "inspected",
+      "coverage": "home page only: desktop 1440x900 (top and two scroll positions) and mobile 390x844 (top)",
+      "captured_at": "2026-11-23T20:09:54.043Z",
+      "cookie_banner": "dismissed (\"Accept All\")",
+      "screens": [
+        {
+          "label": "C1",
+          "file": "r1/shots/blakstadibiza-com-desktop-s1.jpg",
+          "frame": "Home, “Our style & philosophy”"
+        },
+        {
+          "label": "C2",
+          "file": "r1/shots/blakstadibiza-com-desktop-s2.jpg",
+          "frame": "Home, quotation over photograph"
+        },
+        {
+          "label": "C3",
+          "file": "r1/shots/blakstadibiza-com-desktop.jpg",
+          "frame": "Home, first viewport (caught mid-crossfade between two slides)"
+        }
+      ],
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "Metropolis, sans-serif",
+          "fontSize": "16px",
+          "color": "rgb(95, 95, 95)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": {
+          "selector": "h1",
+          "text": "When design meets nature",
+          "fontFamily": "Cormorant, serif",
+          "fontSize": "85px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "none"
+        },
+        "h2": {
+          "selector": "h2",
+          "text": "ARCHITECTURAL HERITAGE",
+          "fontFamily": "Metropolis, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "letterSpacing": "1.8px",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "uppercase"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "",
+          "fontFamily": "Metropolis, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "letterSpacing": "0.4px",
+          "color": "rgb(112, 112, 112)",
+          "textTransform": "none"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "We value your privacy",
+          "fontFamily": "Metropolis, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "700",
+          "letterSpacing": "0.4px",
+          "color": "rgb(33, 33, 33)",
+          "textTransform": "none"
+        }
+      },
+      "principle": "White wall plus blue sky plus hard shadow is the most specific “Ibiza” image there is, and it is not a cliché of the property category. A single quotation can carry the agency’s point of view.",
+      "does_not_transfer": "Cormorant with wide-tracked capitals is now the default “luxury” type pairing; using it would undo the distinctiveness."
+    },
+    {
+      "id": "inigo-com",
+      "name": "Inigo",
+      "url": "https://www.inigo.com",
+      "direction": "almanac",
+      "kind": "Live site · estate agency for historic homes, UK",
+      "found_via": "Recalled, then opened and verified in this session",
+      "status": "inspected",
+      "coverage": "home page only: desktop 1440x900 (top and two scroll positions) and mobile 390x844 (top)",
+      "captured_at": "2026-11-23T19:50:42.091Z",
+      "cookie_banner": "dismissed (\"ACCEPT ALL\")",
+      "screens": [
+        {
+          "label": "D1",
+          "file": "r1/shots/inigo-com-desktop.jpg",
+          "frame": "Home, first viewport"
+        },
+        {
+          "label": "D2",
+          "file": "r1/shots/inigo-com-desktop-s2.jpg",
+          "frame": "Home, listings into “Almanac Stories”"
+        },
+        {
+          "label": "D3",
+          "file": "r1/shots/inigo-com-mobile.jpg",
+          "frame": "Home, mobile 390px"
+        }
+      ],
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "adobe-caslon-pro, \"Adobe Caslon Pro\", Caslon, serif",
+          "fontSize": "16px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(223, 219, 220)"
+        },
+        "h1": {
+          "selector": "h1",
+          "text": "Wind in the Willows",
+          "fontFamily": "\"Big Caslon It\", Caslon, serif",
+          "fontSize": "66px",
+          "fontWeight": "400",
+          "letterSpacing": "1.2px",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "none"
+        },
+        "h2": {
+          "selector": "h2",
+          "text": "Like what you see?",
+          "fontFamily": "adobe-caslon-pro, \"Adobe Caslon Pro\", Caslon, serif",
+          "fontSize": "25.2px",
+          "fontWeight": "300",
+          "letterSpacing": "-1px",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "none"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "InigoInigo Logo",
+          "fontFamily": "adobe-caslon-pro, \"Adobe Caslon Pro\", Caslon, serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "textTransform": "none"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "We use cookies so that your experience of our site is as opt",
+          "fontFamily": "\"Soehne Web\", sans-serif",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "textTransform": "none"
+        }
+      },
+      "principle": "Give each home a name and a sentence, not a spec sheet. Use two or three tinted grounds to give a single page distinct chapters. Set titles across image edges.",
+      "does_not_transfer": "The palette is English and overcast; ours needs to be sun-bleached. The “Almanac” journal behind it is real editorial output we will not have."
+    },
+    {
+      "id": "white-ibiza-com",
+      "name": "White Ibiza",
+      "url": "https://white-ibiza.com",
+      "direction": "almanac",
+      "kind": "Live site · island guide and magazine, Ibiza",
+      "found_via": "Web search (Ibiza architecture and design coverage)",
+      "status": "inspected",
+      "coverage": "home page only: desktop 1440x900 (top and two scroll positions) and mobile 390x844 (top)",
+      "captured_at": "2026-11-23T20:10:19.261Z",
+      "cookie_banner": "dismissed (\"ACCEPT ALL\")",
+      "screens": [
+        {
+          "label": "E1",
+          "file": "r1/shots/white-ibiza-com-desktop.jpg",
+          "frame": "Home, first viewport"
+        },
+        {
+          "label": "E2",
+          "file": "r1/shots/white-ibiza-com-desktop-s1.jpg",
+          "frame": "Home, category row"
+        },
+        {
+          "label": "E3",
+          "file": "r1/shots/white-ibiza-com-mobile.jpg",
+          "frame": "Home, mobile 390px"
+        }
+      ],
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "BillCorporateNarrowVariable",
+          "fontSize": "18px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": null,
+        "h2": {
+          "selector": "h2",
+          "text": "WHAT’S ON",
+          "fontFamily": "BillCorporateNarrowVariable",
+          "fontSize": "30px",
+          "fontWeight": "400",
+          "letterSpacing": "5px",
+          "color": "rgb(0, 0, 0)",
+          "textTransform": "uppercase"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "THE ISLAND GUIDE",
+          "fontFamily": "BillCorporateNarrowVariable",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(51, 51, 51)",
+          "textTransform": "none"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "We value your privacy",
+          "fontFamily": "BillCorporateNarrowVariable",
+          "fontSize": "18px",
+          "fontWeight": "700",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "textTransform": "none"
+        }
+      },
+      "principle": "Lead with the name as a masthead and keep the photograph separate from the type, so text is always on a clean ground and always legible. Proof that an Ibiza brand can be black-on-white and still feel of the island.",
+      "does_not_transfer": "It is a guide with many categories; its lower page is a directory, which a one-page agency site should not imitate."
+    },
+    {
+      "id": "hotelcorazon-com",
+      "name": "Hotel Corazón",
+      "url": "https://www.hotelcorazon.com",
+      "direction": "one-colour",
+      "kind": "Live site · hotel, Tramuntana, Mallorca",
+      "found_via": "Web search (Wallpaper* coverage of Mallorca hotels)",
+      "status": "inspected",
+      "coverage": "home page only: desktop 1440x900 (top and two scroll positions) and mobile 390x844 (top)",
+      "captured_at": "2026-11-23T19:50:57.097Z",
+      "cookie_banner": "none seen",
+      "screens": [
+        {
+          "label": "F1",
+          "file": "r1/shots/hotelcorazon-com-desktop.jpg",
+          "frame": "Home, first viewport (video playing)"
+        },
+        {
+          "label": "F2",
+          "file": "r1/shots/hotelcorazon-com-desktop-s1.jpg",
+          "frame": "Home, manifesto text"
+        },
+        {
+          "label": "F3",
+          "file": "r1/shots/hotelcorazon-com-desktop-s2.jpg",
+          "frame": "Home, rooms grid"
+        },
+        {
+          "label": "F4",
+          "file": "r1/shots/hotelcorazon-com-mobile.jpg",
+          "frame": "Home, mobile 390px"
+        }
+      ],
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "Klinsman, sans-serif",
+          "fontSize": "18px",
+          "color": "rgb(55, 24, 16)",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "h1": null,
+        "h2": {
+          "selector": "h2",
+          "text": "HOTEL CORAZÓN",
+          "fontFamily": "Klinsman, sans-serif",
+          "fontSize": "48px",
+          "fontWeight": "400",
+          "letterSpacing": "-1px",
+          "color": "rgb(55, 24, 16)",
+          "textTransform": "uppercase"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "CONTACT",
+          "fontFamily": "Klinsman, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(55, 24, 16)",
+          "textTransform": "uppercase"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "WELCOME TO THE WORLD OF CORAZÓN",
+          "fontFamily": "Klinsman, sans-serif",
+          "fontSize": "18px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(55, 24, 16)",
+          "textTransform": "uppercase"
+        }
+      },
+      "principle": "One confident colour drawn from the place (terracotta, sunburn, bougainvillea) can do more than any amount of gold. Dark brown instead of black keeps everything warm. The enquiry action can be the first thing on the page.",
+      "does_not_transfer": "Paragraphs in centred capitals are hard to read, and the red-brown pairing fails contrast for body text. The tone is playful hospitality; property buyers need to trust us with seven figures."
+    },
+    {
+      "id": "camperandnicholsons-com",
+      "name": "Camper & Nicholsons",
+      "url": "https://www.camperandnicholsons.com",
+      "direction": "full-bleed",
+      "kind": "Live site · yacht brokerage",
+      "found_via": "Web search (Awwwards luxury category, Honorable Mention listing)",
+      "status": "inspected",
+      "coverage": "home page only: desktop 1440x900 (top and two scroll positions) and mobile 390x844 (top)",
+      "captured_at": "2026-11-23T20:10:07.276Z",
+      "cookie_banner": "dismissed (\"ACCEPT ALL\")",
+      "screens": [
+        {
+          "label": "G1",
+          "file": "r1/shots/camperandnicholsons-com-desktop-s1.jpg",
+          "frame": "Home, statement over photograph"
+        },
+        {
+          "label": "G2",
+          "file": "r1/shots/camperandnicholsons-com-desktop-s2.jpg",
+          "frame": "Home, “In good company” into white section"
+        },
+        {
+          "label": "G3",
+          "file": "r1/shots/camperandnicholsons-com-desktop.jpg",
+          "frame": "Home, first viewport"
+        },
+        {
+          "label": "G4",
+          "file": "r1/shots/camperandnicholsons-com-mobile.jpg",
+          "frame": "Home, mobile 390px"
+        }
+      ],
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "\"Cera Pro\", ui-sans-serif, system-ui, sans-serif",
+          "fontSize": "16px",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(0, 0, 0)"
+        },
+        "h1": {
+          "selector": "h1",
+          "text": "",
+          "fontFamily": "\"Cera Pro\", ui-sans-serif, system-ui, sans-serif",
+          "fontSize": "37.76px",
+          "fontWeight": "500",
+          "letterSpacing": "normal",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "uppercase"
+        },
+        "h2": {
+          "selector": "h2",
+          "text": "Cookies on C&N",
+          "fontFamily": "\"Cera Pro\", ui-sans-serif, system-ui, sans-serif",
+          "fontSize": "14.52px",
+          "fontWeight": "500",
+          "letterSpacing": "0.5808px",
+          "color": "rgb(0, 0, 0)",
+          "textTransform": "uppercase"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "CHARTER",
+          "fontFamily": "\"Cera Pro\", ui-sans-serif, system-ui, sans-serif",
+          "fontSize": "12.92px",
+          "fontWeight": "500",
+          "letterSpacing": "normal",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "uppercase"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "C&N uses cookies and other online tracking technologies for ",
+          "fontFamily": "\"Cera Pro\", ui-sans-serif, system-ui, sans-serif",
+          "fontSize": "12.92px",
+          "fontWeight": "400",
+          "letterSpacing": "-0.1292px",
+          "color": "rgb(0, 0, 0)",
+          "textTransform": "none"
+        }
+      },
+      "principle": "Sell the life, not the asset: a human moment in each image. A short statement with one link is enough per screen. Small type can be the luxury signal.",
+      "does_not_transfer": "This is a production budget, not a layout. Without footage of this quality the direction collapses into a stock hero. The dark palette also points away from “sunlit”."
+    },
+    {
+      "id": "lecollectionist-com",
+      "name": "Le Collectionist",
+      "url": "https://www.lecollectionist.com",
+      "direction": "full-bleed",
+      "kind": "Live site · luxury villa rental",
+      "found_via": "Web search (Tatler article on luxury home rental sites)",
+      "status": "inspected",
+      "coverage": "home page only: desktop 1440x900 (top and two scroll positions) and mobile 390x844 (top)",
+      "captured_at": "2026-11-23T20:09:40.728Z",
+      "cookie_banner": "none seen",
+      "screens": [
+        {
+          "label": "H1",
+          "file": "r1/shots/lecollectionist-com-desktop.jpg",
+          "frame": "Home, first viewport"
+        },
+        {
+          "label": "H2",
+          "file": "r1/shots/lecollectionist-com-desktop-s1.jpg",
+          "frame": "Home, “The Collections”"
+        },
+        {
+          "label": "H3",
+          "file": "r1/shots/lecollectionist-com-mobile.jpg",
+          "frame": "Home, mobile 390px"
+        }
+      ],
+      "measured": {
+        "viewport": "1440x900",
+        "state": "default, top of page",
+        "body": {
+          "fontFamily": "Brown, sans-serif",
+          "fontSize": "16px",
+          "color": "rgb(32, 32, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "h1": {
+          "selector": "h1",
+          "text": "LUXURY VILLA RENTAL AND CHALET RENTAL.",
+          "fontFamily": "Brown, sans-serif",
+          "fontSize": "20px",
+          "fontWeight": "400",
+          "letterSpacing": "1px",
+          "color": "rgb(32, 32, 32)",
+          "textTransform": "uppercase"
+        },
+        "h2": {
+          "selector": "h2",
+          "text": "LIVE THE\nEXTRAORDINARY",
+          "fontFamily": "Brown, sans-serif",
+          "fontSize": "32px",
+          "fontWeight": "400",
+          "letterSpacing": "1px",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "uppercase"
+        },
+        "nav": {
+          "selector": "nav a, header a",
+          "text": "",
+          "fontFamily": "Brown, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "letterSpacing": "normal",
+          "color": "rgb(117, 117, 117)",
+          "textTransform": "none"
+        },
+        "p": {
+          "selector": "main p, section p, p",
+          "text": "Your trip in the palm of your hand with the Le Collectionist",
+          "fontFamily": "Brown, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "300",
+          "letterSpacing": "normal",
+          "color": "rgb(255, 255, 255)",
+          "textTransform": "none"
+        }
+      },
+      "principle": "A shorter hero that lets the homes show in the first screen is good for a buyer who wants proof quickly. “Collections” is a neat way to group very few homes.",
+      "does_not_transfer": "Competent but interchangeable. It is the look a concept piece needs to rise above, and search-led layouts make no sense for six homes."
+    }
+  ],
+  "category_baseline": [
+    {
+      "name": "Engel & Völkers Ibiza",
+      "url": "https://www.engelvoelkers.com/es/en/ibiza",
+      "status": "inspected",
+      "captured_at": "2026-11-23T20:10:15.399Z",
+      "screen": {
+        "label": "X1",
+        "file": "r1/shots/engelvoelkers-com-es-en-ibiza-desktop.jpg"
+      },
+      "note": "Search box, pool photograph, “Find your dream property”. Lower down: dense cards with price, beds and square metres, and a managing partner in a suit."
+    },
+    {
+      "name": "Balearic Properties",
+      "url": "https://www.balearic-properties.com",
+      "status": "inspected",
+      "captured_at": "2026-11-23T20:09:43.841Z",
+      "screen": {
+        "label": "X2",
+        "file": "r1/shots/balearic-properties-com-desktop.jpg"
+      },
+      "note": "Drone shot of a turquoise bay, centred search, “more than 2,000” properties. Cookie bar left in view; it stayed on every frame."
+    },
+    {
+      "name": "Baerz & Co",
+      "url": "https://www.baerz.com",
+      "status": "inspected",
+      "captured_at": "2026-11-23 (first pass)",
+      "screen": {
+        "label": "X3",
+        "file": "shots/baerz-com-desktop.jpg"
+      },
+      "note": "Aerial city photograph with a brown wash, serif headline, search field. First-pass capture only; the second capture timed out."
+    }
+  ],
+  "not_inspected": [
+    {
+      "name": "The Modern House",
+      "url": "https://www.themodernhouse.com",
+      "reason": "HTTP 403"
+    },
+    {
+      "name": "Aucoot",
+      "url": "https://www.aucoot.com",
+      "reason": "HTTP 401"
+    },
+    {
+      "name": "Plum Guide",
+      "url": "https://www.plumguide.com",
+      "reason": "HTTP 403"
+    },
+    {
+      "name": "Kobu",
+      "url": "https://kobu.co",
+      "reason": "HTTP 429"
+    },
+    {
+      "name": "Fantastic Frank",
+      "url": "https://www.fantasticfrank.com",
+      "reason": "HTTP 429"
+    },
+    {
+      "name": "Finca Serena",
+      "url": "https://www.fincaserenamallorca.com",
+      "reason": "Loaded, but a cookie wall covered the page; not pursued"
+    },
+    {
+      "name": "Son Xotano",
+      "url": "https://www.sonxotano.com",
+      "reason": "Guessed address was a parked domain; the hotel’s real site was not found"
+    }
+  ]
+}

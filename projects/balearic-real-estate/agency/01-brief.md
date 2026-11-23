@@ -1,6 +1,6 @@
 # Brief: luxury real estate one-pager, Ibiza and Mallorca
 
-Status: **awaiting approval** · Drafted 2026-11-23 · Mode A (AI-first)
+Status: **approved 2026-11-23** · Drafted 2026-11-23 · Mode A (AI-first)
 
 ## Summary
 
