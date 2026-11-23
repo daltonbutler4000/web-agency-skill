@@ -1,7 +1,7 @@
 # Design system
 
-The tokens are the source of truth: `site/src/styles/global.css` (`:root`). A full `DESIGN.md`
-at the project root is written by the design lead's documenter after the finish review.
+The tokens are the source of truth: `site/src/styles/global.css` (`:root`). The full record is `DESIGN.md` at the project root, with
+`.impeccable/design.json` beside it; this file is the short version.
 
 - **Colour:** chalk `#F5F2EA` (ground), sand `#E8DDC9`, terracotta `#A9492A` (actions and the
   "how we work" section), terracotta-deep `#8C3A1F` (hover, labels on sand), ink `#2A211B`,
