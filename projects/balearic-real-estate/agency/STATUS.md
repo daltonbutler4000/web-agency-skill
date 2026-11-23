@@ -1,8 +1,8 @@
 # Status
 
 - **Project:** luxury real estate one-pager, Ibiza and Mallorca (concept)
-- **Stage:** 7–9 · Content, motion, critique — in progress
+- **Stage:** 10 · QA — complete, **awaiting approval**
 - **Mode:** A (AI-first)
 - **Design lead:** `impeccable` (switched from `design-taste-frontend` on 2026-11-23)
 - **Last approval:** art direction A · Almanac, 2026-11-23
-- **Next action:** finish critique fixes, then QA for approval
+- **Next action:** designer approves QA (go or no-go) and decides the seven preferences; then stage 11, Launch preparation

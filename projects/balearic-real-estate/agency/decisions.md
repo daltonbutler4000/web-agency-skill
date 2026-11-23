@@ -51,3 +51,9 @@
 - **2026-11-23** Key page reviewed by the designer. Ground colour decided: the whiter lime
   `#FAF9F6` ("Go with the whiter option"). No other changes requested. Proceeding to content,
   motion, critique and QA.
+- **2026-11-23** Content and motion passes done. Critique: 24/32 before fixes; seven problems
+  and six inconsistencies fixed; seven preferences listed for the designer (`07-critique.md`).
+- **2026-11-23** QA run and recorded (`08-qa.md`). Agency recommendation: go as a concept
+  build; not finished until final photographs and a manual Safari check.
+- **2026-11-23** Detector ignore added for `design-system-font` on the two archived, rejected
+  direction specimens only (agent decision, disclosed to the designer).

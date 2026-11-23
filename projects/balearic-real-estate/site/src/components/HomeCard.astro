@@ -13,7 +13,7 @@ const { home, island } = Astro.props;
     <div><dt class="visually-hidden">Details</dt><dd>{home.facts}</dd></div>
     <div><dt class="visually-hidden">Price</dt><dd class="home__price">{home.price}</dd></div>
   </dl>
-  <a class="link" href="#enquire" data-home={home.name}>Enquire about {home.name}</a>
+  <a class="link" href="#enquire" data-home={home.name} data-place={home.place} data-island={island}>Enquire about {home.name}</a>
 </article>
 
 <style>
@@ -23,12 +23,13 @@ const { home, island } = Astro.props;
   .home:hover .home__photo :global(img) { transform: scale(1.025); }
   /* The name sits on a paper tab cut into the bottom of the photograph. */
   /* Sized so the longest name holds one line in every column layout; the tab shrink-wraps its text. */
-  .home__name { position: relative; width: fit-content; max-width: 100%; margin: -0.9em 0 var(--s4); padding: 0.36em 0.6em 0.08em 0; background: var(--chalk); font: 300 italic clamp(1.75rem, 2.5vw, 2.5rem)/1 var(--serif); letter-spacing: -0.02em; }
+  .home__name { position: relative; width: fit-content; max-width: 100%; margin: -0.9em 0 var(--s4); padding: 0.36em 0.6em 0.08em 0; background: var(--chalk); font: 300 italic clamp(1.5rem, 2.5vw, 2.5rem)/1 var(--serif); letter-spacing: -0.02em; }
   .home__place { color: var(--terracotta); margin-bottom: var(--s3); }
   .home__line { font: 400 var(--step-1)/1.45 var(--serif); margin-bottom: var(--s4); max-width: 26rem; text-wrap: pretty; }
   .home__facts { width: 100%; display: flex; justify-content: space-between; gap: var(--s4); flex-wrap: wrap; padding-top: var(--s3); border-top: 1px solid var(--line); font-size: var(--step--1); color: var(--stone); font-variant-numeric: lining-nums tabular-nums; }
   .home__price { color: var(--ink); font-weight: 500; }
   .home .link { margin-top: var(--s2); }
+  @media (max-width: 900px) { .home__name { font-size: 1.75rem; } }
 
   /* Browsers without scroll-driven animation: the page script adds .tabs-io to <html> and
      .is-in to each card as it arrives. Without the script the names are simply visible. */

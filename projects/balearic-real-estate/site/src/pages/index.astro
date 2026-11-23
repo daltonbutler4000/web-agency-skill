@@ -128,7 +128,7 @@ const description = 'Solell is a small estate agency for people buying a home in
       <section class="how on-terracotta" id="approach">
         <div class="wrap how__in">
           <div class="how__text">
-            <h2 class="h-section">Four steps, <em>none of them hurried.</em></h2>
+            <h2 class="h-section">Four steps, <em>from first call to keys.</em></h2>
             <ol class="how__steps">
               {steps.map((step, i) => (
                 <li>
@@ -151,9 +151,11 @@ const description = 'Solell is a small estate agency for people buying a home in
 
       <!-- 7 · Enquiry -->
       <section class="enq wrap" id="enquire">
-        <div class="enq__intro">
+        <div class="enq__head">
           <h2 class="h-section">Enquire <em>privately.</em></h2>
           <p class="lead">Write a line or two about what you are looking for. Your message goes to one person, and nothing you tell us is passed on.</p>
+        </div>
+        <div class="enq__aside">
           <dl class="enq__direct">
             <div><dt class="label">You will hear from</dt><dd>{contact.name}<br /><span class="enq__role">{contact.role}</span></dd></div>
             <div><dt class="label">Or write directly</dt><dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd></div>
@@ -161,8 +163,13 @@ const description = 'Solell is a small estate agency for people buying a home in
           </dl>
         </div>
 
-        <div class="enq__panel">
+        <div class="enq__panel" id="enquiry-panel">
+          <p class="about" id="enquiry-about" hidden>
+            <span>Enquiring about <strong id="about-name"></strong><span id="about-place"></span></span>
+            <button type="button" class="about__clear" id="about-clear">Remove</button>
+          </p>
           <form class="form" id="enquiry-form" action={`mailto:${contact.email}`} method="post" enctype="text/plain">
+            <input type="hidden" name="house" id="f-house" value="" />
             <div class="form__errors" id="form-errors" role="alert" tabindex="-1" hidden></div>
             <div class="field">
               <label for="f-name">Your name</label>
@@ -192,11 +199,12 @@ const description = 'Solell is a small estate agency for people buying a home in
               <p class="field__error" id="e-message" hidden></p>
             </div>
             <button class="btn form__send" type="submit">Send enquiry</button>
-            <p class="form__note">We use your details only to reply to you.</p>
+            <p class="form__note">{contact.name.split(' ')[0]} replies herself, usually within one working day, by email unless you ask for a call. We use your details only to reply to you.</p>
           </form>
           <div class="sent" id="enquiry-sent" tabindex="-1" hidden>
             <h3 class="sent__title serif">Thank you<span id="sent-name"></span>.</h3>
-            <p class="lead">Your enquiry would now be with {contact.name}. Solell is a concept, so this form sends nothing and nothing has been stored.</p>
+            <p class="lead">{contact.name} will reply herself, usually within one working day<span id="sent-about"></span>.</p>
+            <p class="sent__concept">That is what would happen next. Solell is a concept, so this form sent nothing and nothing has been stored.</p>
             <button class="btn btn--quiet" type="button" id="sent-again">Write another enquiry</button>
           </div>
         </div>
@@ -292,8 +300,16 @@ const description = 'Solell is a small estate agency for people buying a home in
       .how__pic .caption { color: var(--on-terracotta); }
 
       /* Enquiry */
-      .enq { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(2rem, 6vw, 6rem); padding-block: var(--section); align-items: start; }
-      .enq__intro { display: grid; gap: var(--s6); position: sticky; top: 7rem; }
+      .enq { display: grid; grid-template-columns: 5fr 6fr; grid-template-areas: "head panel" "aside panel"; grid-template-rows: auto 1fr; gap: var(--s6) clamp(2rem, 6vw, 6rem); padding-block: var(--section); align-items: start; }
+      .enq__head { grid-area: head; display: grid; gap: var(--s6); }
+      .enq__aside { grid-area: aside; }
+      .enq__panel { grid-area: panel; }
+      .about { display: flex; justify-content: space-between; align-items: center; gap: var(--s4); margin-bottom: var(--s5); padding: var(--s3) var(--s4); background: var(--chalk); border: 1px solid var(--line); font: 400 var(--step-1)/1.3 var(--serif); }
+      .about[hidden] { display: none; }
+      .about strong { font-weight: 400; font-style: italic; }
+      .about__clear { flex: none; min-height: 2.75rem; padding: 0 var(--s2); background: none; border: 0; cursor: pointer; color: var(--ink); font: 500 var(--step--1)/1 var(--sans); text-decoration: underline; text-underline-offset: 0.3em; }
+      .about__clear:hover { color: var(--terracotta-deep); }
+      .sent__concept { font-size: var(--step--1); color: var(--stone); max-width: 30rem; }
       .enq__direct { display: grid; gap: var(--s5); padding-top: var(--s5); border-top: 1px solid var(--line); }
       .enq__direct dt { color: var(--stone); margin-bottom: var(--s2); }
       .enq__direct dd { font: 400 var(--step-1)/1.4 var(--serif); }
@@ -315,7 +331,7 @@ const description = 'Solell is a small estate agency for people buying a home in
       .choice { display: flex; flex-wrap: wrap; gap: var(--s2); }
       .choice label { position: relative; cursor: pointer; }
       .choice input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
-      .choice span { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 var(--s5); border: 1px solid var(--field-line); border-radius: var(--radius); background: var(--chalk); font: 400 0.9375rem/1 var(--sans); transition: background-color var(--dur-1) ease, color var(--dur-1) ease, border-color var(--dur-1) ease; }
+      .choice span { display: inline-flex; align-items: center; min-height: 3rem; padding: 0 var(--s5); border: 1px solid var(--field-line); border-radius: var(--radius); background: var(--chalk); font: 400 0.9375rem/1 var(--sans); transition: background-color var(--dur-1) ease, color var(--dur-1) ease, border-color var(--dur-1) ease; }
       .choice label:hover span { border-color: var(--ink); }
       .choice input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--chalk); }
       .choice input:focus-visible + span { outline: 2px solid var(--terracotta); outline-offset: 3px; }
@@ -341,7 +357,9 @@ const description = 'Solell is a small estate agency for people buying a home in
       .foot summary::after { content: ""; width: 0.5rem; height: 0.5rem; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; rotate: 45deg; translate: 0 -0.15rem; transition: rotate var(--dur-2) var(--ease-out), translate var(--dur-2) var(--ease-out); }
       .foot details[open] summary::after { rotate: 225deg; translate: 0 0.1rem; }
       .foot details p { margin-bottom: var(--s3); }
-      .foot details ul { display: grid; gap: var(--s2); padding-bottom: var(--s4); font-size: var(--step--1); }
+      .foot details ul { display: grid; gap: 0; padding-bottom: var(--s4); font-size: var(--step--1); }
+      .foot details li { padding: var(--s2) 0; }
+      .foot details li a { display: inline-block; padding: var(--s1) 0; }
       .foot__lang { text-wrap: balance; border-top: 1px solid rgb(237 228 211 / 0.28); padding-top: var(--s3); color: var(--on-ink-soft); }
 
       /* Phone action bar */
@@ -362,36 +380,43 @@ const description = 'Solell is a small estate agency for people buying a home in
 
       @media (max-width: 1100px) {
         .top__what { display: none; }
-        .homes__grid { grid-template-columns: 1fr 1fr; }
-        .homes__grid > :global(.home:nth-child(2)) { margin-top: var(--s8); }
-        .homes__grid > :global(.home:nth-child(3)) { grid-column: 1 / -1; max-width: calc(50% - 1rem); }
         .foot__cols { grid-template-columns: 1fr 1fr; }
         .foot__about { grid-column: 1 / -1; }
       }
       @media (max-width: 900px) {
-        .top__nav, .top__cta { display: none; }
-        .top__in { min-height: 4rem; }
-        .top__what { display: block; margin-left: auto; border: 0; padding: 0; text-align: right; }
+        .top__cta, .top__what { display: none; }
+        .top__in { min-height: 4rem; gap: var(--s4); }
+        .top__nav { gap: clamp(0.75rem, 4vw, 1.5rem); font-size: var(--step--1); }
+        .top__nav a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0; }
         .open { grid-template-columns: 1fr; min-height: 0; }
         .open__text { padding: var(--s7) var(--gutter); gap: var(--s5); }
         .open__pic { padding: var(--s6) var(--gutter) var(--s7); }
         .open__frame { max-height: none; flex-basis: 100%; }
         .open__cap { width: 100%; padding-left: calc(clamp(2.25rem, 4.2vw, 4rem) + clamp(0.75rem, 2vw, 1.75rem)); }
-        .view, .homes__head, .how__in, .enq { grid-template-columns: 1fr; }
+        .view, .homes__head, .how__in { grid-template-columns: 1fr; }
+        .enq { grid-template-columns: 1fr; grid-template-areas: "head" "panel" "aside"; grid-template-rows: auto; }
         .view__pic { max-width: 72%; }
         .homes__head { gap: var(--s5); }
         .isles__grid { grid-template-columns: 1fr; }
         .isle--low { margin-top: 0; }
         .how__pic { max-width: 78%; }
-        .enq__intro { position: static; }
         .dock { display: flex; position: fixed; left: var(--gutter); right: var(--gutter); bottom: max(0.75rem, env(safe-area-inset-bottom)); z-index: 25; box-shadow: 0 10px 28px -10px rgb(42 33 27 / 0.55); transition: translate var(--dur-2) var(--ease-out), opacity var(--dur-2) ease, background-color var(--dur-1) ease; }
         .dock.is-away { translate: 0 140%; opacity: 0; pointer-events: none; }
+        /* Over the terracotta section the bar takes the light button so it stays a button. */
+        .dock.is-light { background: var(--on-terracotta); border-color: var(--on-terracotta); color: var(--ink); }
         .foot { padding-bottom: 7rem; }
+      }
+      /* Two columns: the third house of each island runs across both, photograph beside text. */
+      @media (min-width: 701px) and (max-width: 900px) {
+        .homes__grid { grid-template-columns: 1fr 1fr; }
+        .homes__grid > :global(.home:nth-child(3)) { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(1.75rem, 3.4vw, 3.5rem); align-content: center; }
+        .homes__grid > :global(.home:nth-child(3) .home__photo) { grid-column: 1; grid-row: 1 / span 6; }
+        .homes__grid > :global(.home:nth-child(3) > :not(.home__photo)) { grid-column: 2; }
+        .homes__grid > :global(.home:nth-child(3) .home__name) { margin-top: 0; padding: 0; align-self: end; }
       }
       @media (max-width: 700px) {
         .homes__grid { grid-template-columns: 1fr; gap: var(--s8); }
         .homes__grid > :global(.home:nth-child(2)) { margin-top: 0; }
-        .homes__grid > :global(.home:nth-child(3)) { max-width: none; }
         .homes__group { margin-top: var(--s8); }
         .foot__cols { grid-template-columns: 1fr; }
         .form__send { justify-self: stretch; }
@@ -407,21 +432,31 @@ const description = 'Solell is a small estate agency for people buying a home in
       const summary = document.getElementById('form-errors');
       const message = document.getElementById('f-message') as HTMLTextAreaElement | null;
 
-      // "Enquire about <home>" prefills the message and picks the island.
-      document.querySelectorAll<HTMLAnchorElement>('a[data-home]').forEach((link) => {
-        link.addEventListener('click', () => {
-          const home = link.dataset.home!;
-          const island = link.closest('.homes__group')?.querySelector('.homes__island span')?.textContent;
-          if (message && (!message.value || message.dataset.auto === 'true')) {
-            message.value = `I would like to know more about ${home}.`;
-            message.dataset.auto = 'true';
-          }
-          const radio = form?.querySelector<HTMLInputElement>(`input[name="island"][value="${island}"]`);
-          if (radio) radio.checked = true;
-          if (form?.hidden) showForm();
-          setTimeout(() => document.getElementById('f-name')?.focus({ preventScroll: true }), 600);
-        });
-      });
+      // Choosing a house: its name heads the form, travels in a hidden field and picks the island.
+      const about = document.getElementById('enquiry-about');
+      const houseField = document.getElementById('f-house') as HTMLInputElement | null;
+      function chooseHouse(home: string, place: string, island: string) {
+        if (!form || !about || !houseField) return;
+        houseField.value = home ? `${home}, ${place}, ${island}` : '';
+        document.getElementById('about-name')!.textContent = home;
+        document.getElementById('about-place')!.textContent = home ? `, ${place}` : '';
+        about.hidden = !home;
+        const radio = form.querySelector<HTMLInputElement>(`input[name="island"][value="${home ? island : 'Either'}"]`);
+        if (radio) radio.checked = true;
+        if (message && (!message.value || message.dataset.auto === 'true')) {
+          message.value = home ? `I would like to know more about ${home}.` : '';
+          message.dataset.auto = 'true';
+        }
+      }
+      function fromLink(link: HTMLElement) {
+        const home = link.dataset.home;
+        if (!home) return;
+        chooseHouse(home, link.dataset.place || '', link.dataset.island || '');
+        if (form?.hidden) showForm();
+        setTimeout(() => document.getElementById('f-name')?.focus({ preventScroll: true }), 600);
+      }
+      document.querySelectorAll<HTMLAnchorElement>('a[data-home]').forEach((link) => link.addEventListener('click', () => fromLink(link)));
+      document.getElementById('about-clear')?.addEventListener('click', () => { chooseHouse('', '', ''); document.getElementById('f-name')?.focus(); });
       message?.addEventListener('input', () => { message.dataset.auto = 'false'; });
 
       const rules: Record<string, (v: string) => string> = {
@@ -451,7 +486,8 @@ const description = 'Solell is a small estate agency for people buying a home in
           event.preventDefault();
           const failed = Object.keys(rules).filter((name) => check(name));
           if (failed.length) {
-            summary.textContent = failed.length === 1 ? 'One thing needs your attention before this can be sent.' : `${failed.length} things need your attention before this can be sent.`;
+            const names: Record<string, string> = { name: 'your name', email: 'your email', message: 'your message' };
+            summary.textContent = `Before this can be sent, please check ${failed.map((f) => names[f]).join(failed.length > 2 ? ', ' : ' and ')}.`;
             summary.hidden = false;
             (form.elements.namedItem(failed[0]) as HTMLElement).focus();
             return;
@@ -459,10 +495,13 @@ const description = 'Solell is a small estate agency for people buying a home in
           summary.hidden = true;
           const first = (form.elements.namedItem('name') as HTMLInputElement).value.trim().split(/\s+/)[0];
           document.getElementById('sent-name')!.textContent = first ? `, ${first}` : '';
+          const chosen = document.getElementById('about-name')!.textContent;
+          document.getElementById('sent-about')!.textContent = chosen ? `, about ${chosen}` : '';
           form.hidden = true;
           sent.hidden = false;
           sent.focus();
           form.reset();
+          chooseHouse('', '', '');
         });
         document.getElementById('sent-again')?.addEventListener('click', () => { showForm(); document.getElementById('f-name')?.focus(); });
       }
@@ -478,7 +517,7 @@ const description = 'Solell is a small estate agency for people buying a home in
       }
 
       // Phone action bar: hide it while the opening's own button, the enquiry section or the footer is on screen.
-      const dock = document.querySelector('.dock');
+      const dock = document.querySelector<HTMLAnchorElement>('.dock');
       const targets = [document.querySelector('.open__acts'), document.getElementById('enquire'), document.querySelector('.foot')].filter(Boolean) as Element[];
       if (dock && 'IntersectionObserver' in window) {
         const seen = new Set<Element>();
@@ -487,6 +526,20 @@ const description = 'Solell is a small estate agency for people buying a home in
           dock.classList.toggle('is-away', seen.size > 0);
         }, { rootMargin: '0px 0px -20% 0px' });
         targets.forEach((t) => io.observe(t));
+
+        const how = document.querySelector('.how');
+        if (how) new IntersectionObserver(([e]) => dock.classList.toggle('is-light', e.isIntersecting), { rootMargin: '-88% 0px 0px 0px' }).observe(how);
+
+        // While a house is on screen the bar enquires about that house, so there is one action, not two.
+        const inView = new Set<HTMLElement>();
+        const follow = new IntersectionObserver((entries) => {
+          entries.forEach((e) => (e.isIntersecting ? inView.add(e.target as HTMLElement) : inView.delete(e.target as HTMLElement)));
+          const link = [...inView].pop()?.querySelector<HTMLAnchorElement>('a[data-home]');
+          dock.textContent = link ? `Enquire about ${link.dataset.home}` : 'Enquire privately';
+          ['home', 'place', 'island'].forEach((k) => { if (link) dock.dataset[k] = link.dataset[k]!; else delete dock.dataset[k]; });
+        }, { rootMargin: '-45% 0px -45% 0px' });
+        document.querySelectorAll('.home').forEach((h) => follow.observe(h));
+        dock.addEventListener('click', () => fromLink(dock));
       }
     </script>
   </body>
