@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "prototypes/direction-b/index.html"
+        ],
+        "createdAt": "2026-11-23T21:14:15.057Z",
+        "reason": "agent: archived specimen of a rejected art direction (B Masthead / C Terra), kept as a record in agency/04-art-direction.md; not part of the shipped site"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "prototypes/direction-c/index.html"
+        ],
+        "createdAt": "2026-11-23T21:14:15.064Z",
+        "reason": "agent: archived specimen of a rejected art direction (B Masthead / C Terra), kept as a record in agency/04-art-direction.md; not part of the shipped site"
+      }
+    ]
+  }
+}
