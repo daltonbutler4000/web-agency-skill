@@ -23,3 +23,14 @@
   hand without its deal or gate. Agency recommends `impeccable` as lead for the build.
 - **2026-11-23** Working name "Solell" proposed (one web search, no conflict found; not a
   trademark check). Three directions presented: A Almanac (recommended), B Masthead, C Terra.
+- **2026-11-23** **Approval: direction.** Designer approved **A · Almanac** ("Go with A,
+  generate the photos, switch to impeccable"). Commits to: name Solell; Newsreader + Hanken
+  Grotesk; limewash / sand / terracotta / ink palette; split opening, framed 4:5 photographs
+  with captions, italic home titles on tabs; quiet page-like motion. Rejected: B Masthead
+  (colder, index undersells the homes), C Terra (reads as hospitality, will date).
+- **2026-11-23** Imagery: home photographs to be AI-generated in one consistent light;
+  licensed photographs of real places only for the islands section; all credited.
+- **2026-11-23** Design lead switched from `design-taste-frontend` to `impeccable` for design,
+  build, critique and polish. Reason: Taste Skill house rules conflict with the approved direction.
+- **2026-11-23** Carried into the build from the design hook: test a chalkier ground against
+  limewash; remove the floating label above the headline; check title-tab padding.

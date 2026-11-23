@@ -1,0 +1,469 @@
+---
+import { Image } from 'astro:assets';
+import '../styles/global.css';
+import HomeCard from '../components/HomeCard.astro';
+import { contact, islands, steps, credits } from '../data/site.js';
+import opening from '../assets/photos/opening-limewash.jpg';
+import bell from '../assets/photos/detail-bell.jpg';
+import stepsPhoto from '../assets/photos/detail-steps.jpg';
+import ibiza from '../assets/photos/island-ibiza.jpg';
+import mallorca from '../assets/photos/island-mallorca.jpg';
+
+const title = 'Solell · Houses in Ibiza and Mallorca';
+const description = 'Solell is a small estate agency for people buying a home in Ibiza or Mallorca. Six houses at a time, each one known room by room. Enquire privately.';
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#F5F2EA" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/newsreader-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="top">
+      <div class="wrap top__in">
+        <a class="mark" href="#top" aria-label="Solell, back to top">Solell</a>
+        <span class="top__what">Estate agency · Ibiza &amp; Mallorca</span>
+        <nav class="top__nav" aria-label="Sections">
+          <a href="#homes">Homes</a>
+          <a href="#islands">Islands</a>
+          <a href="#approach">Approach</a>
+        </nav>
+        <a class="btn top__cta" href="#enquire">Enquire privately</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- 2 · Opening -->
+      <section class="open" id="top">
+        <div class="open__text">
+          <h1 class="h-display">Houses on the <em>sunlit side</em> of two islands.</h1>
+          <p class="lead">Solell is a small agency for people buying a home in Ibiza or Mallorca. We keep a short list, six houses at present, and we know each one room by room.</p>
+          <div class="open__acts">
+            <a class="btn" href="#enquire">Enquire privately</a>
+            <a class="btn btn--quiet" href="#homes">See the six homes</a>
+          </div>
+        </div>
+        <figure class="open__pic">
+          <div class="open__row">
+            <span class="open__cross" aria-hidden="true">Calç i sol</span>
+            <div class="frame open__frame">
+              <Image src={opening} alt="A whitewashed wall with a deep arched doorway in hard sunlight, a red-domed chapel behind it" widths={[480, 720, 960, 1200]} sizes="(max-width: 900px) 78vw, 34vw" width={960} height={1200} fit="cover" position="left" loading="eager" fetchpriority="high" />
+            </div>
+          </div>
+          <figcaption class="caption open__cap"><span>Limewash and sun, Santa Eulària</span><span>Ibiza</span></figcaption>
+        </figure>
+      </section>
+
+      <!-- 3 · Point of view -->
+      <section class="view wrap">
+        <div class="view__text">
+          <h2 class="h-section">A short list, <em>kept on purpose.</em></h2>
+          <p class="view__big serif">Solell is the Catalan word for the side of a hill that takes the sun. It is where the islands’ farmhouses were built, long before anyone thought of a view.</p>
+          <p class="lead">We work the same way. Other agencies will show you two thousand properties and a search box. We would sooner show you six houses we have walked at seven in the morning and again at dusk, and tell you plainly which one we would buy.</p>
+        </div>
+        <figure class="view__pic">
+          <div class="frame"><Image src={bell} alt="An old iron bell on a wrought bracket against a sunlit ochre wall" widths={[320, 480, 720]} sizes="(max-width: 900px) 60vw, 22vw" width={720} height={960} fit="cover" loading="lazy" /></div>
+          <figcaption class="caption"><span>A door bell, Valldemossa</span><span>Mallorca</span></figcaption>
+        </figure>
+      </section>
+
+      <!-- 4 · Selected homes -->
+      <section class="homes wrap" id="homes">
+        <div class="homes__head">
+          <h2 class="h-section">Six houses, <em>chosen slowly.</em></h2>
+          <p class="lead">Three in Ibiza, three in Mallorca. The list changes when a house sells, not before. Guide prices are in euros.</p>
+        </div>
+        {islands.map((island) => (
+          <div class="homes__group">
+            <h3 class="homes__island"><span>{island.name}</span></h3>
+            <div class="homes__grid">
+              {island.homes.map((home) => <HomeCard home={home} island={island.name} />)}
+            </div>
+          </div>
+        ))}
+        <p class="homes__more lead">Looking for something that is not here? Most of what we sell is never advertised. <a href="#enquire">Tell us what you have in mind.</a></p>
+      </section>
+
+      <!-- 5 · The two islands -->
+      <section class="isles" id="islands">
+        <div class="wrap">
+          <h2 class="h-section">Two islands, <em>and they are not alike.</em></h2>
+          <div class="isles__grid">
+            <article class="isle">
+              <div class="frame isle__photo"><Image src={ibiza} alt="A small cove of clear turquoise water under an ochre cliff" widths={[480, 720, 960, 1280]} sizes="(max-width: 900px) 92vw, 44vw" width={1280} height={853} fit="cover" loading="lazy" /></div>
+              <h3 class="isle__name">Ibiza</h3>
+              <p class="lead">Small enough to cross in forty minutes, and quieter than its reputation once you leave the coast road. The north is pine, red earth and white farmhouses; the south-west has the coves and the long sunsets.</p>
+              <ul class="isle__areas label" aria-label="Where we work in Ibiza"><li>Sant Carles</li><li>Santa Gertrudis</li><li>Sant Josep</li><li>Dalt Vila</li></ul>
+            </article>
+            <article class="isle isle--low">
+              <div class="frame isle__photo"><Image src={mallorca} alt="A stone village stacked on a green hill beneath a streaked evening sky" widths={[480, 720, 960, 1280]} sizes="(max-width: 900px) 92vw, 44vw" width={1280} height={853} fit="cover" loading="lazy" /></div>
+              <h3 class="isle__name">Mallorca</h3>
+              <p class="lead">Seven times the size, with a mountain range down its west coast and a proper city at its foot. Stone villages in the Tramuntana, vineyards on the plain, and a south-east of honey-coloured towns and narrow inlets.</p>
+              <ul class="isle__areas label" aria-label="Where we work in Mallorca"><li>Deià</li><li>Valldemossa</li><li>Fornalutx</li><li>Santanyí</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · How we work -->
+      <section class="how on-terracotta" id="approach">
+        <div class="wrap how__in">
+          <div class="how__text">
+            <h2 class="h-section">Four steps, <em>none of them hurried.</em></h2>
+            <ol class="how__steps">
+              {steps.map((step, i) => (
+                <li>
+                  <span class="how__n serif" aria-hidden="true">{i + 1}</span>
+                  <div>
+                    <h3 class="how__title">{step.title}</h3>
+                    <p>{step.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <a class="btn btn--light" href="#enquire">Start with a conversation</a>
+          </div>
+          <figure class="how__pic">
+            <div class="frame"><Image src={stepsPhoto} alt="Stone steps climbing between village houses in strong sun, bougainvillea over a wall" widths={[360, 540, 720, 960]} sizes="(max-width: 900px) 70vw, 30vw" width={800} height={1100} fit="cover" loading="lazy" /></div>
+            <figcaption class="caption"><span>Carrer Església, Fornalutx</span><span>Mallorca</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 7 · Enquiry -->
+      <section class="enq wrap" id="enquire">
+        <div class="enq__intro">
+          <h2 class="h-section">Enquire <em>privately.</em></h2>
+          <p class="lead">Write a line or two about what you are looking for. Your message goes to one person, and nothing you tell us is passed on.</p>
+          <dl class="enq__direct">
+            <div><dt class="label">You will hear from</dt><dd>{contact.name}<br /><span class="enq__role">{contact.role}</span></dd></div>
+            <div><dt class="label">Or write directly</dt><dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd></div>
+            <div><dt class="label">Or call</dt><dd><a href={`tel:${contact.phoneHref}`}>{contact.phone}</a></dd></div>
+          </dl>
+        </div>
+
+        <div class="enq__panel">
+          <form class="form" id="enquiry-form" action={`mailto:${contact.email}`} method="post" enctype="text/plain">
+            <div class="form__errors" id="form-errors" role="alert" tabindex="-1" hidden></div>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name" />
+              <p class="field__error" id="e-name" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="e-email" />
+              <p class="field__error" id="e-email" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Telephone <span class="field__opt">(optional)</span></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" />
+            </div>
+            <fieldset class="field">
+              <legend>Which island?</legend>
+              <div class="choice">
+                <label><input type="radio" name="island" value="Ibiza" /><span>Ibiza</span></label>
+                <label><input type="radio" name="island" value="Mallorca" /><span>Mallorca</span></label>
+                <label><input type="radio" name="island" value="Either" checked /><span>Either</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="f-message">What are you looking for?</label>
+              <textarea id="f-message" name="message" rows="5" required aria-describedby="e-message"></textarea>
+              <p class="field__error" id="e-message" hidden></p>
+            </div>
+            <button class="btn form__send" type="submit">Send enquiry</button>
+            <p class="form__note">We use your details only to reply to you.</p>
+          </form>
+          <div class="sent" id="enquiry-sent" tabindex="-1" hidden>
+            <h3 class="sent__title serif">Thank you<span id="sent-name"></span>.</h3>
+            <p class="lead">Your enquiry would now be with {contact.name}. Solell is a concept, so this form sends nothing and nothing has been stored.</p>
+            <button class="btn btn--quiet" type="button" id="sent-again">Write another enquiry</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 8 · Footer -->
+    <footer class="foot">
+      <div class="wrap">
+        <p class="foot__mark serif" aria-hidden="true">Solell</p>
+        <div class="foot__cols">
+          <p class="foot__about">An estate agency for Ibiza and Mallorca.<br />Six houses at a time.</p>
+          <p class="foot__concept"><strong>A concept, not a company.</strong> Solell is a fictional agency made as a design study. The homes, prices, contact details and people are illustrative, and nothing here is an offer of property.</p>
+          <div class="foot__more">
+            <details>
+              <summary>Photograph credits</summary>
+              <p>The photographs are stand-ins from Wikimedia Commons. They show public places on the islands, not the homes described.</p>
+              <ul>
+                {credits.map(([what, who, licence, url]) => <li><a href={url} rel="noopener">{what}</a>, {who}, {licence}</li>)}
+              </ul>
+            </details>
+            <details>
+              <summary>Privacy</summary>
+              <p>This page sets no cookies, loads nothing from other sites and has no analytics. The enquiry form does not send or keep what you type.</p>
+            </details>
+            <p class="foot__lang">English only for now. Castellano and Deutsch to follow.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="btn dock" href="#enquire">Enquire privately</a>
+
+    <style>
+      /* Header */
+      .top { position: sticky; top: 0; z-index: 20; background: var(--chalk); border-bottom: 1px solid var(--line); }
+      .top__in { display: flex; align-items: center; gap: var(--s6); min-height: 4.75rem; }
+      .mark { font: 400 italic 1.9rem/1 var(--serif); letter-spacing: -0.01em; text-decoration: none; padding: var(--s2) 0; }
+      .top__what { font-size: var(--step--1); color: var(--stone); padding-left: var(--s5); border-left: 1px solid var(--line); line-height: 1.3; }
+      .top__nav { display: flex; gap: var(--s6); margin-left: auto; font-size: 0.9375rem; }
+      .top__nav a { text-decoration: none; padding: var(--s3) 0; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size var(--dur-2) var(--ease-out); }
+      .top__nav a:hover { background-size: 100% 1px; }
+
+      /* Opening */
+      .open { display: grid; grid-template-columns: 1fr 1fr; min-height: min(calc(100svh - 4.8rem), 54rem); }
+      .open__text { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: var(--s6); padding: var(--s8) var(--gutter) var(--s8) max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter))); }
+      .open__text .h-display { max-width: 9.4em; }
+      .open__acts { display: flex; flex-wrap: wrap; gap: var(--s3); }
+      .open__pic { background: var(--sand); display: flex; flex-direction: column; justify-content: center; padding: var(--s8) max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter))) var(--s8) var(--gutter); }
+      .open__row { display: flex; align-items: flex-end; justify-content: flex-end; gap: clamp(0.75rem, 2vw, 1.75rem); }
+      .open__cross { writing-mode: vertical-rl; transform: rotate(180deg); font: 300 italic clamp(2.25rem, 4.2vw, 4rem)/1 var(--serif); letter-spacing: -0.02em; color: var(--terracotta); white-space: nowrap; }
+      .open__frame { flex: 0 1 29rem; aspect-ratio: 4 / 5; max-height: 62svh; }
+      .open__cap { width: min(100%, 29rem); margin-left: auto; }
+
+      /* Point of view */
+      .view { display: grid; grid-template-columns: 7fr 3fr; gap: var(--gutter); align-items: center; padding-block: var(--section); }
+      .view__text { display: grid; gap: var(--s6); }
+      .view__big { font-size: var(--step-2); line-height: 1.32; font-weight: 300; max-width: 30em; text-wrap: pretty; }
+      .view__pic .frame { aspect-ratio: 3 / 4; }
+
+      /* Homes */
+      .homes { padding-bottom: var(--section); }
+      .homes__head { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); align-items: end; padding-top: var(--section); border-top: 1px solid var(--line); }
+      .homes__group { margin-top: var(--s9); }
+      .homes__island { display: flex; align-items: baseline; gap: var(--s5); font: 300 italic var(--step-2)/1 var(--serif); color: var(--terracotta); margin-bottom: var(--s7); }
+      .homes__island::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+      .homes__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s7) clamp(1.75rem, 3.4vw, 3.5rem); align-items: start; }
+      .homes__grid > :global(.home:nth-child(2)) { margin-top: var(--s8); }
+      .homes__more { margin-top: var(--s9); max-width: 40rem; }
+
+      /* Islands */
+      .isles { background: var(--sand); padding-block: var(--section); }
+      .isles__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5.5rem); margin-top: var(--s8); align-items: start; }
+      .isle--low { margin-top: var(--s9); }
+      .isle__photo { aspect-ratio: 3 / 2; }
+      .isle__name { font: 300 italic var(--step-4)/1 var(--serif); letter-spacing: -0.02em; margin: -0.5em 0 var(--s4); padding: 0.16em 0.5em 0 0; background: var(--sand); position: relative; display: inline-block; }
+      .isle__areas { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); margin-top: var(--s5); padding-top: var(--s4); border-top: 1px solid var(--line); color: var(--terracotta-deep); }
+
+      /* How we work */
+      .how { background: var(--terracotta); color: var(--on-terracotta); padding-block: var(--section); }
+      .how ::selection { background: var(--on-terracotta); color: var(--ink); }
+      .how__in { display: grid; grid-template-columns: 7fr 4fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+      .how__steps { counter-reset: step; margin: var(--s8) 0 var(--s7); display: grid; gap: var(--s6); }
+      .how__steps li { display: grid; grid-template-columns: 3.5rem 1fr; gap: var(--s4); padding-top: var(--s5); border-top: 1px solid rgb(251 244 232 / 0.32); }
+      .how__n { font-size: var(--step-3); font-style: italic; font-weight: 300; line-height: 0.9; font-variant-numeric: lining-nums; }
+      .how__title { font: 400 var(--step-2)/1.15 var(--serif); margin-bottom: var(--s2); }
+      .how__steps p { max-width: 36rem; color: var(--on-terracotta); }
+      .how__pic .frame { aspect-ratio: 8 / 11; background: var(--terracotta-deep); }
+      .how__pic .caption { color: var(--on-terracotta); }
+
+      /* Enquiry */
+      .enq { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(2rem, 6vw, 6rem); padding-block: var(--section); align-items: start; }
+      .enq__intro { display: grid; gap: var(--s6); position: sticky; top: 7rem; }
+      .enq__direct { display: grid; gap: var(--s5); padding-top: var(--s5); border-top: 1px solid var(--line); }
+      .enq__direct dt { color: var(--stone); margin-bottom: var(--s2); }
+      .enq__direct dd { font: 400 var(--step-1)/1.4 var(--serif); }
+      .enq__direct a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+      .enq__role { font: 400 var(--step--1)/1.4 var(--sans); color: var(--stone); }
+      .enq__panel { background: var(--sand); padding: clamp(1.5rem, 4vw, 3.5rem); }
+      .form { display: grid; gap: var(--s5); }
+      .field { display: grid; gap: var(--s2); }
+      .field label, .field legend { font: 500 0.9375rem/1.3 var(--sans); }
+      .field legend { margin-bottom: var(--s2); }
+      .field__opt { font-weight: 400; color: var(--stone); }
+      .field input[type="text"], .field input[type="email"], .field input[type="tel"], .field textarea { width: 100%; min-height: 3rem; padding: var(--s3) var(--s4); font: 400 1.0625rem/1.4 var(--sans); color: var(--ink); background: var(--chalk); border: 1px solid #77695A; border-radius: var(--radius); transition: border-color var(--dur-1) ease, box-shadow var(--dur-1) ease; }
+      .field textarea { resize: vertical; min-height: 8rem; }
+      .field input:hover, .field textarea:hover { border-color: var(--ink); }
+      .field input:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 1px; border-color: var(--terracotta); }
+      .field [aria-invalid="true"] { border-color: var(--error); box-shadow: inset 0 0 0 1px var(--error); }
+      .field__error, .form__errors { color: var(--error); font-size: var(--step--1); font-weight: 500; }
+      .form__errors { padding: var(--s3) var(--s4); border: 1px solid var(--error); background: var(--chalk); }
+      .choice { display: flex; flex-wrap: wrap; gap: var(--s2); }
+      .choice label { position: relative; cursor: pointer; }
+      .choice input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+      .choice span { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 var(--s5); border: 1px solid #77695A; border-radius: var(--radius); background: var(--chalk); font: 400 0.9375rem/1 var(--sans); transition: background-color var(--dur-1) ease, color var(--dur-1) ease, border-color var(--dur-1) ease; }
+      .choice label:hover span { border-color: var(--ink); }
+      .choice input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--chalk); }
+      .choice input:focus-visible + span { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+      .form__send { justify-self: start; min-width: 12rem; }
+      .form__note { font-size: var(--step--1); color: var(--stone); }
+      .sent { display: grid; gap: var(--s5); justify-items: start; }
+      .sent[hidden], .form[hidden] { display: none; }
+      .sent__title { font-size: var(--step-4); font-weight: 300; font-style: italic; line-height: 1; letter-spacing: -0.02em; }
+      .sent:focus { outline: none; }
+
+      /* Footer */
+      .foot { background: var(--ink); color: #EDE4D3; padding-block: var(--s9) var(--s8); }
+      .foot ::selection { background: var(--sand); color: var(--ink); }
+      .foot :focus-visible { outline-color: var(--sand); }
+      .foot__mark { font-size: clamp(5rem, 17vw, 15rem); font-style: italic; font-weight: 300; line-height: 0.8; letter-spacing: -0.04em; color: var(--sand); margin-bottom: var(--s8); }
+      .foot__cols { display: grid; grid-template-columns: 3fr 4fr 4fr; gap: var(--gutter); font-size: 0.9375rem; line-height: 1.55; }
+      .foot__about { font: 400 var(--step-1)/1.4 var(--serif); }
+      .foot__concept strong { font-weight: 600; color: #fff; }
+      .foot details { border-top: 1px solid rgb(237 228 211 / 0.28); }
+      .foot summary { cursor: pointer; padding: var(--s3) 0; font-weight: 500; min-height: 2.75rem; }
+      .foot details p { margin-bottom: var(--s3); }
+      .foot details ul { display: grid; gap: var(--s2); padding-bottom: var(--s4); font-size: var(--step--1); }
+      .foot__lang { border-top: 1px solid rgb(237 228 211 / 0.28); padding-top: var(--s3); color: #CFC3AE; }
+
+      /* Phone action bar */
+      .dock { display: none; }
+
+      /* Opening entrance: the one authored moment. Content is visible by default. */
+      @media (prefers-reduced-motion: no-preference) {
+        .open__frame { animation: wipe var(--dur-3) var(--ease-out) both; }
+        .open__frame :global(img) { animation: settle 1600ms var(--ease-out) both; }
+        .open__cross { animation: rise 900ms var(--ease-out) 350ms both; }
+        .open__text > * { animation: rise 800ms var(--ease-out) both; }
+        .open__text > :nth-child(2) { animation-delay: 120ms; }
+        .open__text > :nth-child(3) { animation-delay: 220ms; }
+        @keyframes wipe { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
+        @keyframes settle { from { transform: scale(1.12); } to { transform: none; } }
+        @keyframes rise { from { opacity: 0; translate: 0 0.6rem; } to { opacity: 1; translate: 0 0; } }
+      }
+
+      @media (max-width: 1100px) {
+        .top__what { display: none; }
+        .homes__grid { grid-template-columns: 1fr 1fr; }
+        .homes__grid > :global(.home:nth-child(2)) { margin-top: var(--s8); }
+        .homes__grid > :global(.home:nth-child(3)) { grid-column: 1 / -1; max-width: calc(50% - 1rem); }
+        .foot__cols { grid-template-columns: 1fr 1fr; }
+        .foot__about { grid-column: 1 / -1; }
+      }
+      @media (max-width: 900px) {
+        .top__nav, .top__cta { display: none; }
+        .top__in { min-height: 4rem; }
+        .top__what { display: block; margin-left: auto; border: 0; padding: 0; text-align: right; }
+        .open { grid-template-columns: 1fr; min-height: 0; }
+        .open__text { padding: var(--s7) var(--gutter); gap: var(--s5); }
+        .open__pic { padding: var(--s6) var(--gutter) var(--s7); }
+        .open__frame { max-height: none; flex-basis: 100%; }
+        .open__cap { width: 100%; padding-left: calc(clamp(2.25rem, 4.2vw, 4rem) + clamp(0.75rem, 2vw, 1.75rem)); }
+        .view, .homes__head, .how__in, .enq { grid-template-columns: 1fr; }
+        .view__pic { max-width: 62%; }
+        .homes__head { gap: var(--s5); }
+        .isles__grid { grid-template-columns: 1fr; }
+        .isle--low { margin-top: 0; }
+        .how__pic { max-width: 70%; order: -1; }
+        .enq__intro { position: static; }
+        .dock { display: flex; position: fixed; left: var(--gutter); right: var(--gutter); bottom: max(0.75rem, env(safe-area-inset-bottom)); z-index: 25; box-shadow: 0 10px 28px -10px rgb(42 33 27 / 0.55); transition: translate var(--dur-2) var(--ease-out), opacity var(--dur-2) ease, background-color var(--dur-1) ease; }
+        .dock.is-away { translate: 0 140%; opacity: 0; pointer-events: none; }
+        .foot { padding-bottom: 7rem; }
+      }
+      @media (max-width: 700px) {
+        .homes__grid { grid-template-columns: 1fr; gap: var(--s8); }
+        .homes__grid > :global(.home:nth-child(2)) { margin-top: 0; }
+        .homes__grid > :global(.home:nth-child(3)) { max-width: none; }
+        .homes__group { margin-top: var(--s8); }
+        .foot__cols { grid-template-columns: 1fr; }
+        .form__send { justify-self: stretch; }
+        .choice label { flex: 1; }
+        .choice span { width: 100%; justify-content: center; }
+      }
+    </style>
+
+    <script>
+      // Progressive enhancement only: the page reads and links without this script.
+      const form = document.getElementById('enquiry-form') as HTMLFormElement | null;
+      const sent = document.getElementById('enquiry-sent');
+      const summary = document.getElementById('form-errors');
+      const message = document.getElementById('f-message') as HTMLTextAreaElement | null;
+
+      // "Enquire about <home>" prefills the message and picks the island.
+      document.querySelectorAll<HTMLAnchorElement>('a[data-home]').forEach((link) => {
+        link.addEventListener('click', () => {
+          const home = link.dataset.home!;
+          const island = link.closest('.homes__group')?.querySelector('.homes__island span')?.textContent;
+          if (message && (!message.value || message.dataset.auto === 'true')) {
+            message.value = `I would like to know more about ${home}.`;
+            message.dataset.auto = 'true';
+          }
+          const radio = form?.querySelector<HTMLInputElement>(`input[name="island"][value="${island}"]`);
+          if (radio) radio.checked = true;
+          if (form?.hidden) showForm();
+          setTimeout(() => document.getElementById('f-name')?.focus({ preventScroll: true }), 600);
+        });
+      });
+      message?.addEventListener('input', () => { message.dataset.auto = 'false'; });
+
+      const rules: Record<string, (v: string) => string> = {
+        name: (v) => (v.trim() ? '' : 'Please tell us your name.'),
+        email: (v) => (!v.trim() ? 'Please give an email address so we can reply.' : /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'That email address looks incomplete. Check for a missing @ or ending.'),
+        message: (v) => (v.trim().length >= 10 ? '' : 'Please write a line or two about what you are looking for.'),
+      };
+      function check(name: string) {
+        const field = form!.elements.namedItem(name) as HTMLInputElement;
+        const error = document.getElementById(`e-${name}`)!;
+        const text = rules[name](field.value);
+        field.setAttribute('aria-invalid', text ? 'true' : 'false');
+        error.textContent = text;
+        error.hidden = !text;
+        return text;
+      }
+      function showForm() { form!.hidden = false; sent!.hidden = true; }
+
+      if (form && sent && summary) {
+        form.noValidate = true;
+        Object.keys(rules).forEach((name) => {
+          const field = form.elements.namedItem(name) as HTMLInputElement;
+          field.addEventListener('blur', () => { if (field.value || field.getAttribute('aria-invalid') === 'true') check(name); });
+          field.addEventListener('input', () => { if (field.getAttribute('aria-invalid') === 'true') check(name); });
+        });
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const failed = Object.keys(rules).filter((name) => check(name));
+          if (failed.length) {
+            summary.textContent = failed.length === 1 ? 'One thing needs your attention before this can be sent.' : `${failed.length} things need your attention before this can be sent.`;
+            summary.hidden = false;
+            (form.elements.namedItem(failed[0]) as HTMLElement).focus();
+            return;
+          }
+          summary.hidden = true;
+          const first = (form.elements.namedItem('name') as HTMLInputElement).value.trim().split(/\s+/)[0];
+          document.getElementById('sent-name')!.textContent = first ? `, ${first}` : '';
+          form.hidden = true;
+          sent.hidden = false;
+          sent.focus();
+          form.reset();
+        });
+        document.getElementById('sent-again')?.addEventListener('click', () => { showForm(); document.getElementById('f-name')?.focus(); });
+      }
+
+      // Phone action bar: hide it while the enquiry section or footer is on screen.
+      const dock = document.querySelector('.dock');
+      const targets = [document.getElementById('enquire'), document.querySelector('.foot')].filter(Boolean) as Element[];
+      if (dock && 'IntersectionObserver' in window) {
+        const seen = new Set<Element>();
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => (e.isIntersecting ? seen.add(e.target) : seen.delete(e.target)));
+          dock.classList.toggle('is-away', seen.size > 0);
+        }, { rootMargin: '0px 0px -20% 0px' });
+        targets.forEach((t) => io.observe(t));
+      }
+    </script>
+  </body>
+</html>

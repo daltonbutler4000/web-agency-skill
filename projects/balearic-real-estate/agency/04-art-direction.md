@@ -1,6 +1,6 @@
 # Art direction: three directions
 
-Status: **awaiting approval** · 2026-11-23 · Design lead used for the specimens: see the note
+Status: **A · Almanac approved 2026-11-23** · 2026-11-23 · Design lead used for the specimens: see the note
 at the end.
 
 All three share what research and strategy fixed: the working name **Solell**, photographs
