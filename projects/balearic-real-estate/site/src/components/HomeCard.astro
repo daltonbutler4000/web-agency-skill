@@ -30,6 +30,13 @@ const { home, island } = Astro.props;
   .home__price { color: var(--ink); font-weight: 500; }
   .home .link { margin-top: var(--s2); }
 
+  /* Browsers without scroll-driven animation: the page script adds .tabs-io to <html> and
+     .is-in to each card as it arrives. Without the script the names are simply visible. */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.tabs-io) .home__name { clip-path: inset(0 100% 0 0); translate: 0 0.5em; transition: clip-path 700ms var(--ease-out), translate 700ms var(--ease-out); }
+    :global(.tabs-io) .home.is-in .home__name { clip-path: inset(0 0 0 0); translate: 0 0; }
+  }
+
   @supports (animation-timeline: view()) {
     @media (prefers-reduced-motion: no-preference) {
       .home__name { animation: tab-in linear both; animation-timeline: view(); animation-range: entry 10% cover 34%; }

@@ -19,10 +19,13 @@ const description = 'Solell is a small estate agency for people buying a home in
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#F5F2EA" />
+    <meta name="theme-color" content="#FAF9F6" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og.jpg" />
+    <meta property="og:image:alt" content="Solell. Houses on the sunlit side of two islands." />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preload" href="/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -37,12 +40,14 @@ const description = 'Solell is a small estate agency for people buying a home in
         <a class="mark" href="#top" aria-label="Solell, back to top">Solell</a>
         <span class="top__what">Estate agency · Ibiza &amp; Mallorca</span>
         <nav class="top__nav" aria-label="Sections">
-          <a href="#homes">Homes</a>
+          <a href="#homes">Houses</a>
           <a href="#islands">Islands</a>
           <a href="#approach">Approach</a>
         </nav>
         <a class="btn top__cta" href="#enquire">Enquire privately</a>
       </div>
+      <!-- Phone action bar: fixed to the bottom edge, inside the header landmark. -->
+      <a class="btn dock" href="#enquire">Enquire privately</a>
     </header>
 
     <main id="main">
@@ -53,7 +58,7 @@ const description = 'Solell is a small estate agency for people buying a home in
           <p class="lead">Solell is a small agency for people buying a home in Ibiza or Mallorca. We keep a short list, six houses at present, and we know each one room by room.</p>
           <div class="open__acts">
             <a class="btn" href="#enquire">Enquire privately</a>
-            <a class="btn btn--quiet" href="#homes">See the six homes</a>
+            <a class="btn btn--quiet" href="#homes">See the six houses</a>
           </div>
         </div>
         <figure class="open__pic">
@@ -95,7 +100,7 @@ const description = 'Solell is a small estate agency for people buying a home in
           </div>
         ))}
         <p class="homes__more lead">Looking for something that is not here? Most of what we sell is never advertised. <a href="#enquire">Tell us what you have in mind.</a></p>
-        <p class="homes__note">Solell is a concept. The homes and prices are illustrative, and the photographs are stand-ins showing public places on the islands, not the homes described.</p>
+        <p class="homes__note">Solell is a concept. The houses and prices are illustrative, and the photographs are stand-ins showing public places on the islands, not the houses described.</p>
       </section>
 
       <!-- 5 · The two islands -->
@@ -204,7 +209,7 @@ const description = 'Solell is a small estate agency for people buying a home in
         <p class="foot__mark serif" aria-hidden="true">Solell</p>
         <div class="foot__cols">
           <p class="foot__about">An estate agency for Ibiza and Mallorca.<br />Six houses at a time.</p>
-          <p class="foot__concept"><strong>A concept, not a company.</strong> Solell is a fictional agency made as a design study. The homes, prices, contact details and people are illustrative, the photographs are stand-ins of public places, and nothing here is an offer of property.</p>
+          <p class="foot__concept"><strong>A concept, not a company.</strong> Solell is a fictional agency made as a design study. The houses, prices, contact details and people are illustrative, the photographs are stand-ins of public places, and nothing here is an offer of property.</p>
           <div class="foot__more">
             <details>
               <summary>Photograph credits</summary>
@@ -223,7 +228,6 @@ const description = 'Solell is a small estate agency for people buying a home in
       </div>
     </footer>
 
-    <a class="btn dock" href="#enquire">Enquire privately</a>
 
     <style>
       /* Header */
@@ -283,7 +287,7 @@ const description = 'Solell is a small estate agency for people buying a home in
       .how__steps li { display: grid; grid-template-columns: 3.5rem 1fr; gap: var(--s4); padding-top: var(--s5); border-top: 1px solid rgb(251 244 232 / 0.32); }
       .how__n { font-size: var(--step-3); font-style: italic; font-weight: 300; line-height: 0.9; font-variant-numeric: lining-nums; }
       .how__title { font: 400 var(--step-2)/1.15 var(--serif); margin-bottom: var(--s2); }
-      .how__steps p { max-width: 36rem; color: var(--on-terracotta); }
+      .how__steps p { max-width: 36rem; color: var(--on-terracotta); text-wrap: pretty; }
       .how__pic .frame { aspect-ratio: 4 / 5; background: var(--terracotta-deep); }
       .how__pic .caption { color: var(--on-terracotta); }
 
@@ -321,15 +325,16 @@ const description = 'Solell is a small estate agency for people buying a home in
       .sent[hidden], .form[hidden] { display: none; }
       .sent__title { font-size: var(--step-4); font-weight: 300; font-style: italic; line-height: 1; letter-spacing: -0.02em; }
       .sent:focus { outline: none; }
+      @media (prefers-reduced-motion: no-preference) { .sent:not([hidden]) { animation: rise var(--dur-2) var(--ease-out) both; } }
 
       /* Footer */
-      .foot { background: var(--ink); color: #EDE4D3; padding-block: var(--s9) var(--s8); }
+      .foot { background: var(--ink); color: var(--on-ink); padding-block: var(--s9) var(--s8); }
       .foot ::selection { background: var(--sand); color: var(--ink); }
       .foot :focus-visible { outline-color: var(--sand); }
       .foot__mark { font-size: clamp(5rem, 17vw, 15rem); font-style: italic; font-weight: 300; line-height: 0.8; letter-spacing: -0.04em; color: var(--sand); margin-bottom: var(--s8); }
       .foot__cols { display: grid; grid-template-columns: 3fr 4fr 4fr; gap: var(--gutter); font-size: 0.9375rem; line-height: 1.55; }
       .foot__about { font: 400 var(--step-1)/1.4 var(--serif); }
-      .foot__concept strong { font-weight: 600; color: #fff; }
+      .foot__concept strong { font-weight: 600; color: var(--on-ink-strong); }
       .foot details { border-top: 1px solid rgb(237 228 211 / 0.28); }
       .foot summary { cursor: pointer; padding: var(--s3) 0; font-weight: 500; min-height: 2.75rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
       .foot summary::-webkit-details-marker { display: none; }
@@ -337,7 +342,7 @@ const description = 'Solell is a small estate agency for people buying a home in
       .foot details[open] summary::after { rotate: 225deg; translate: 0 0.1rem; }
       .foot details p { margin-bottom: var(--s3); }
       .foot details ul { display: grid; gap: var(--s2); padding-bottom: var(--s4); font-size: var(--step--1); }
-      .foot__lang { border-top: 1px solid rgb(237 228 211 / 0.28); padding-top: var(--s3); color: #CFC3AE; }
+      .foot__lang { text-wrap: balance; border-top: 1px solid rgb(237 228 211 / 0.28); padding-top: var(--s3); color: var(--on-ink-soft); }
 
       /* Phone action bar */
       .dock { display: none; }
@@ -345,9 +350,9 @@ const description = 'Solell is a small estate agency for people buying a home in
       /* Opening entrance: the one authored moment. Content is visible by default. */
       @media (prefers-reduced-motion: no-preference) {
         .open__frame { animation: wipe var(--dur-3) var(--ease-out) both; }
-        .open__frame :global(img) { animation: settle 1600ms var(--ease-out) both; }
-        .open__cross { animation: rise 900ms var(--ease-out) 350ms both; }
-        .open__text > * { animation: rise 800ms var(--ease-out) both; }
+        .open__frame :global(img) { animation: settle var(--dur-settle) var(--ease-out) both; }
+        .open__cross { animation: rise var(--dur-enter) var(--ease-out) 350ms both; }
+        .open__text > * { animation: rise var(--dur-enter) var(--ease-out) both; }
         .open__text > :nth-child(2) { animation-delay: 120ms; }
         .open__text > :nth-child(3) { animation-delay: 220ms; }
         @keyframes wipe { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
@@ -460,6 +465,16 @@ const description = 'Solell is a small estate agency for people buying a home in
           form.reset();
         });
         document.getElementById('sent-again')?.addEventListener('click', () => { showForm(); document.getElementById('f-name')?.focus(); });
+      }
+
+      // Home names slide onto their photographs. Scroll-driven CSS does this where supported;
+      // elsewhere an observer does the same once per card.
+      if (!CSS.supports('animation-timeline: view()') && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('tabs-io');
+        const tabs = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); tabs.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -18% 0px' });
+        document.querySelectorAll('.home').forEach((h) => tabs.observe(h));
       }
 
       // Phone action bar: hide it while the opening's own button, the enquiry section or the footer is on screen.

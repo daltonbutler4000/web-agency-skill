@@ -1,0 +1,3 @@
+# Solell is a concept site and should not be indexed.
+User-agent: *
+Disallow: /

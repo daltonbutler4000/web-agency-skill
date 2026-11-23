@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found · Solell</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <main class="lost wrap">
+      <a class="mark" href="/" aria-label="Solell, home">Solell</a>
+      <h1 class="h-section">This page is <em>not on the list.</em></h1>
+      <p class="lead">The address may have changed, or the house may have sold. Everything we have is on one page.</p>
+      <a class="btn" href="/">Go to the six houses</a>
+    </main>
+    <style>
+      .lost { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: var(--s6); padding-block: var(--s8); }
+      .mark { font: 400 italic 1.9rem/1 var(--serif); text-decoration: none; }
+    </style>
+  </body>
+</html>

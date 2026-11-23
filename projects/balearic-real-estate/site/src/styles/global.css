@@ -12,7 +12,7 @@
 
 :root {
   /* Colour */
-  --chalk: #F5F2EA;      /* page ground: limewash, pulled towards chalk */
+  --chalk: #FAF9F6;      /* page ground: white lime (designer choice, 2026-11-23) */
   --sand: #E8DDC9;       /* second ground */
   --terracotta: #A9492A; /* actions, place labels, one whole section */
   --terracotta-deep: #8C3A1F;
@@ -22,6 +22,10 @@
   --field-line: #77695A; /* control borders: 3:1 or better on chalk and sand */
   --on-terracotta: #FBF4E8;
   --error: #8C2A14;
+  --on-ink: #EDE4D3;       /* footer text */
+  --on-ink-soft: #CFC3AE;
+  --on-ink-strong: #FFFFFF;
+  --on-action: #FFFFFF;    /* button text on terracotta */
 
   /* Type */
   --serif: "Newsreader", "Newsreader Fallback", Georgia, serif;
@@ -46,6 +50,8 @@
   --radius: 2px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --dur-1: 180ms; --dur-2: 420ms; --dur-3: 1100ms;
+  --dur-enter: 800ms;   /* opening text and caption */
+  --dur-settle: 1600ms; /* opening photograph easing back to rest */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -66,7 +72,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.3em
 .skip { position: absolute; left: var(--gutter); top: -4rem; z-index: 30; background: var(--ink); color: var(--chalk); padding: var(--s3) var(--s4); text-decoration: none; }
 .skip:focus { top: var(--s3); }
 
-/* Small capitals label: place names, form legends. Never set above a heading. */
+/* Small capitals label: place names, areas, contact terms. Never set above a heading. */
 .label { font: 500 0.78rem/1.2 var(--sans); letter-spacing: 0.14em; text-transform: uppercase; }
 
 /* Headings */
@@ -76,7 +82,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.3em
 .lead { font: 400 var(--step-1)/1.5 var(--serif); max-width: var(--measure); text-wrap: pretty; }
 
 /* Buttons: one pair */
-.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 var(--s5); font: 500 0.9375rem/1 var(--sans); text-decoration: none; border: 1px solid var(--terracotta); border-radius: var(--radius); background: var(--terracotta); color: #fff; cursor: pointer; transition: background-color var(--dur-1) ease, color var(--dur-1) ease, border-color var(--dur-1) ease, transform var(--dur-1) var(--ease-out); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 var(--s5); font: 500 0.9375rem/1 var(--sans); text-decoration: none; border: 1px solid var(--terracotta); border-radius: var(--radius); background: var(--terracotta); color: var(--on-action); cursor: pointer; transition: background-color var(--dur-1) ease, color var(--dur-1) ease, border-color var(--dur-1) ease, transform var(--dur-1) var(--ease-out); }
 .btn:hover { background: var(--terracotta-deep); border-color: var(--terracotta-deep); }
 .btn:active { transform: translateY(1px); }
 .btn--quiet { background: transparent; color: var(--ink); border-color: var(--ink); }

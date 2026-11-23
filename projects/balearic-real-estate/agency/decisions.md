@@ -48,3 +48,6 @@
 - **2026-11-23** Finish review verdict: all eight fixes and one regression scored resolved;
   disposition "ship", scoped to those fixes. Noted, not held open: on phones the approach
   photograph follows the section's button. Photographs remain stand-ins.
+- **2026-11-23** Key page reviewed by the designer. Ground colour decided: the whiter lime
+  `#FAF9F6` ("Go with the whiter option"). No other changes requested. Proceeding to content,
+  motion, critique and QA.
