@@ -10,3 +10,8 @@
 - **2026-11-23** Research round 1 delivered: 8 references in 4 directions, 3 category-baseline
   sites, 7 sites recorded as not inspected. Agency recommendation (not approved): Almanac base
   with Gallery White framing and one warm colour.
+- **2026-11-23** Research feedback: designer accepted the agency recommendation as given
+  ("Go with your recommendation"). Chosen direction: Almanac base, Gallery White framing, one
+  warm colour. Full-Bleed Cinema dropped. No second research round.
+- **2026-11-23** Strategy drafted (`03-strategy.md`): 8 sections, six homes (3 per island),
+  illustrative guide prices shown, no invented proof, named fictional contact without portrait.

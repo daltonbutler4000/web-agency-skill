@@ -68,4 +68,9 @@ footage a concept project does not have.
 
 ## Designer feedback
 
-*(to be recorded verbatim after the board is reviewed)*
+2026-11-23, verbatim: "Go with your recommendation, move on to strategy"
+
+No individual likes or dislikes were given. The recommendation above is therefore the chosen
+direction to carry into art direction: Almanac base (Inigo, White Ibiza), Gallery White framing
+(Domus Nova, with Moredesign's materials imagery and Blakstad's white-wall subject), one warm
+colour in the spirit of Hotel Corazón. Full-Bleed Cinema is out.
