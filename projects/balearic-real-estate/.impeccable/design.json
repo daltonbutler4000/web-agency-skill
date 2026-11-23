@@ -1,0 +1,404 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-23T20:58:42+00:00",
+  "title": "Design System: Solell",
+  "extensions": {
+    "colorMeta": {
+      "terracotta": {
+        "role": "primary",
+        "displayName": "Terracotta",
+        "canonical": "#A9492A",
+        "tonalRamp": [
+          "oklch(15% 0.074 38)",
+          "oklch(27% 0.107 38)",
+          "oklch(39% 0.134 38)",
+          "oklch(51% 0.134 38)",
+          "oklch(63% 0.121 38)",
+          "oklch(75% 0.094 38)",
+          "oklch(86% 0.060 38)",
+          "oklch(95% 0.027 38)"
+        ]
+      },
+      "terracotta-deep": {
+        "role": "primary",
+        "displayName": "Deep Terracotta",
+        "canonical": "#8C3A1F",
+        "tonalRamp": [
+          "oklch(15% 0.065 38)",
+          "oklch(27% 0.095 38)",
+          "oklch(39% 0.119 38)",
+          "oklch(51% 0.119 38)",
+          "oklch(63% 0.107 38)",
+          "oklch(75% 0.083 38)",
+          "oklch(86% 0.053 38)",
+          "oklch(95% 0.024 38)"
+        ]
+      },
+      "on-terracotta": {
+        "role": "primary",
+        "displayName": "Limewash on Terracotta",
+        "canonical": "#FBF4E8",
+        "tonalRamp": [
+          "oklch(15% 0.010 81)",
+          "oklch(27% 0.014 81)",
+          "oklch(39% 0.018 81)",
+          "oklch(51% 0.018 81)",
+          "oklch(63% 0.016 81)",
+          "oklch(75% 0.012 81)",
+          "oklch(86% 0.008 81)",
+          "oklch(95% 0.004 81)"
+        ]
+      },
+      "chalk": {
+        "role": "neutral",
+        "displayName": "Chalk",
+        "canonical": "#F5F2EA",
+        "tonalRamp": [
+          "oklch(15% 0.006 90)",
+          "oklch(27% 0.009 90)",
+          "oklch(39% 0.011 90)",
+          "oklch(51% 0.011 90)",
+          "oklch(63% 0.010 90)",
+          "oklch(75% 0.008 90)",
+          "oklch(86% 0.005 90)",
+          "oklch(95% 0.002 90)"
+        ]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Sand",
+        "canonical": "#E8DDC9",
+        "tonalRamp": [
+          "oklch(15% 0.016 83)",
+          "oklch(27% 0.023 83)",
+          "oklch(39% 0.029 83)",
+          "oklch(51% 0.029 83)",
+          "oklch(63% 0.026 83)",
+          "oklch(75% 0.021 83)",
+          "oklch(86% 0.013 83)",
+          "oklch(95% 0.006 83)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Ink",
+        "canonical": "#2A211B",
+        "tonalRamp": [
+          "oklch(15% 0.010 55)",
+          "oklch(27% 0.014 55)",
+          "oklch(39% 0.018 55)",
+          "oklch(51% 0.018 55)",
+          "oklch(63% 0.016 55)",
+          "oklch(75% 0.012 55)",
+          "oklch(86% 0.008 55)",
+          "oklch(95% 0.004 55)"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "#665C51",
+        "tonalRamp": [
+          "oklch(15% 0.012 70)",
+          "oklch(27% 0.017 70)",
+          "oklch(39% 0.022 70)",
+          "oklch(51% 0.022 70)",
+          "oklch(63% 0.019 70)",
+          "oklch(75% 0.015 70)",
+          "oklch(86% 0.010 70)",
+          "oklch(95% 0.004 70)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#D5C9B4",
+        "tonalRamp": [
+          "oklch(15% 0.017 82)",
+          "oklch(27% 0.025 82)",
+          "oklch(39% 0.031 82)",
+          "oklch(51% 0.031 82)",
+          "oklch(63% 0.028 82)",
+          "oklch(75% 0.022 82)",
+          "oklch(86% 0.014 82)",
+          "oklch(95% 0.006 82)"
+        ]
+      },
+      "field-line": {
+        "role": "neutral",
+        "displayName": "Field Line",
+        "canonical": "#77695A",
+        "tonalRamp": [
+          "oklch(15% 0.016 69)",
+          "oklch(27% 0.023 69)",
+          "oklch(39% 0.029 69)",
+          "oklch(51% 0.029 69)",
+          "oklch(63% 0.026 69)",
+          "oklch(75% 0.020 69)",
+          "oklch(86% 0.013 69)",
+          "oklch(95% 0.006 69)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error",
+        "canonical": "#8C2A14",
+        "tonalRamp": [
+          "oklch(15% 0.075 34)",
+          "oklch(27% 0.109 34)",
+          "oklch(39% 0.137 34)",
+          "oklch(51% 0.137 34)",
+          "oklch(63% 0.123 34)",
+          "oklch(75% 0.096 34)",
+          "oklch(86% 0.062 34)",
+          "oklch(95% 0.027 34)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The page headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings; italic for island names and the thank-you."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "A home's italic name on its tab."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Statement paragraph, group headings, step titles."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Serif running text, 34rem measure."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Sans text for facts, steps and fields."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Buttons, links, navigation, field labels."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Captions, facts, prices, notes."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase place names and list terms; never above a heading."
+      }
+    },
+    "shadows": [
+      {
+        "name": "dock",
+        "value": "0 10px 28px -10px rgb(42 33 27 / 0.55)",
+        "purpose": "Only under the fixed phone action bar."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All movement: entrances, underlines, the dock."
+      },
+      {
+        "name": "dur-1",
+        "value": "180ms",
+        "purpose": "Colour and border state changes."
+      },
+      {
+        "name": "dur-2",
+        "value": "420ms",
+        "purpose": "Drawn underlines, disclosure chevron, dock slide."
+      },
+      {
+        "name": "dur-3",
+        "value": "1100ms",
+        "purpose": "Opening photograph wipe from the bottom edge."
+      },
+      {
+        "name": "opening-entrance",
+        "value": "frame clip-path wipe 1100ms; image scale 1.12 to 1 over 1600ms; text rise 0.6rem and fade 800ms staggered 0/120/220ms; vertical italic 900ms after 350ms",
+        "purpose": "The one authored page-load moment; content is visible without it."
+      },
+      {
+        "name": "tab-in",
+        "value": "scroll-driven view(): translateY(0.5em) and clip-path inset from the right, entry 10% to cover 34%",
+        "purpose": "A name tab slides into place as its photograph enters."
+      },
+      {
+        "name": "photo-hover",
+        "value": "transform scale(1.025) 900ms",
+        "purpose": "Home card photograph on hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "three-to-two",
+        "value": "1100px"
+      },
+      {
+        "name": "one-column",
+        "value": "900px"
+      },
+      {
+        "name": "phone",
+        "value": "700px"
+      }
+    ],
+    "imageRatios": [
+      {
+        "name": "house-and-detail",
+        "value": "4 / 5"
+      },
+      {
+        "name": "island",
+        "value": "3 / 2",
+        "note": "Intentional exception: the two island photographs only."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action colour: enquiry and send.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Enquire privately</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 var(--s5, 1.5rem); font: 500 0.9375rem/1 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); text-decoration: none; border: 1px solid var(--terracotta, #A9492A); border-radius: var(--radius, 2px); background: var(--terracotta, #A9492A); color: #fff; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover { background: var(--terracotta-deep, #8C3A1F); border-color: var(--terracotta-deep, #8C3A1F); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--terracotta, #A9492A); outline-offset: 3px; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Secondary action beside a primary, on chalk or sand.",
+      "html": "<a class=\"ds-btn ds-btn--quiet\" href=\"#\">See the six homes</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 var(--s5, 1.5rem); font: 500 0.9375rem/1 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); text-decoration: none; border: 1px solid var(--terracotta, #A9492A); border-radius: var(--radius, 2px); background: var(--terracotta, #A9492A); color: #fff; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover { background: var(--terracotta-deep, #8C3A1F); border-color: var(--terracotta-deep, #8C3A1F); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--terracotta, #A9492A); outline-offset: 3px; } .ds-btn--quiet { background: transparent; color: var(--ink, #2A211B); border-color: var(--ink, #2A211B); } .ds-btn--quiet:hover { background: var(--ink, #2A211B); border-color: var(--ink, #2A211B); color: var(--chalk, #F5F2EA); }"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "The action on the terracotta ground.",
+      "html": "<div class=\"ds-on-terracotta\"><a class=\"ds-btn ds-btn--light\" href=\"#\">Start with a conversation</a></div>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 var(--s5, 1.5rem); font: 500 0.9375rem/1 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); text-decoration: none; border: 1px solid var(--terracotta, #A9492A); border-radius: var(--radius, 2px); background: var(--terracotta, #A9492A); color: #fff; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover { background: var(--terracotta-deep, #8C3A1F); border-color: var(--terracotta-deep, #8C3A1F); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--terracotta, #A9492A); outline-offset: 3px; } .ds-on-terracotta { background: var(--terracotta, #A9492A); padding: 2rem; } .ds-btn--light { background: var(--on-terracotta, #FBF4E8); border-color: var(--on-terracotta, #FBF4E8); color: var(--ink, #2A211B); } .ds-btn--light:hover { background: var(--ink, #2A211B); border-color: var(--ink, #2A211B); color: var(--on-terracotta, #FBF4E8); } .ds-btn--light:focus-visible { outline-color: var(--on-terracotta, #FBF4E8); }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Inline action with a drawn underline that retracts on hover.",
+      "html": "<a class=\"ds-link\" href=\"#\">Enquire about Can Xaloc</a>",
+      "css": ".ds-link { font: 500 0.9375rem/1.3 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); color: var(--ink, #2A211B); text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; padding: 0.75rem 0; min-height: 2.75rem; display: inline-flex; align-items: center; transition: background-size 420ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms ease; } .ds-link:hover { background-size: 0 1px; background-position: 100% 100%; color: var(--terracotta-deep, #8C3A1F); } .ds-link:focus-visible { outline: 2px solid var(--terracotta, #A9492A); outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled field on the sand panel.",
+      "html": "<div class=\"ds-panel\"><div class=\"ds-field\"><label for=\"ds-name\">Your name</label><input id=\"ds-name\" type=\"text\" /></div></div>",
+      "css": ".ds-panel { background: var(--sand, #E8DDC9); padding: 2rem; } .ds-field { display: grid; gap: 0.5rem; } .ds-field label { font: 500 0.9375rem/1.3 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); color: var(--ink, #2A211B); } .ds-field input { width: 100%; min-height: 3rem; padding: 0.75rem 1rem; font: 400 1.0625rem/1.4 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); color: var(--ink, #2A211B); background: var(--chalk, #F5F2EA); border: 1px solid var(--field-line, #77695A); border-radius: var(--radius, 2px); transition: border-color 180ms ease, box-shadow 180ms ease; } .ds-field input:hover { border-color: var(--ink, #2A211B); } .ds-field input:focus-visible { outline: 2px solid var(--terracotta, #A9492A); outline-offset: 1px; border-color: var(--terracotta, #A9492A); }"
+    },
+    {
+      "name": "Choice",
+      "kind": "chip",
+      "refersTo": "choice",
+      "description": "Radio options as outlined blocks; the selected one fills ink.",
+      "html": "<div class=\"ds-choice\"><label><input type=\"radio\" name=\"ds-island\" /><span>Ibiza</span></label><label><input type=\"radio\" name=\"ds-island\" /><span>Mallorca</span></label><label><input type=\"radio\" name=\"ds-island\" checked /><span>Either</span></label></div>",
+      "css": ".ds-choice { display: flex; flex-wrap: wrap; gap: 0.5rem; } .ds-choice label { position: relative; cursor: pointer; } .ds-choice input { position: absolute; opacity: 0; inset: 0; cursor: pointer; } .ds-choice span { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 1.5rem; border: 1px solid var(--field-line, #77695A); border-radius: var(--radius, 2px); background: var(--chalk, #F5F2EA); color: var(--ink, #2A211B); font: 400 0.9375rem/1 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease; } .ds-choice label:hover span { border-color: var(--ink, #2A211B); } .ds-choice input:checked + span { background: var(--ink, #2A211B); border-color: var(--ink, #2A211B); color: var(--chalk, #F5F2EA); } .ds-choice input:focus-visible + span { outline: 2px solid var(--terracotta, #A9492A); outline-offset: 3px; }"
+    },
+    {
+      "name": "Home Card",
+      "kind": "card",
+      "refersTo": "name-tab",
+      "description": "Framed 4:5 photograph, italic name on a paper tab, place label, sentence, facts and price, enquiry link.",
+      "html": "<article class=\"ds-home\"><div class=\"ds-home__photo\"></div><h4 class=\"ds-home__name\">Can Xaloc</h4><p class=\"ds-home__place\">Sant Carles · Ibiza</p><p class=\"ds-home__line\">A farmhouse that keeps the morning sun in its kitchen.</p><dl class=\"ds-home__facts\"><dd>4 bedrooms · 310 m²</dd><dd class=\"ds-home__price\">Illustrative price</dd></dl><a class=\"ds-home__link\" href=\"#\">Enquire about Can Xaloc</a></article>",
+      "css": ".ds-home { display: flex; flex-direction: column; align-items: flex-start; max-width: 22rem; background: var(--chalk, #F5F2EA); color: var(--ink, #2A211B); } .ds-home__photo { width: 100%; aspect-ratio: 4 / 5; background: var(--sand, #E8DDC9); } .ds-home__name { position: relative; width: fit-content; margin: -0.9em 0 1rem; padding: 0.36em 0.6em 0.08em 0; background: var(--chalk, #F5F2EA); font: 300 italic clamp(1.75rem, 2.5vw, 2.5rem)/1 var(--serif, 'Newsreader', Georgia, serif); letter-spacing: -0.02em; } .ds-home__place { margin: 0 0 0.75rem; font: 500 0.78rem/1.2 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta, #A9492A); } .ds-home__line { margin: 0 0 1rem; font: 400 1.125rem/1.45 var(--serif, 'Newsreader', Georgia, serif); } .ds-home__facts { width: 100%; margin: 0; display: flex; justify-content: space-between; gap: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--line, #D5C9B4); font: 400 0.875rem/1.4 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); color: var(--stone, #665C51); font-variant-numeric: lining-nums tabular-nums; } .ds-home__facts dd { margin: 0; } .ds-home__price { color: var(--ink, #2A211B); font-weight: 500; } .ds-home__link { margin-top: 0.5rem; font: 500 0.9375rem/1.3 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); color: inherit; text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; padding: 0.75rem 0; transition: background-size 420ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms ease; } .ds-home__link:hover { background-size: 0 1px; background-position: 100% 100%; color: var(--terracotta-deep, #8C3A1F); } .ds-home__link:focus-visible { outline: 2px solid var(--terracotta, #A9492A); outline-offset: 3px; }"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Sticky chalk bar: italic wordmark, descriptor, anchors, primary action.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-top__mark\" href=\"#\">Solell</a><span class=\"ds-top__what\">Estate agency · Ibiza &amp; Mallorca</span><nav class=\"ds-top__nav\"><a href=\"#\">Homes</a><a href=\"#\">Islands</a><a href=\"#\">Approach</a></nav></header>",
+      "css": ".ds-top { display: flex; align-items: center; gap: 2rem; min-height: 4.75rem; padding: 0 1.5rem; background: var(--chalk, #F5F2EA); color: var(--ink, #2A211B); border-bottom: 1px solid var(--line, #D5C9B4); } .ds-top__mark { font: 400 italic 1.9rem/1 var(--serif, 'Newsreader', Georgia, serif); letter-spacing: -0.01em; color: inherit; text-decoration: none; } .ds-top__what { font: 400 0.875rem/1.3 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); color: var(--stone, #665C51); padding-left: 1.5rem; border-left: 1px solid var(--line, #D5C9B4); } .ds-top__nav { display: flex; gap: 2rem; margin-left: auto; font: 400 0.9375rem/1.55 var(--sans, 'Hanken Grotesk', system-ui, sans-serif); } .ds-top__nav a { color: inherit; text-decoration: none; padding: 0.75rem 0; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size 420ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-top__nav a:hover { background-size: 100% 1px; } .ds-top a:focus-visible { outline: 2px solid var(--terracotta, #A9492A); outline-offset: 3px; border-radius: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Almanac",
+    "overview": "Solell reads like a small printed almanac of houses: each entry has a name, a place and a sentence before it has a figure. The page is paper. A chalk-limewash ground carries almost everything, a sand ground marks a change of chapter, one terracotta owns every action and one whole section, and a warm brown-black ink does the reading. Nothing glows, floats or sits on a photograph.\n\nTwo typefaces split the work. Newsreader, light and often italic, is the voice: headlines, names of houses and islands, the sentences that carry judgement. Hanken Grotesk is the record: facts, prices, captions, labels, controls. Photographs are objects on the page, framed, square-cornered and captioned beneath, with the italic name of the thing cut into the bottom edge on a tab of the ground colour.\n\nDensity is low and the rhythm is editorial: asymmetric two-column sections, one column dropped below the other, hairline rules instead of boxes. Motion is page-like: one authored entrance on the opening, a name tab that slides into place as its photograph arrives, and underlines that draw.",
+    "keyCharacteristics": [
+      "Paper grounds (chalk, sand), one terracotta, warm ink; no gradients, no tints of other hues.",
+      "Newsreader Light with italics for voice; Hanken Grotesk for facts.",
+      "Framed 4:5 photographs with captions beneath; never a photograph behind text.",
+      "Italic names on paper tabs overlapping the bottom of the frame.",
+      "Hairline rules (1px) and square corners; controls soften to 2px.",
+      "Flat surfaces; depth comes from ground changes and overlap."
+    ],
+    "rules": [
+      {
+        "name": "The One Clay Rule",
+        "body": "Terracotta is the only accent. It marks actions and place, and it may take over one full section per page as a ground. No second accent, no tint of terracotta as a surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The Clean Ground Rule",
+        "body": "Text sits on chalk, sand, terracotta or ink, never on a photograph and never on a gradient.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sand Darkens Rule",
+        "body": "Small terracotta text is for chalk. On sand, use `terracotta-deep`; plain terracotta on sand is reserved for large italic display.",
+        "section": "colors"
+      },
+      {
+        "name": "The Voice and Record Rule",
+        "body": "If a line carries judgement or a name, it is Newsreader. If it carries a fact, a figure or an instruction, it is Hanken Grotesk.",
+        "section": "typography"
+      },
+      {
+        "name": "The Italic Names Rule",
+        "body": "Italic is for proper names (homes, islands, the wordmark) and for the turned clause of a heading. It is not general emphasis.",
+        "section": "typography"
+      },
+      {
+        "name": "The Label Below Rule",
+        "body": "The uppercase label never sits above a heading. It follows the name it locates, or stands as the term of a list.",
+        "section": "typography"
+      },
+      {
+        "name": "The Four-by-Five Rule",
+        "body": "Photographs of houses and details are framed 4:5 portrait. The two island photographs are 3:2 landscape: a place, not a house. No other ratio.",
+        "section": "layout"
+      },
+      {
+        "name": "The Floating Only Rule",
+        "body": "A shadow means the element is fixed above scrolling content. Nothing in the flow of the page casts one.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do frame every photograph square-cornered with its caption beneath: 4:5 for houses and details, 3:2 for the two islands only.",
+      "Do put the name before the figure: italic name on its tab, then place, then a sentence, then facts and price.",
+      "Do keep terracotta for actions, place labels and one full section; use `terracotta-deep` for small text on sand.",
+      "Do separate with 1px `line` rules and ground changes, and bound controls with `field-line`.",
+      "Do keep targets at least 2.75rem tall and buttons 3rem.",
+      "Do stagger paired items (4rem or 6rem) on wide screens and flatten the stagger in one column.",
+      "Do honour reduced motion: every entrance and transition collapses, and content is visible without any of them."
+    ],
+    "donts": [
+      "Don't set text over a photograph or use a photograph as a section background.",
+      "Don't add a second accent colour, a gradient, or gold on black.",
+      "Don't open with an aerial bay, an infinity pool, a search box or a portfolio count.",
+      "Don't place the uppercase label above a heading.",
+      "Don't give cards borders, fills, radii or shadows; only the docked phone button casts a shadow.",
+      "Don't round frames or panels, or round controls beyond 2px.",
+      "Don't use italic for emphasis in running text, or a script face for the wordmark."
+    ]
+  }
+}

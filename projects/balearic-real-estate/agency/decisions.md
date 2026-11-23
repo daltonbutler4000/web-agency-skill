@@ -45,3 +45,6 @@
   no label floats above the headline; island photographs are 3:2 by exception.
 - **2026-11-23** Finish review (design lead's independent reviewer): disposition "fix", eight
   material fixes, all applied in one batch; verdict round requested.
+- **2026-11-23** Finish review verdict: all eight fixes and one regression scored resolved;
+  disposition "ship", scoped to those fixes. Noted, not held open: on phones the approach
+  photograph follows the section's button. Photographs remain stand-ins.
