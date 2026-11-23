@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference board</title>
+<style>
+  :root {
+    --bg: #f6f5f2; --surface: #fff; --ink: #16181d; --muted: #5d636f; --line: #dcdad4;
+    --accent: #1f4fd8; --pick: #0a7a4b; --warn: #a14a00;
+    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121317; --surface: #1b1d23; --ink: #eceef2; --muted: #a2a8b4; --line: #2e3139;
+      --accent: #8fb0ff; --pick: #5fd3a0; --warn: #f0a868; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 var(--sans); }
+  header, main, footer { max-width: 1400px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
+  header { padding-top: 48px; padding-bottom: 24px; }
+  h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h3 { font-size: 1.125rem; margin: 0; }
+  p { margin: 0; }
+  .meta, .idea { color: var(--muted); max-width: 70ch; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  nav a { color: var(--ink); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px; font-size: .875rem; }
+  nav a:hover { border-color: var(--ink); }
+  section { padding: 40px 0; border-top: 1px solid var(--line); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 24px; margin-top: 24px; }
+  article { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+  article.picked { outline: 3px solid var(--pick); outline-offset: -1px; }
+  .shot { display: block; width: 100%; padding: 0; border: 0; background: var(--line); cursor: zoom-in; aspect-ratio: 16 / 10; overflow: hidden; }
+  .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .noshot { aspect-ratio: 16 / 10; display: grid; place-items: center; padding: 24px; text-align: center; color: var(--warn); background: var(--bg); font-size: .9375rem; }
+  .body { padding: 18px 20px 20px; display: grid; gap: 12px; }
+  .top { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+  a.site { color: var(--accent); font-size: .875rem; word-break: break-all; }
+  .small { font-size: .8125rem; color: var(--muted); }
+  .badge { font-size: .75rem; padding: 2px 8px; border-radius: 4px; border: 1px solid currentColor; white-space: nowrap; }
+  .badge.ok { color: var(--pick); } .badge.bad { color: var(--warn); }
+  dl { margin: 0; display: grid; grid-template-columns: 7.5em 1fr; gap: 4px 12px; font-size: .875rem; }
+  dt { color: var(--muted); } dd { margin: 0; }
+  .take { font-size: .9375rem; } .take b { font-weight: 600; }
+  .thumbs { display: flex; gap: 6px; }
+  .thumbs button { border: 1px solid var(--line); background: none; color: var(--muted); border-radius: 4px; font: inherit; font-size: .75rem; padding: 2px 8px; cursor: pointer; }
+  label.pick { display: flex; gap: 8px; align-items: center; font-weight: 600; cursor: pointer; }
+  input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--pick); }
+  textarea { width: 100%; min-height: 64px; font: inherit; font-size: .875rem; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; resize: vertical; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  footer { padding-top: 32px; padding-bottom: 64px; border-top: 1px solid var(--line); display: grid; gap: 12px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  button.primary { font: inherit; font-weight: 600; background: var(--ink); color: var(--bg); border: 0; border-radius: 6px; padding: 10px 18px; cursor: pointer; }
+  dialog { border: 0; padding: 0; background: #000; max-width: 96vw; max-height: 96vh; }
+  dialog::backdrop { background: rgba(0, 0, 0, .8); }
+  dialog img { display: block; max-width: 96vw; max-height: 92vh; }
+  dialog form { position: absolute; top: 8px; right: 8px; }
+  dialog button { font: inherit; padding: 6px 12px; cursor: pointer; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Reference board</h1>
+  <p class="meta" id="meta"></p>
+  <nav id="nav" aria-label="Directions"></nav>
+</header>
+<main id="main"></main>
+<footer>
+  <h2>Your selection</h2>
+  <p class="meta">Tick the references you like and note what you like or dislike about each. Selections are remembered in this browser. Copy the summary and paste it back into the conversation.</p>
+  <div class="actions"><button class="primary" id="copy">Copy my feedback</button><span id="count" class="small" role="status"></span></div>
+  <textarea id="general" aria-label="General comments" placeholder="Anything else: what is missing, what to look for in a second round"></textarea>
+  <p class="small">Screenshots are private working references. Sites are linked to their originals and belong to their owners; they inform principles and are not to be copied.</p>
+</footer>
+<dialog id="lightbox" aria-label="Screenshot"><form method="dialog"><button>Close</button></form></dialog>
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (t, a = {}, ...kids) => { const e = Object.assign(document.createElement(t), a); kids.flat().forEach(k => k != null && e.append(k)); return e; };
+if (!DATA) document.getElementById('main').append($('p', { textContent: 'No data. Build this file with scripts/build-board.cjs.' }));
+else {
+  const KEY = 'board:' + (DATA.project || '') + ':' + (DATA.round || 1);
+  let state = {}; try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} count(); };
+  const refs = DATA.references || [];
+  document.title = (DATA.project ? DATA.project + ' · ' : '') + 'Reference board';
+  document.getElementById('title').textContent = (DATA.project || 'Reference board') + (DATA.round > 1 ? ' · round ' + DATA.round : '');
+  const bad = refs.filter(r => r.status !== 'inspected').length;
+  document.getElementById('meta').textContent = `${refs.length} references` + (bad ? `, ${bad} could not be inspected and are marked` : ', all inspected in a browser') + '.';
+  const dirs = [...(DATA.directions || [])];
+  if (refs.some(r => !dirs.find(d => d.id === r.direction))) dirs.push({ id: '__none', name: 'Ungrouped', idea: '' });
+  const lb = document.getElementById('lightbox');
+  const OBS = ['typography', 'imagery', 'layout', 'colour', 'interaction', 'motion'];
+  for (const d of dirs) {
+    const list = refs.filter(r => (dirs.find(x => x.id === r.direction) ? r.direction : '__none') === d.id);
+    if (!list.length) continue;
+    document.getElementById('nav').append($('a', { href: '#' + d.id, textContent: d.name }));
+    const grid = $('div', { className: 'grid' });
+    for (const r of list) {
+      const st = state[r.id] = state[r.id] || { pick: false, note: '' };
+      const shots = (r.shots || []).filter(s => s.src);
+      const ok = r.status === 'inspected' && shots.length;
+      const art = $('article', { id: 'ref-' + r.id, className: st.pick ? 'picked' : '' });
+      if (ok) {
+        const img = $('img', { src: shots[0].src, alt: `${r.name}, ${shots[0].label} screenshot`, loading: 'lazy' });
+        const btn = $('button', { className: 'shot', type: 'button', title: 'Enlarge' }, img);
+        btn.onclick = () => { const old = lb.querySelector('img'); if (old) old.remove(); lb.append($('img', { src: img.src, alt: img.alt })); lb.showModal(); };
+        art.append(btn);
+      } else art.append($('div', { className: 'noshot', textContent: 'Not inspected' + (r.error ? ': ' + r.error : '') + '. No visual claims are made about this site.' }));
+      const body = $('div', { className: 'body' });
+      body.append($('div', { className: 'top' },
+        $('div', {}, $('h3', { textContent: r.name }), $('a', { className: 'site', href: r.url, target: '_blank', rel: 'noopener noreferrer', textContent: r.url })),
+        $('span', { className: 'badge ' + (ok ? 'ok' : 'bad'), textContent: ok ? 'Inspected' : 'Not inspected' })));
+      if (shots.length > 1) body.append($('div', { className: 'thumbs' }, shots.map(s => { const b = $('button', { type: 'button', textContent: s.label }); b.onclick = () => { const i = art.querySelector('.shot img'); i.src = s.src; i.alt = `${r.name}, ${s.label} screenshot`; }; return b; })));
+      const o = r.observations || {};
+      if (ok && OBS.some(k => o[k])) body.append($('dl', {}, OBS.filter(k => o[k]).flatMap(k => [$('dt', { textContent: k[0].toUpperCase() + k.slice(1) }), $('dd', { textContent: o[k] })])));
+      if (ok && r.principle) body.append($('p', { className: 'take' }, $('b', { textContent: 'Take from it: ' }), r.principle));
+      if (ok && r.caveat) body.append($('p', { className: 'take' }, $('b', { textContent: 'Will not transfer: ' }), r.caveat));
+      body.append($('p', { className: 'small', textContent: [r.found_via && 'Found via ' + r.found_via, r.captured_at && 'captured ' + r.captured_at.slice(0, 10), shots[0] && shots[0].viewport].filter(Boolean).join(' · ') }));
+      const cb = $('input', { type: 'checkbox', checked: st.pick });
+      cb.onchange = () => { st.pick = cb.checked; art.classList.toggle('picked', st.pick); save(); };
+      const ta = $('textarea', { value: st.note, placeholder: 'What do you like or dislike here?' }); ta.setAttribute('aria-label', 'Notes on ' + r.name);
+      ta.oninput = () => { st.note = ta.value; save(); };
+      body.append($('label', { className: 'pick' }, cb, 'Favourite'), ta);
+      art.append(body); grid.append(art);
+    }
+    document.getElementById('main').append($('section', { id: d.id }, $('h2', { textContent: d.name }), d.idea ? $('p', { className: 'idea', textContent: d.idea }) : null, grid));
+  }
+  const gen = document.getElementById('general'); gen.value = state.__general || ''; gen.oninput = () => { state.__general = gen.value; save(); };
+  function count() { document.getElementById('count').textContent = refs.filter(r => state[r.id] && state[r.id].pick).length + ' favourites selected'; }
+  count();
+  document.getElementById('copy').onclick = async () => {
+    const lines = ['Reference board feedback' + (DATA.round ? ' (round ' + DATA.round + ')' : ''), '', 'Favourites:'];
+    refs.filter(r => state[r.id].pick).forEach(r => lines.push(`- ${r.name} (${r.url})` + (state[r.id].note ? `: ${state[r.id].note}` : '')));
+    const other = refs.filter(r => !state[r.id].pick && state[r.id].note);
+    if (other.length) { lines.push('', 'Notes on others:'); other.forEach(r => lines.push(`- ${r.name}: ${state[r.id].note}`)); }
+    if (state.__general) lines.push('', 'General: ' + state.__general);
+    const text = lines.join('\n');
+    try { await navigator.clipboard.writeText(text); document.getElementById('count').textContent = 'Copied. Paste it into the conversation.'; }
+    catch { gen.value = text; gen.select(); document.getElementById('count').textContent = 'Could not copy automatically; the summary is in the box below.'; }
+  };
+}
+</script>
+</body>
+</html>
