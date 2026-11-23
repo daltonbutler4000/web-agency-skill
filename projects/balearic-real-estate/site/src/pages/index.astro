@@ -453,9 +453,9 @@ const description = 'Solell is a small estate agency for people buying a home in
         document.getElementById('sent-again')?.addEventListener('click', () => { showForm(); document.getElementById('f-name')?.focus(); });
       }
 
-      // Phone action bar: hide it while the enquiry section or footer is on screen.
+      // Phone action bar: hide it while the opening's own button, the enquiry section or the footer is on screen.
       const dock = document.querySelector('.dock');
-      const targets = [document.getElementById('enquire'), document.querySelector('.foot')].filter(Boolean) as Element[];
+      const targets = [document.querySelector('.open__acts'), document.getElementById('enquire'), document.querySelector('.foot')].filter(Boolean) as Element[];
       if (dock && 'IntersectionObserver' in window) {
         const seen = new Set<Element>();
         const io = new IntersectionObserver((entries) => {
