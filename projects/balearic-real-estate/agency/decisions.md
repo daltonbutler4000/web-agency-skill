@@ -15,3 +15,11 @@
   warm colour. Full-Bleed Cinema dropped. No second research round.
 - **2026-11-23** Strategy drafted (`03-strategy.md`): 8 sections, six homes (3 per island),
   illustrative guide prices shown, no invented proof, named fictional contact without portrait.
+- **2026-11-23** Strategy reviewed: designer said "Go" with no changes. Decisions 1–5 in
+  `03-strategy.md` stand.
+- **2026-11-23** Design lead chosen: `design-taste-frontend` (Mode A, new site, no brand).
+  Override noted: its house rules (no captions, one section per screen, dealt palettes and
+  fonts, finish gate) conflict with the research outcome, so the three specimens were built by
+  hand without its deal or gate. Agency recommends `impeccable` as lead for the build.
+- **2026-11-23** Working name "Solell" proposed (one web search, no conflict found; not a
+  trademark check). Three directions presented: A Almanac (recommended), B Masthead, C Terra.
