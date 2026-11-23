@@ -36,7 +36,7 @@ the long side.
 
 | Slot | File to replace in `site/src/assets/photos/` | Prompt |
 |---|---|---|
-| Opening | `opening-limewash.jpg` | A thick whitewashed farmhouse wall with a deep arched doorway in hard morning sun, sharp diagonal shadow, clear blue sky, a corner of terracotta roof tile |
+| Opening | `opening-limewash.jpg` | A limewashed house front in full morning sun, a single painted plank door, a small shuttered window, a terracotta pot on worn stone steps, deep clean shadow in the doorway |
 | Can Pou | `can-pou.jpg` | Traditional white Ibizan finca with cubic volumes and small windows behind a dry garden of fig and oleander, stone well in the foreground, red earth path |
 | Casa des Portal | `casa-des-portal.jpg` | Roof terrace of a whitewashed townhouse inside old city walls, lime-plaster bench, terracotta pots, a cathedral bell tower close by, late afternoon light |
 | Es Varador | `es-varador.jpg` | Low white house on a pine-covered slope above weathered timber boat sheds and a slipway, calm clear water, seen from the shore |

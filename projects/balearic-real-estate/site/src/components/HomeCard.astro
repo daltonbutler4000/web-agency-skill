@@ -22,7 +22,8 @@ const { home, island } = Astro.props;
   .home__photo :global(img) { transition: transform 900ms var(--ease-out); }
   .home:hover .home__photo :global(img) { transform: scale(1.025); }
   /* The name sits on a paper tab cut into the bottom of the photograph. */
-  .home__name { position: relative; margin: -0.72em 0 var(--s4); padding: 0.2em 0.55em 0.06em 0; max-width: 94%; background: var(--chalk); font: 300 italic var(--step-3)/1 var(--serif); letter-spacing: -0.02em; text-wrap: balance; }
+  /* Sized so the longest name holds one line in every column layout; the tab shrink-wraps its text. */
+  .home__name { position: relative; width: fit-content; max-width: 100%; margin: -0.9em 0 var(--s4); padding: 0.36em 0.6em 0.08em 0; background: var(--chalk); font: 300 italic clamp(1.75rem, 2.5vw, 2.5rem)/1 var(--serif); letter-spacing: -0.02em; }
   .home__place { color: var(--terracotta); margin-bottom: var(--s3); }
   .home__line { font: 400 var(--step-1)/1.45 var(--serif); margin-bottom: var(--s4); max-width: 26rem; text-wrap: pretty; }
   .home__facts { width: 100%; display: flex; justify-content: space-between; gap: var(--s4); flex-wrap: wrap; padding-top: var(--s3); border-top: 1px solid var(--line); font-size: var(--step--1); color: var(--stone); font-variant-numeric: lining-nums tabular-nums; }

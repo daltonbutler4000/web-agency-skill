@@ -19,6 +19,7 @@
   --ink: #2A211B;        /* text: warm brown-black */
   --stone: #665C51;      /* secondary text on chalk and sand */
   --line: #D5C9B4;
+  --field-line: #77695A; /* control borders: 3:1 or better on chalk and sand */
   --on-terracotta: #FBF4E8;
   --error: #8C2A14;
 

@@ -16,6 +16,8 @@ photographs credited; form sends nothing.
 
 Memorable moment: each home's italic name sitting on a paper tab cut into its photograph.
 
+Intentional exceptions: the two island photographs are 3:2 landscape (a place, not a house) with the island name on a tab and a place caption beside it; every other photograph is 4:5.
+
 Unresolved: final photographs for the six homes (stand-ins now; generation prompts in
 `agency/06-content.md`).
 
@@ -35,7 +37,7 @@ its houses and the islands, and enquires privately about one home or with a gene
 
 FIRST VIEWPORT: Split. Left on chalk: headline "Houses on the sunlit side of two islands." at
 about 88px with "sunlit side" in italic, a two-sentence statement, "Enquire privately" and "See
-the six homes". Right on sand: one 4:5 framed photograph of a limewashed wall with a vertical
+the six homes". Right on sand: one 4:5 framed photograph of a sunlit limewashed house front with a vertical
 italic caption beside it and a split caption beneath. Header above with wordmark, descriptor,
 anchors and the enquiry action.
 

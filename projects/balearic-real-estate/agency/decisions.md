@@ -34,3 +34,14 @@
   build, critique and polish. Reason: Taste Skill house rules conflict with the approved direction.
 - **2026-11-23** Carried into the build from the design hook: test a chalkier ground against
   limewash; remove the floating label above the headline; check title-tab padding.
+- **2026-11-23** Imagery changed: designer declined Figma AI image generation ("No, use
+  stand-ins"). The page ships with eleven Wikimedia Commons stand-ins, credited in the footer
+  and stated beneath the homes; generation prompts are in `06-content.md`.
+- **2026-11-23** Stack: Astro 5, plain CSS tokens, self-hosted variable fonts, `sharp` for
+  responsive images. No CMS, no client framework; one small inline script for the form.
+- **2026-11-23** Build decisions: homes grouped by island; "How we work" is the one
+  terracotta section; ground moved from limewash `#F6F1E7` to chalk `#F5F2EA` (designer to
+  confirm, comparison in `shots-wip/ground-compare.jpg`); descriptor moved into the header so
+  no label floats above the headline; island photographs are 3:2 by exception.
+- **2026-11-23** Finish review (design lead's independent reviewer): disposition "fix", eight
+  material fixes, all applied in one batch; verdict round requested.

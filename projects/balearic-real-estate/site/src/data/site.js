@@ -39,8 +39,8 @@ export const islands = [
         facts: '3 bedrooms · 240 m² · roof terrace',
         price: 'Guide €2.8m',
         photo: casaDesPortal,
-        alt: 'Whitewashed townhouses and a small belfry around a quiet square in the old town',
-        position: '0% 0%',
+        alt: 'A thick whitewashed wall with a deep arched doorway and worn stone steps',
+        position: '0% 50%',
       },
       {
         id: 'es-varador',
@@ -117,9 +117,9 @@ export const steps = [
 
 // Stand-in photographs from Wikimedia Commons. They show real public places, not the homes.
 export const credits = [
+  ['Carrer des Portal Nou, Ibiza', 'Sara Suñé', 'CC BY 2.0', 'https://commons.wikimedia.org/wiki/File:Carrer_des_Portal_Nou,_Ibiza_(4020736786).jpg'],
   ['Limewashed wall, Santa Eulària des Riu', 'Gerda Arendt', 'CC0', 'https://commons.wikimedia.org/wiki/File:Entranca_to_Santa_Eul%C3%A0ria_des_Riu,_Ibiza.jpg'],
   ['House and garden, Balàfia', 'Gerda Arendt', 'CC0', 'https://commons.wikimedia.org/wiki/File:House_and_garden_with_dragon_tree,_Bal%C3%A0fia,_Ibiza.jpg'],
-  ['Dalt Vila', 'Nicolas Vigier', 'CC0', 'https://commons.wikimedia.org/wiki/File:Dalt_Vila_(50600584928).jpg'],
   ['Port de Porroig', 'Jorge Cancela', 'CC BY 2.0', 'https://commons.wikimedia.org/wiki/File:Port_de_Porroig,_Eivissa.jpg'],
   ['House in Valldemossa', 'Malopez 21', 'CC BY-SA 4.0', 'https://commons.wikimedia.org/wiki/File:Valldemossa,_casa,_01.jpg'],
   ['Finca Balitx d’Avall', 'Rosa-Maria Rinkl', 'CC BY-SA 4.0', 'https://commons.wikimedia.org/wiki/File:Finca_Balitx_d%C2%B4Avall.jpg'],
