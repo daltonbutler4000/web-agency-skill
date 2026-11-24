@@ -11,6 +11,10 @@ They must be genuinely different answers to the brief, not three tints of one id
 spread: one closest to the designer's stated favourites, one that pushes further, one that takes
 a different route to the same goal. Each traces back to named references and stated principles.
 
+To sharpen the vocabulary of a direction, or to check that the three really differ, the style
+and company DESIGN.md collections in [inspiration-sources.md](inspiration-sources.md) are
+available. They inform a direction; they never replace the board's inspected references.
+
 For each direction give:
 
 - **Name and idea** in one sentence.

@@ -1,7 +1,7 @@
 ---
 name: web-agency
 description: Personal digital-agency workflow for websites. Use to start, redesign, or build a website end to end (discovery, visual research, strategy, art direction, design, development, content, motion, critique, QA, launch), or to resume one that has an `agency/` folder. Coordinates specialist skills (impeccable, design-taste-frontend, visual-direction-research, Figma) instead of duplicating them.
-argument-hint: "[new | redesign | figma | resume | status | <stage>] [brief, URL or Figma link]"
+argument-hint: "[new | redesign | figma | inspire | resume | status | <stage>] [brief, URL or Figma link]"
 allowed-tools: Read(~/.claude/skills/web-agency/**)
 ---
 
@@ -105,6 +105,7 @@ finishes or is blocked: current stage, mode, design lead, last approval, next ac
 ## Arguments
 
 `new <brief>` start at Discovery · `redesign <url or path>` audit first, then Discovery ·
-`figma <link>` Mode B · `resume` / `status` read STATUS.md · a stage name (`research`, `qa`, …)
+`figma <link>` Mode B · `inspire <topic>` quick ideas from
+[references/inspiration-sources.md](references/inspiration-sources.md), no stages · `resume` / `status` read STATUS.md · a stage name (`research`, `qa`, …)
 jumps to that stage if its inputs exist, otherwise say what is missing. With no argument, check
 for `agency/STATUS.md`, then ask what the project is.

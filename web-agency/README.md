@@ -36,6 +36,7 @@ Later sessions: `/web-agency resume` (reads `agency/STATUS.md`), or jump to a st
 | `SKILL.md` | Modes, stage table, rules, checkpoints | The process itself changes |
 | `references/preferences.md` | Your global preferences, confirmed vs unconfirmed | Your taste or defaults change. No client data here. |
 | `references/specialists.md` | Which skill does what, and fallbacks | You add, remove or rename a specialist |
+| `references/inspiration-sources.md` | Refero, UI Skills design.md, designmd.app: what each is for and how to reach it | You add or drop an inspiration source |
 | `references/workflow.md`, `discovery.md`, `research.md`, `art-direction.md`, `build-and-motion.md`, `quality-launch.md` | One stage each | That stage needs different steps or checklists |
 | `scripts/capture.cjs`, `scripts/build-board.cjs`, `assets/reference-board.html` | Screenshot capture and the board | The board needs to look or behave differently |
 

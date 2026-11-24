@@ -42,6 +42,8 @@ requirements below to the request. If it is not installed, do the same steps you
    which usually load normally. Do not present a gallery listing you could not open as inspected.
 3. **Longlist, then curate** to roughly 8–12 references that differ from each other. Fewer strong
    references beat a padded list. Include at least three from outside the client's industry.
+   For product-UI patterns and flows (dashboards, onboarding, pricing, checkout), Refero is an
+   approved source; see [inspiration-sources.md](inspiration-sources.md) for access and limits.
 4. **Inspect each one** in a browser: home plus at least one inner page, desktop and mobile width.
    Note hover, scroll and transition behaviour only where you actually observed it.
 5. **Capture** with `node <skill-dir>/scripts/capture.cjs --out agency/02-research <urls…>`
