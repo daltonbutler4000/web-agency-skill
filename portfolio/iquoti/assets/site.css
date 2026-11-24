@@ -165,7 +165,7 @@ img { backface-visibility: hidden; transform: translateZ(0px); }
 
 html { font-size: 1px; }
 
-body { font-family: "Inter", "Helvetica Neue", sans-serif; font-style: normal; font-weight: normal; font-size: 16rem; line-height: 1.3; color: var(--gray-color); -webkit-font-smoothing: antialiased; }
+body { font-family: "Graphik", "Helvetica Neue", sans-serif; font-style: normal; font-weight: normal; font-size: 16rem; line-height: 1.3; color: var(--gray-color); -webkit-font-smoothing: antialiased; }
 
 h1, h2 { font-weight: 600; }
 
@@ -805,7 +805,7 @@ li.category-icon.vehicle-rentals::before { background-image: url("../assets/vehi
   .mobile-menu-open .nav-link::after { top: 6px; }
 }
 
-.mobile-menu { width: 350px; display: none; visibility: hidden; transition: 0.2s; border-radius: 0px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px; position: fixed; top: 0px; right: 0px; left: auto; height: 100%; z-index: 1200; background-color: rgb(255, 255, 255); overflow: hidden auto; transform: translateX(100%); font-family: "Inter"; }
+.mobile-menu { width: 350px; display: none; visibility: hidden; transition: 0.2s; border-radius: 0px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px; position: fixed; top: 0px; right: 0px; left: auto; height: 100%; z-index: 1200; background-color: rgb(255, 255, 255); overflow: hidden auto; transform: translateX(100%); font-family: "Graphik"; }
 
 .mobile-menu > header { padding: 20px; }
 
@@ -829,7 +829,7 @@ li.category-icon.vehicle-rentals::before { background-image: url("../assets/vehi
 
 .mobile-menu #initial #search-form-mobile { position: relative; z-index: 20; }
 
-.mobile-menu #initial #search-form-mobile #autocomplete-mobile { position: absolute; top: 0px; z-index: 0; color: rgb(204, 204, 204); font-style: normal; font-weight: normal; -webkit-font-smoothing: antialiased; font-family: "Inter", "Helvetica Neue", sans-serif; display: inline-block; padding-left: 60px; }
+.mobile-menu #initial #search-form-mobile #autocomplete-mobile { position: absolute; top: 0px; z-index: 0; color: rgb(204, 204, 204); font-style: normal; font-weight: normal; -webkit-font-smoothing: antialiased; font-family: "Graphik", "Helvetica Neue", sans-serif; display: inline-block; padding-left: 60px; }
 
 .mobile-menu #initial #search-form-mobile #services-mobile { width: 100%; position: relative; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; background: transparent; display: inline-block; padding-left: 60px; }
 
@@ -845,7 +845,7 @@ li.category-icon.vehicle-rentals::before { background-image: url("../assets/vehi
 
 .mobile-menu .currentMenu-wrapper { height: 20px; width: 100%; display: flex; -webkit-box-align: center; align-items: center; }
 
-.mobile-menu #currentMenu { color: rgb(80, 119, 221); font-family: "Inter"; display: none; font-weight: 600; font-size: 16rem; }
+.mobile-menu #currentMenu { color: rgb(80, 119, 221); font-family: "Graphik"; display: none; font-weight: 600; font-size: 16rem; }
 
 .mobile-menu #currentMenu.active { display: inline-block; padding-left: 60px; line-height: 45px; }
 
@@ -863,7 +863,7 @@ li.category-icon.vehicle-rentals::before { background-image: url("../assets/vehi
 
 .mobile-menu .menu { overflow: hidden auto; margin: 0px; position: absolute; inset: 63px -100% 0px 100%; transition: right 0.2s; background: rgb(255, 255, 255); }
 
-.mobile-menu .menu ul { margin-top: 0px; margin-bottom: 0px; font-size: 16px; font-family: "Inter"; }
+.mobile-menu .menu ul { margin-top: 0px; margin-bottom: 0px; font-size: 16px; font-family: "Graphik"; }
 
 .mobile-menu .menu.active { left: 0px; transition: left 0.2s; right: 0%; width: 100%; }
 
@@ -1019,7 +1019,7 @@ body { height: 100%; }
 
 #search-form.active #services { border-bottom-left-radius: 0px; border-bottom-color: rgb(255, 255, 255); }
 
-#search-form #autocomplete { position: absolute; z-index: 0; color: rgb(204, 204, 204); font-style: normal; font-weight: normal; -webkit-font-smoothing: antialiased; font-family: "Inter", "Helvetica Neue", sans-serif; left: 19px; height: 57px; line-height: 57px; font-size: 13px; }
+#search-form #autocomplete { position: absolute; z-index: 0; color: rgb(204, 204, 204); font-style: normal; font-weight: normal; -webkit-font-smoothing: antialiased; font-family: "Graphik", "Helvetica Neue", sans-serif; left: 19px; height: 57px; line-height: 57px; font-size: 13px; }
 
 @media screen and (min-width: 768px) {
   #search-form #autocomplete { font-size: 18px; line-height: 27.9px; left: 39px; top: 26px; }

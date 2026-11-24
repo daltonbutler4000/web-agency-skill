@@ -1,6 +1,6 @@
 /* Inner pages (Services, About, Work), rebuilt from the original Sketch designs */
 .rf-page { max-width: 966px; margin: 0 auto; padding: 90px 24px 0; color: #4a4747; }
-.rf-page h1 { font-family: "Inter", sans-serif; font-size: 37px; line-height: 48px; font-weight: 700; color: #212121; letter-spacing: -0.5px; margin: 0 0 18px; }
+.rf-page h1 { font-family: "Aktiv Grotesk", sans-serif; font-size: 37px; line-height: 48px; font-weight: 700; color: #212121; letter-spacing: -0.5px; margin: 0 0 18px; }
 .rf-page p { font-size: 17px; line-height: 29px; margin: 0 0 29px; }
 .rf-intro { max-width: 640px; padding-bottom: 40px; }
 .rf-phase { display: grid; grid-template-columns: minmax(0, 392px) minmax(0, 1fr); gap: 20px 60px; align-items: center; padding: 70px 0; border-bottom: 1px solid #e6e6e6; }
@@ -9,7 +9,7 @@
 .rf-phase--flip .rf-phase__img { order: -1; }
 .rf-phase__img { text-align: center; }
 .rf-phase__img img { max-width: 100%; height: auto; }
-.rf-phase h2 { font-family: "Inter", sans-serif; font-size: 27px; line-height: 31px; font-weight: 700; color: #212121; text-align: left; padding: 0; margin: 0 0 14px; max-width: none; }
+.rf-phase h2 { font-family: "Aktiv Grotesk", sans-serif; font-size: 27px; line-height: 31px; font-weight: 700; color: #212121; text-align: left; padding: 0; margin: 0 0 14px; max-width: none; }
 .rf-phase .rf-phase__num { color: #f15c5c; margin: 0 0 4px; }
 .rf-phase__text p:last-child { margin-bottom: 0; }
 .rf-quote { text-align: center; padding: 100px 0 110px; max-width: 790px; margin: 0 auto; }
@@ -21,7 +21,7 @@
 .rf-team { display: grid; grid-template-columns: 1fr 1fr; column-gap: 60px; }
 .rf-member { max-width: 380px; margin-bottom: 50px; }
 .rf-member img { display: block; width: 100%; height: auto; margin-bottom: 38px; }
-.rf-member h2 { font-family: "Inter", sans-serif; font-size: 17px; line-height: 29px; font-weight: 700; color: #4a4747; text-align: left; padding: 0; margin: 0; }
+.rf-member h2 { font-family: "Aktiv Grotesk", sans-serif; font-size: 17px; line-height: 29px; font-weight: 700; color: #4a4747; text-align: left; padding: 0; margin: 0; }
 .rf-member p { max-width: 290px; margin: 0; }
 .rf-member .rf-member__role { color: #f15c5c; font-style: italic; }
 .rf-member.m1 { margin-top: -90px; }
