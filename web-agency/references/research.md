@@ -34,25 +34,30 @@ requirements below to the request. If it is not installed, do the same steps you
 1. **Search axes from the brief:** the client's industry; two or three adjacent industries with
    the same kind of content or audience; and pure craft (typography-led, image-led, editorial,
    motion-led) regardless of industry.
-2. **Sources:** Awwwards, SiteInspire, Godly, Land-book, plus other curated galleries, agency
-   case studies and live brand sites found through search. Not Mobbin.
+2. **Start with the designer's own bookmarks.** [bookmarks.md](bookmarks.md) lists about 130
+   sites they saved, tagged by sector and first-screen character. Shortlist the ones that fit the
+   brief and re-open each before using it. Then widen the search with the sources below, so the
+   board is never only bookmarks.
+3. **Sources:** Awwwards, SiteInspire, Godly, Land-book, plus other curated galleries, agency
+   case studies and live brand sites found through search. Mobbin's public pages may be
+   browsed for app screens; do not sign in to it or install its connector.
    The galleries often refuse automated or cloud browsers (HTTP 403/429, reset connections).
    That is expected: use web search to find what they feature (for example
    `site:awwwards.com <query>`, `site:siteinspire.com <query>`), then open the original sites,
    which usually load normally. Do not present a gallery listing you could not open as inspected.
-3. **Longlist, then curate** to roughly 8–12 references that differ from each other. Fewer strong
+4. **Longlist, then curate** to roughly 8–12 references that differ from each other. Fewer strong
    references beat a padded list. Include at least three from outside the client's industry.
    For product-UI patterns and flows (dashboards, onboarding, pricing, checkout), Refero is an
    approved source; see [inspiration-sources.md](inspiration-sources.md) for access and limits.
-4. **Inspect each one** in a browser: home plus at least one inner page, desktop and mobile width.
+5. **Inspect each one** in a browser: home plus at least one inner page, desktop and mobile width.
    Note hover, scroll and transition behaviour only where you actually observed it.
-5. **Capture** with `node <skill-dir>/scripts/capture.cjs --out agency/02-research <urls…>`
+6. **Capture** with `node <skill-dir>/scripts/capture.cjs --out agency/02-research <urls…>`
    (writes `shots/` and `references.json`). Open the saved images and discard any that show a
    loader, cookie banner or broken layout; recapture or mark as failed.
-6. **Evaluate each reference** on: typography, imagery, composition and layout, colour,
+7. **Evaluate each reference** on: typography, imagery, composition and layout, colour,
    interaction, motion. For each, state the *principle* worth taking and what would not transfer
    (for example, "depends on commissioned photography the client does not have").
-7. **Group** the references into three or four candidate directions, each with a short name and
+8. **Group** the references into three or four candidate directions, each with a short name and
    one sentence on the idea behind it.
 
 ## The reference board

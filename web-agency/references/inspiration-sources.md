@@ -78,6 +78,6 @@ don'ts. Much of the descriptive text is in Portuguese.
 - **The honesty rules in research.md apply.** Cite only what you opened this session, link the
   original, and say plainly when a login wall or a blocked page stopped you.
 - **Quick inspiration requests.** When the designer just wants ideas outside a project, skip the
-  stages: ask what the thing is in one question if it is unclear, pull four to eight items from
-  the fitting source, and show each with its link, one line on what is worth taking, and one on
+  stages: ask what the thing is in one question if it is unclear, pull four to eight items,
+  starting with the designer's own [bookmarks.md](bookmarks.md) and then the fitting source, and show each with its link, one line on what is worth taking, and one on
   what would not transfer. Offer the full research stage only if they want to go further.
