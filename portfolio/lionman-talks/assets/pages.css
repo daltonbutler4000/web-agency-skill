@@ -1,0 +1,7 @@
+/* Event pages, rebuilt from the original Sketch design on top of the theme's own single-event styles */
+.site-main-single { background: #fff; }
+.single-lionman_events .site-main-single > .wrapper aside #map_canvas { background: #fafaf7 url("venue-map.jpg") center / cover no-repeat; }
+.single-lionman_events .site-main-single > .wrapper aside .professor-details img { width: 100%; height: auto; }
+.single-lionman_events .site-main-single > .wrapper .lm-schedule { font-family: "PT Serif", serif; font-weight: 400; font-size: 1.625rem; color: #494949; margin: 40px 0 16px; }
+.single-lionman_events .site-main-single > .wrapper article p:first-child:first-of-type::first-letter { font-family: "PT Serif", serif; line-height: 1; }
+.featured-event .featured-column-left .buy-tickets-header button { border: 0; cursor: pointer; }
