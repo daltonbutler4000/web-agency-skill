@@ -1,0 +1,10 @@
+/* Repairs for assets and behaviour that were not preserved in the archive */
+
+.wow { visibility: hidden; }
+.wow.animated { visibility: visible; animation-duration: 0.8s; animation-fill-mode: both; }
+/* The parallax photo between "skills" and the case studies (Untitled-1.png) was never archived */
+.skills__section-img-wrap { display: none; }
+.skills { padding-bottom: 80px; }
+#mySidenav.is-open { width: min(100%, 520px); }
+#mySidenav.is-open #slideout_inner { right: 0; }
+.open-contact-btn, .closebtn { cursor: pointer; }
