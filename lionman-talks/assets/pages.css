@@ -16,7 +16,7 @@
 /* Booking / recording notice (the live site handed these off to Eventbrite and YouTube) */
 .lm-modal { position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(20,15,11,.82); }
 .lm-modal.is-open { display: flex; }
-.lm-modal__box { position: relative; width: 100%; max-width: 560px; background: #fff; color: #494949; padding: 48px 48px 44px; font-family: "Lato", sans-serif; }
+.lm-modal__box { position: relative; width: 100%; max-width: 560px; background: #fff; color: #494949; padding: 48px 48px 44px; font-family: "Gill Sans Nova", sans-serif; }
 .lm-modal__box h3 { font-family: "PT Serif", serif; font-weight: 400; font-size: 1.6875rem; color: #140f0b; margin: 0 0 14px; }
 .lm-modal__box p { font-size: 1.0625rem; line-height: 28px; margin: 0 0 26px; }
 .lm-modal__box .lm-modal__ok { background: #f7b244; color: #140f0b; border: 0; padding: 13px 36px; font-size: 1.125rem; cursor: pointer; }
