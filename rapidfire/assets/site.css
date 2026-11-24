@@ -154,13 +154,13 @@ body .is-layout-grid { display: grid; }
 
 /* inline styles */
 
-.tk-"Inter", h1, h2, h3, h4, h5, h6, p { font-family: "Inter", sans-serif; }
+.tk-"Aktiv Grotesk", h1, h2, h3, h4, h5, h6, p { font-family: "Aktiv Grotesk", sans-serif; }
 
-.tk-"Inter" { font-family: "Inter", sans-serif; }
+.tk-"Aktiv Grotesk" { font-family: "Aktiv Grotesk", sans-serif; }
 
-.tk-"Inter" { font-family: "Inter", sans-serif; }
+.tk-"Aktiv Grotesk" { font-family: "Aktiv Grotesk", sans-serif; }
 
-.tk-"Inter" { font-family: "Inter", sans-serif; }
+.tk-"Aktiv Grotesk" { font-family: "Aktiv Grotesk", sans-serif; }
 
 /* inline styles */
 
@@ -4307,7 +4307,7 @@ td, th { padding: 0px; }
 
 ul { padding-inline-start: 0px; }
 
-body, button, input, select, optgroup, textarea { color: rgb(74, 71, 71); font-family: "Inter"; font-size: 1.00028rem; line-height: 1.67; }
+body, button, input, select, optgroup, textarea { color: rgb(74, 71, 71); font-family: "Aktiv Grotesk"; font-size: 1.00028rem; line-height: 1.67; }
 
 @media (min-width: 600px) {
   body, button, input, select, optgroup, textarea { line-height: 1.725; font-size: 1.063rem; }
@@ -6742,7 +6742,7 @@ embed, iframe, object { max-width: 100%; }
 
 .welcome__title { max-width: 480px; width: 100%; }
 
-.welcome__title h1 { margin-top: 90px; margin-bottom: 15px; font-family: "Inter"; font-size: 74px; font-weight: 600; line-height: 75px; letter-spacing: -4px; }
+.welcome__title h1 { margin-top: 90px; margin-bottom: 15px; font-family: "Aktiv Grotesk"; font-size: 74px; font-weight: 600; line-height: 75px; letter-spacing: -4px; }
 
 .welcome__desc { max-width: 480px; width: 100%; }
 
@@ -6874,15 +6874,15 @@ embed, iframe, object { max-width: 100%; }
 
 .services-page__header { max-width: 970px; margin: 0px auto; }
 
-.services-page__title h2 { font-family: "Inter"; font-size: 37px; line-height: 48px; color: rgb(33, 33, 33); margin-top: 145px; margin-bottom: 15px; }
+.services-page__title h2 { font-family: "Aktiv Grotesk"; font-size: 37px; line-height: 48px; color: rgb(33, 33, 33); margin-top: 145px; margin-bottom: 15px; }
 
-.services-page__desc { font: 400 17px / 29px "Inter"; color: rgb(74, 71, 71); max-width: 635px; margin-bottom: 100px; }
+.services-page__desc { font: 400 17px / 29px "Aktiv Grotesk"; color: rgb(74, 71, 71); max-width: 635px; margin-bottom: 100px; }
 
 .services-page__item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; border-bottom: 1px solid rgb(216, 216, 216); padding-bottom: 100px; }
 
 .services-page__item.reverse { flex-direction: row-reverse; }
 
-.services-page__item-desc { width: calc(50% - 20px); font: 17px / 29px "Inter"; color: rgb(74, 71, 71); }
+.services-page__item-desc { width: calc(50% - 20px); font: 17px / 29px "Aktiv Grotesk"; color: rgb(74, 71, 71); }
 
 .item-desc-inner { max-width: 400px; }
 
@@ -6896,9 +6896,9 @@ embed, iframe, object { max-width: 100%; }
 
 .services-page__item-elements ul { margin: 0px; list-style-type: none; }
 
-.services-page__item-elements ul li { font: 600 17px / 29px "Inter"; color: rgb(74, 71, 71); }
+.services-page__item-elements ul li { font: 600 17px / 29px "Aktiv Grotesk"; color: rgb(74, 71, 71); }
 
-.rp-btn.yellow a { background-color: rgb(251, 195, 58); color: rgb(45, 42, 42); font: 600 17px "Inter"; }
+.rp-btn.yellow a { background-color: rgb(251, 195, 58); color: rgb(45, 42, 42); font: 600 17px "Aktiv Grotesk"; }
 
 .services-page__list { max-width: 970px; margin: 0px auto 100px; }
 
@@ -6934,9 +6934,9 @@ embed, iframe, object { max-width: 100%; }
 
 .about-page__item:nth-child(4) { margin-top: -65px; }
 
-.about-page__title h2 { font: 600 37px "Inter"; color: rgb(33, 33, 33); margin: 50px 0px 15px; }
+.about-page__title h2 { font: 600 37px "Aktiv Grotesk"; color: rgb(33, 33, 33); margin: 50px 0px 15px; }
 
-.about-page__item p { font: 17px / 29px "Inter"; margin: 5px 0px; }
+.about-page__item p { font: 17px / 29px "Aktiv Grotesk"; margin: 5px 0px; }
 
 .about-page__item-img { margin-bottom: 25px; }
 
