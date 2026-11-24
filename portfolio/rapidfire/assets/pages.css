@@ -41,7 +41,7 @@
 /* Work dropdown in the header */
 .site-header .menu-item-has-children { position: relative; }
 .site-header .menu-item-has-children:hover > .sub-menu,
-.site-header .menu-item-has-children:focus-within > .sub-menu { display: block; transform: translateY(0); opacity: 1 !important; z-index: 20 !important; }
+.site-header .menu-item-has-children:focus-within > .sub-menu { display: block !important; transform: translateY(0); opacity: 1 !important; z-index: 20 !important; }
 
 @media (max-width: 767px) {
   .rf-page { padding-top: 50px; }
