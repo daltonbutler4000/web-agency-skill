@@ -1,0 +1,24 @@
+/* Event pages, rebuilt from the original Sketch design on top of the theme's own single-event styles */
+.site-main-single { background: #fff; }
+.single-lionman_events .site-main-single > .wrapper aside #map_canvas { background: #fafaf7 url("venue-map.jpg") center / cover no-repeat; }
+.single-lionman_events .site-main-single > .wrapper aside .professor-details img { width: 100%; height: auto; }
+.single-lionman_events .site-main-single > .wrapper .lm-schedule { font-family: "PT Serif", serif; font-weight: 400; font-size: 1.625rem; color: #494949; margin: 40px 0 16px; }
+.single-lionman_events .site-main-single > .wrapper article p:first-child:first-of-type::first-letter { font-family: "PT Serif", serif; line-height: 1; }
+.featured-event .featured-column-left .buy-tickets-header button { border: 0; cursor: pointer; }
+
+/* Recorded talks: video poster in the hero */
+.featured-event .featured-column-right .video-player .lm-video-poster { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; cursor: pointer; background: #000 center / cover no-repeat; }
+.lm-play { position: absolute; top: 50%; left: 50%; width: 122px; height: 122px; margin: -61px 0 0 -61px; border-radius: 50%; background: rgba(0,0,0,.76); display: flex; align-items: center; justify-content: center; transition: background .2s ease-in-out; }
+.lm-play svg { margin-left: 8px; }
+.lm-video-poster:hover .lm-play { background: rgba(247,178,68,.95); }
+.single-lionman_events .site-main-single > .wrapper aside .professor-description h4:only-child { margin-bottom: 0; }
+
+/* Booking / recording notice (the live site handed these off to Eventbrite and YouTube) */
+.lm-modal { position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(20,15,11,.82); }
+.lm-modal.is-open { display: flex; }
+.lm-modal__box { position: relative; width: 100%; max-width: 560px; background: #fff; color: #494949; padding: 48px 48px 44px; font-family: "Lato", sans-serif; }
+.lm-modal__box h3 { font-family: "PT Serif", serif; font-weight: 400; font-size: 1.6875rem; color: #140f0b; margin: 0 0 14px; }
+.lm-modal__box p { font-size: 1.0625rem; line-height: 28px; margin: 0 0 26px; }
+.lm-modal__box .lm-modal__ok { background: #f7b244; color: #140f0b; border: 0; padding: 13px 36px; font-size: 1.125rem; cursor: pointer; }
+.lm-modal__close { position: absolute; top: 12px; right: 16px; background: none; border: 0; font-size: 30px; line-height: 1; color: #857c75; cursor: pointer; }
+@media (max-width: 600px) { .lm-modal__box { padding: 40px 24px 30px; } .lm-play { width: 72px; height: 72px; margin: -36px 0 0 -36px; } .lm-play svg { width: 20px; margin-left: 5px; } }

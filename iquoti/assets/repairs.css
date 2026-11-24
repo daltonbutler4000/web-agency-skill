@@ -1,0 +1,5 @@
+/* Repairs for assets and behaviour that were not preserved in the archive */
+
+/* Section photos: originals (clients-bg.jpg, professionals-bg.jpg) were never archived; using photos from the carousel */
+.clients-section .bg-img { background-image: url("life-coach.jpg"); background-position: center; }
+.professionals-section .bg-img { background-image: url("carpenters.jpg"); background-position: center; }

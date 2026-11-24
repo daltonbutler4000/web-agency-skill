@@ -1,0 +1,64 @@
+/* Inner pages (Services, About, Work), rebuilt from the original Sketch designs */
+.rf-page { max-width: 966px; margin: 0 auto; padding: 90px 24px 0; color: #4a4747; }
+.rf-page h1 { font-family: "Inter", sans-serif; font-size: 37px; line-height: 48px; font-weight: 700; color: #212121; letter-spacing: -0.5px; margin: 0 0 18px; }
+.rf-page p { font-size: 17px; line-height: 29px; margin: 0 0 29px; }
+.rf-intro { max-width: 640px; padding-bottom: 40px; }
+.rf-phase { display: grid; grid-template-columns: minmax(0, 392px) minmax(0, 1fr); gap: 20px 60px; align-items: center; padding: 70px 0; border-bottom: 1px solid #e6e6e6; }
+.rf-phase:first-of-type { padding-top: 10px; }
+.rf-phase--flip { grid-template-columns: minmax(0, 1fr) minmax(0, 403px); }
+.rf-phase--flip .rf-phase__img { order: -1; }
+.rf-phase__img { text-align: center; }
+.rf-phase__img img { max-width: 100%; height: auto; }
+.rf-phase h2 { font-family: "Inter", sans-serif; font-size: 27px; line-height: 31px; font-weight: 700; color: #212121; text-align: left; padding: 0; margin: 0 0 14px; max-width: none; }
+.rf-phase .rf-phase__num { color: #f15c5c; margin: 0 0 4px; }
+.rf-phase__text p:last-child { margin-bottom: 0; }
+.rf-quote { text-align: center; padding: 100px 0 110px; max-width: 790px; margin: 0 auto; }
+.rf-quote blockquote { font-size: 22px; line-height: 35px; margin: 24px 0 0; color: #4a4747; }
+.rf-quote cite { display: block; font-size: 22px; line-height: 35px; color: #9e9e9e; margin-bottom: 30px; }
+
+.rf-about { padding-bottom: 110px; }
+.rf-about__intro { max-width: 450px; margin-left: 49%; }
+.rf-team { display: grid; grid-template-columns: 1fr 1fr; column-gap: 60px; }
+.rf-member { max-width: 380px; margin-bottom: 50px; }
+.rf-member img { display: block; width: 100%; height: auto; margin-bottom: 38px; }
+.rf-member h2 { font-family: "Inter", sans-serif; font-size: 17px; line-height: 29px; font-weight: 700; color: #4a4747; text-align: left; padding: 0; margin: 0; }
+.rf-member p { max-width: 290px; margin: 0; }
+.rf-member .rf-member__role { color: #f15c5c; font-style: italic; }
+.rf-member.m1 { margin-top: -90px; }
+.rf-member.m2 { margin-top: 225px; justify-self: end; }
+.rf-member.m3 { margin-top: -140px; }
+.rf-member.m4 { max-width: 477px; justify-self: end; margin-top: 60px; }
+
+.rf-work { padding-bottom: 60px; }
+.rf-work__intro { max-width: 450px; margin-left: 40%; }
+.rf-work__tags { list-style: none; margin: 0; padding: 0; display: flex; gap: 28px; font-weight: 700; font-size: 17px; color: #2e2e2e; }
+.rf-work__shots { background: #f2f2f2; padding: 50px 24px; text-align: center; }
+.rf-work__shots img { max-width: 857px; width: 100%; height: auto; box-shadow: 0 2px 24px rgba(0,0,0,.08); }
+.rf-work__pager { display: flex; justify-content: center; gap: 30px; padding: 70px 24px; background: #f2f2f2; }
+.rf-work__pager a { width: 290px; max-width: 45%; padding: 28px 10px; text-align: center; background: #f3f3ed; font-weight: 700; font-size: 30px; line-height: 1; color: #272424; letter-spacing: -0.5px; }
+.rf-work__pager a:hover { background: #fbc33a; }
+
+/* Work dropdown in the header */
+.site-header .menu-item-has-children { position: relative; }
+.site-header .menu-item-has-children:hover > .sub-menu,
+.site-header .menu-item-has-children:focus-within > .sub-menu { display: block !important; transform: translateY(0); opacity: 1 !important; z-index: 20 !important; }
+
+@media (max-width: 767px) {
+  .rf-page { padding-top: 50px; }
+  .rf-page h1 { font-size: 30px; line-height: 38px; padding-right: 36px; }
+  .rf-page h1 br { display: none; }
+  .rf-phase, .rf-phase--flip { grid-template-columns: 1fr; padding: 50px 0; }
+  .rf-phase .rf-phase__img { order: -1; }
+  .rf-about__intro, .rf-work__intro { margin-left: 0; }
+  .rf-team { grid-template-columns: 1fr; }
+  .rf-member, .rf-member.m1, .rf-member.m2, .rf-member.m3, .rf-member.m4 { margin-top: 0; justify-self: start; max-width: 100%; }
+  .rf-work__pager a { font-size: 22px; }
+}
+
+/* Case studies with several image strips */
+.rf-work__shots { display: flex; flex-direction: column; align-items: center; gap: 50px; }
+.rf-work__shots img { max-width: 979px; }
+.rf-work__link { color: #f15c5c; font-size: 17px; }
+.rf-work__link:hover { text-decoration: underline; }
+.rf-work__tags { flex-wrap: wrap; row-gap: 6px; }
+.site-header .sub-menu a.rf-nolink { opacity: .4; pointer-events: none; }
