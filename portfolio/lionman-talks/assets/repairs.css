@@ -2,4 +2,4 @@
 
 /* Speaker portraits were hosted on a temporary domain and never archived; showing initials instead */
 .professor-img.is-placeholder { display: flex !important; align-items: center; justify-content: center; background: #2a2420; }
-.professor-img.is-placeholder::after { content: attr(data-initials); color: #f4b13e; font: 400 13px/1 "Lato", sans-serif; letter-spacing: .08em; }
+.professor-img.is-placeholder::after { content: attr(data-initials); color: #f4b13e; font: 400 13px/1 "Gill Sans Nova", sans-serif; letter-spacing: .08em; }
