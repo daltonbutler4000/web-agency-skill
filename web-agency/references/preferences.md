@@ -3,8 +3,8 @@
 Global preferences only. No client, employer or project details belong in this file; those live
 in each project's `agency/` folder. A project's brief and brand always outrank this file.
 
-**Status:** every entry is *stated by the designer when the skill was set up (2026-11-23) and not
-yet confirmed in practice*. The first time one materially affects a decision, check it in one
+**Status:** every entry is *stated by the designer (2026-11-23, stack and motion entries
+2026-11-25) and not yet confirmed in practice*. The first time one materially affects a decision, check it in one
 sentence ("You've said you prefer X; applying that here"). When the designer confirms, corrects
 or adds a preference, offer to update this file, and move confirmed entries under **Confirmed**
 with the date. Never record a preference inferred from a single project.
@@ -21,10 +21,26 @@ with the date. Never record a preference inferred from a single project.
   animation.
 - Researches exceptional websites before committing to an aesthetic.
 
-**Tools and stack**
+**Tools and stack** (detail and selection rules in [stack.md](stack.md))
 - Uses Figma, with growing interest in designing directly in code.
-- Works with Astro, Sanity and Claude Code, and with reusable design systems.
-- Astro is the preferred starting point for content-focused sites; choose per project.
+- Content-led client sites: Astro, TypeScript, Tailwind CSS, React where interaction needs it,
+  shadcn/ui, Sanity, GitHub, Vercel.
+- Web applications: Next.js, React, Tailwind CSS, shadcn/ui, Supabase.
+- These are preferred, not mandatory: choose per project, reuse what a project already has, and
+  never migrate an existing project without approval.
+- Third-party components are always customised to the client's identity. The stack supports the
+  creative direction and does not dictate it.
+
+**Motion** (selection rules in [motion.md](motion.md))
+- Describes the desired experience in plain language and expects the right technology to be
+  chosen without naming a library or a skill.
+- GSAP (ScrollTrigger, SplitText) for scroll-driven and cinematic work; Motion or CSS for
+  component interaction; native CSS for simple states; native scrolling unless Lenis is justified.
+- Premium, purposeful motion; the simplest reliable solution.
+
+**Specialist skills**
+- Wants the relevant specialist applied automatically, and keeps the option to name a skill or a
+  combination when exploring alternative directions.
 
 **Build quality**
 - Responsive, performant, accessible.
@@ -40,7 +56,5 @@ with the date. Never record a preference inferred from a single project.
 
 - Accessibility target (assume WCAG 2.2 AA until told otherwise).
 - Performance budget (assume Core Web Vitals "good" on mobile).
-- Default styling approach (plain CSS with tokens, Tailwind, other).
-- Preferred hosting and deployment.
 - How much motion is "thoughtful" versus too much.
 - Spelling and language defaults for copy.

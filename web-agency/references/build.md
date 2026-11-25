@@ -1,17 +1,20 @@
-# Design, development and motion
+# Design and development
 
 The design lead (see SKILL.md) carries the craft. This file sets the constraints it works within.
+Motion has its own file: [motion.md](motion.md).
 
 ## Choose the stack per project
 
-Use what the project already runs on. For a new site, recommend one and say why:
+Use what the project already runs on. For a new site, recommend a stack from
+[stack.md](stack.md) and say why: Astro-based for content-led sites, Next.js-based for web
+applications, with only the layers the project needs. The same file holds the rules for adding
+any dependency; read it before installing anything.
 
-- **Content-focused site** (marketing, portfolio, editorial, small business): Astro is the
-  default starting point; add a CMS only if someone will edit content.
-- **CMS:** the client's existing one if there is one; Sanity is a known option for structured
+- **CMS:** the client's existing one if there is one; otherwise Sanity when someone will edit
   content. Model content from `03-strategy.md`.
-- **App-like or highly interactive product:** a framework suited to it; do not force Astro.
 - **Existing design system or component library:** build with it, extend it, do not fork it.
+- **Third-party components** (shadcn/ui or any other) are restyled to the project's tokens and
+  the approved direction before they appear on a page.
 
 Record the choice and reason in `decisions.md`. Adding a framework, CMS or hosting platform to an
 existing project, or replacing one, needs approval.
@@ -21,8 +24,9 @@ existing project, or replacing one, needs approval.
 Before building pages, establish and write down (`05-design-system.md`, or `DESIGN.md` if
 Impeccable maintains it):
 
-- **Tokens:** colour, type scale, spacing scale, radii, shadows, breakpoints, motion durations and
-  easings, as CSS custom properties or the stack's equivalent. No one-off values in components
+- **Tokens:** colour, type scale (fluid, with `clamp()`), spacing scale, radii, shadows,
+  breakpoints, motion durations and easings, as CSS custom properties mapped into the Tailwind
+  theme, or the stack's equivalent. No one-off values in components
   without a comment saying why.
 - **Components:** the reusable set the sitemap needs, each with its variants and states (hover,
   focus, active, disabled, loading, error, empty).
@@ -50,29 +54,12 @@ those reviewed before building the remainder.
 - Images: correct dimensions, modern formats, `width`/`height` set, lazy-load below the fold,
   meaningful alt text.
 - Fonts: self-hosted or preloaded where possible, `font-display` set, fallback metrics to limit shift.
-- Ship little JavaScript; a content page should work without it.
+- Ship little JavaScript; a content page should work without it. Hydrate an island only when it
+  needs client state, with the latest `client:*` directive that works.
+- SEO basics are built in, not bolted on: unique titles and descriptions, canonical URLs, Open
+  Graph, sitemap, structured data where relevant, content in the HTML rather than injected late.
 - No secrets in the repository. No analytics or third-party scripts without being asked.
 - Commit in sensible steps. Never push to a client's production branch or deploy without approval.
-
-## Motion
-
-Motion has to earn its place: it directs attention, shows a change of state, or carries the
-brand's character as approved in the art direction. Use `impeccable animate` for the work.
-
-Choosing the tool:
-1. **CSS first:** transitions, keyframes, `@starting-style`, view transitions, scroll-driven
-   animations where support allows. Covers hovers, reveals, state changes and most page polish.
-2. **GSAP with ScrollTrigger** when a sequence needs a timeline, pinning, scrubbing, or
-   coordination across elements that CSS cannot express cleanly.
-3. **A specialised library** (WebGL, Lottie, physics, smooth-scroll) only for a named signature
-   moment in the approved direction. State the size and performance cost and get agreement.
-
-Always:
-- Honour `prefers-reduced-motion`: remove non-essential movement, keep content and function.
-- Animate `transform` and `opacity`; avoid animating layout. No layout shift from entrances.
-- Content is visible and usable if scripts fail or have not loaded yet.
-- Do not hijack scrolling or delay content behind a loader without explicit approval.
-- One or two signature moments per page beat effects on every element.
 
 ## Verify by looking
 

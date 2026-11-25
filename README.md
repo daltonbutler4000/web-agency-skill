@@ -7,5 +7,5 @@ skills. Usage and maintenance: [web-agency/README.md](web-agency/README.md).
 git clone https://github.com/<you>/web-agency-skill && bash web-agency-skill/install.sh
 ```
 
-Contents: `web-agency/` (the skill), `vendor/visual-direction-research/` (unmodified MIT copy
+Contents: `web-agency/` (the skill: process, default stack, motion technique selection, specialist routing), `vendor/visual-direction-research/` (unmodified MIT copy
 from superhero-tech/superhero-skills, see its SOURCE.md), `install.sh`.

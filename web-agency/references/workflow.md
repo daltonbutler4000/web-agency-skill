@@ -50,7 +50,7 @@ No specialist. From the brief and research, write `03-strategy.md`:
 See [art-direction.md](art-direction.md). **Out:** `04-art-direction.md`. **Gate: approval.**
 
 ## 5 · Design and 6 · Development
-See [build-and-motion.md](build-and-motion.md). In code-first projects these overlap: design the
+See [build.md](build.md) and [stack.md](stack.md). In code-first projects these overlap: design the
 system and the key pages in the real stack, get them reviewed, then build the rest.
 
 ## 7 · Content
@@ -63,17 +63,26 @@ written by the designer or client is edited only where asked.
 **Done when** no placeholder text remains, or every remaining placeholder is listed.
 
 ## 8 · Motion
-See [build-and-motion.md](build-and-motion.md).
+See [motion.md](motion.md). **In:** the motion character from the approved direction. The same
+file handles one-off motion requests at any point in a project.
 
 ## 9 · Critique, 10 · QA, 11 · Launch
 See [quality-launch.md](quality-launch.md). **Gates: approval after QA, approval before go-live.**
 
 ## Redesigns and existing sites
 
-1. Audit first (`00-audit.md`): what the stack, CMS and design system are, what works, what
+1. Audit first (`00-audit.md`): what the stack, dependencies, CMS and design system are, what works, what
    is broken, and what the analytics or the designer say about real problems.
 2. In Discovery, establish what must not change (URLs, CMS, integrations, brand elements).
 3. Propose the smallest change that meets the brief. A rebuild or a platform change needs a
    stated reason and explicit approval.
 4. Preserve URLs or plan redirects. Never edit a live site or production CMS content without
    being asked to.
+
+## Direct requests
+
+A request to change one thing ("add subtle parallax to the hero", "tighten the type on the
+services page", "make the footer feel less heavy") is not a project stage. Follow *Direct
+requests* in SKILL.md: read the project's context, route to the right reference and specialist,
+do it, verify it, report briefly. Log it in `decisions.md` only if it adds a dependency or
+departs from the approved direction.

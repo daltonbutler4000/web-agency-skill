@@ -37,7 +37,9 @@ Mark anything not tested as *not tested*, with the reason. Never report a pass y
   visible focus, skip link, heading order, alt text, form labels and errors, colour contrast,
   zoom to 200%, reduced motion. An automated scan is a floor, not proof.
 - **Performance:** production build, mobile profile. Report LCP, CLS, INP or TBT, page weight
-  and request count. Fix oversized images, render-blocking assets and layout shift.
+  and request count. Fix oversized images, render-blocking assets and layout shift. Check what
+  JavaScript each page ships: no unused library, no island hydrated without need, scroll scenes
+  smooth on a mid-range phone profile.
 - **Content and SEO:** no placeholder text, titles and descriptions unique, Open Graph image,
   favicon, sitemap, robots, canonical URLs, structured data where relevant.
 - **Cross-browser:** Chromium is tested here; say plainly that Safari and Firefox need a manual
