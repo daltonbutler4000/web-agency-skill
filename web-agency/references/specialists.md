@@ -18,7 +18,8 @@ instructions take over once invoked; follow them, within the standing rules in S
 | Art direction, a new page or section, a redesign | The project's design lead (`impeccable` or `design-taste-frontend`); `frontend-design` as a second opinion on direction | [art-direction.md](art-direction.md), [build.md](build.md) |
 | Typography, spacing, layout, colour, hierarchy on existing pages | `impeccable` with the matching command (`typeset`, `layout`, `colorize`, `bolder`, `quieter`, `distill`) | [build.md](build.md) |
 | "This looks generic / templated / AI-made" | `impeccable critique`, then the matching fix command; on a Taste-led build, its own checker as well | [quality-launch.md](quality-launch.md) |
-| Animation, parallax, scroll effects, transitions, "make it feel…" | Technique from [motion.md](motion.md); craft from `impeccable animate` (and an animation-specialist skill if one is installed, see below) | [motion.md](motion.md) |
+| Scroll-driven and page-level motion: parallax, storytelling, pinned sections, text reveals, cinematic sequences | Technique from [motion.md](motion.md); craft from `impeccable animate` | [motion.md](motion.md) |
+| Component and interaction motion: menus, hovers and presses, popovers, drawers, toasts, enter and exit, "make it feel…" | Technique from [motion.md](motion.md); craft from Emil Kowalski's skills (below), `impeccable animate` if they are missing | [motion.md](motion.md) |
 | Choosing or adding a framework, styling system, library, CMS or host | none; on a Lumos project, its own project-level skills for import, upgrade and audit jobs | [stack.md](stack.md) |
 | Interface copy, microcopy, errors | `impeccable clarify` | [workflow.md](workflow.md) |
 | Accessibility | `impeccable audit`, then `harden` / `adapt` | [quality-launch.md](quality-launch.md) |
@@ -55,7 +56,7 @@ same section three ways, one per skill".
 | Design, build, refine, critique | `impeccable` | Skill `impeccable` with args `<command> [target]` | `frontend-design` for direction; manual checklists in [quality-launch.md](quality-launch.md) |
 | General visual direction guidance | `frontend-design` | Skill | Proceed from the approved direction |
 | Motion craft: timing, easing, choreography, motion review | `impeccable animate` (its motion reviewer runs on captured motion) | Skill `impeccable` with args `animate [target]` | The rules in [motion.md](motion.md); on a Taste-led build, Taste Skill's own motion reference |
-| Animation specialist (Emil Kowalski's animation guidance) | Not bundled. If a skill whose name or description covers web animation craft appears in the session list, use it alongside `impeccable animate` for component and interaction motion | Skill | `impeccable animate` alone |
+| Component and interaction animation craft | Emil Kowalski's skills (table below) | Skill, by name | `impeccable animate` alone |
 | Accessibility and performance audit | `impeccable audit`; no separate audit skill is bundled | Skill `impeccable` with args `audit [target]` | Manual checks in [quality-launch.md](quality-launch.md); an automated scan (axe, Lighthouse) run through the pre-installed browser is a floor, not proof |
 | Read Figma designs, variables, screenshots | Figma connector (`mcp__Figma__*`) | Follow the connector's own instructions and load the skill it names before reading a design | Ask for exported frames (PNG/PDF) and a token list |
 | Browser capture and testing | Playwright (`require('playwright')`), or an in-app / Chrome browser tool | `node <skill>/scripts/capture.cjs`, or the browser tool | Ask the designer for screenshots; say that visual verification was not done |
@@ -79,6 +80,35 @@ versions, so trust the installed skill over this table.
 
 Use the intensity commands (`bolder`, `quieter`, `overdrive`, `delight`) only when the designer
 asks or the approved direction needs it; they change the look, which is the designer's call.
+
+## Emil Kowalski's animation skills
+
+Installed by `install.sh` from `emilkowalski/skills` (MIT), pinned to a reviewed commit. They
+cover interface motion: easing, duration, springs, interruption, origin, gestures. They do not
+cover GSAP scroll work; that stays with [motion.md](motion.md) and `impeccable animate`.
+
+| Job | Skill |
+|---|---|
+| Build one animation or transition on a component | `animate` |
+| Several elements moving together: staggered lists, hero entrances, view swaps | `choreograph` |
+| Drag, swipe, sheets, drawers | `gestures` |
+| An animation stutters or drops frames | `animation-performance` |
+| Too much motion; tone it down | `remove-animations` |
+| "What could be animated here?" (proposes, does not build) | `find-animation-opportunities` |
+| Audit a codebase's motion and plan fixes (read-only) | `improve-animations` |
+| General interaction polish when nothing narrower fits | `emil-design-eng` |
+| The designer describes an effect without knowing its name | `animation-vocabulary` |
+| Strict review of motion code | `review-animations`: only the designer can start it (`/review-animations`); offer it after a motion-heavy change |
+
+Limits:
+- `pick-ui-library` is installed only because the others link to it. Its library suggestions are
+  that author's defaults for React apps; [stack.md](stack.md) and the project's existing
+  dependencies outrank it, and any new library is still proposed to the designer first.
+- These skills assume React and Motion in places. On an Astro site without React, take the
+  principles (curves, durations, what not to animate) and implement in CSS.
+- One lead per motion task: Emil's skills for component and interaction motion,
+  `impeccable animate` for page-level and scroll-driven motion. Impeccable's motion reviewer may
+  still check the result.
 
 ## Taste Skill limits
 
@@ -106,8 +136,8 @@ asks or the approved direction needs it; they change the look, which is the desi
 - **Mobbin**: not connected. Do not install or sign in to it.
 - **design-ref**: superseded by `visual-direction-research`.
 
-- **Emil Kowalski's animation skill**: not installed, and not added by `install.sh`. Used
-  automatically if the designer installs it. Until then `impeccable animate` covers motion craft.
+- **The rest of Emil Kowalski's repository** (Swift, Expo and Apple-platform skills, `ask-sonner`,
+  `break-ui`, `prototype`, `learn-taste`, `ask-emil`): left out as outside website work.
 
 Do not install any skill, plugin or MCP server on your own. If one would help, say what it is,
 what it needs and the risk, and ask. (Project npm dependencies follow [stack.md](stack.md).)

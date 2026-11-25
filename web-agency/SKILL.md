@@ -1,6 +1,6 @@
 ---
 name: web-agency
-description: Personal digital-agency workflow and coordinator for client websites. Use to start, redesign, or build a website end to end (discovery, visual research, strategy, art direction, design, development, content, motion, critique, QA, launch), to resume one that has an `agency/` folder, and for any design, motion or front-end request on a website project described in plain language ("add subtle parallax to the hero", "make the navigation feel more luxurious", "reveal the headline as I scroll"). Chooses the technology (Astro, Lumos, GSAP, Motion, Sanity, Vercel; Next.js, Tailwind, shadcn/ui and Supabase for apps) and the specialist skill (impeccable, design-taste-frontend, visual-direction-research, frontend-design, Figma) automatically instead of duplicating them.
+description: Personal digital-agency workflow and coordinator for client websites. Use to start, redesign, or build a website end to end (discovery, visual research, strategy, art direction, design, development, content, motion, critique, QA, launch), to resume one that has an `agency/` folder, and for any design, motion or front-end request on a website project described in plain language ("add subtle parallax to the hero", "make the navigation feel more luxurious", "reveal the headline as I scroll"). Chooses the technology (Astro, Lumos, GSAP, Motion, Sanity, Vercel; Next.js, Tailwind, shadcn/ui and Supabase for apps) and the specialist skill (impeccable, design-taste-frontend, visual-direction-research, frontend-design, Emil Kowalski's animation skills, Figma) automatically instead of duplicating them.
 argument-hint: "[new | redesign | figma | resume | status | <stage>] [brief, URL or Figma link]"
 allowed-tools: Read(~/.claude/skills/web-agency/**)
 ---
@@ -76,7 +76,7 @@ the stage you are entering. Load the other references only when their stage star
 | 5 | Design | design lead | [build.md](references/build.md) | Review of key pages |
 | 6 | Development | design lead | [build.md](references/build.md), [stack.md](references/stack.md) | — |
 | 7 | Content | `impeccable clarify` | [workflow.md](references/workflow.md) | Review |
-| 8 | Motion | `impeccable animate` | [motion.md](references/motion.md) | — |
+| 8 | Motion | `impeccable animate`, Emil Kowalski's skills | [motion.md](references/motion.md) | — |
 | 9 | UX/UI critique | `impeccable critique`, `audit` | [quality-launch.md](references/quality-launch.md) | Findings triaged |
 | 10 | QA | browser testing | [quality-launch.md](references/quality-launch.md) | **Approval: final QA** |
 | 11 | Launch | none | [quality-launch.md](references/quality-launch.md) | **Approval: go-live** |

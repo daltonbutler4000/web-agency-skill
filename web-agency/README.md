@@ -73,7 +73,7 @@ without checking what is already there. Details in `references/stack.md`.
 ## Install and update
 
 The source of truth is the Git repository. `bash install.sh` copies the skill into
-`~/.claude/skills/` and installs the two extra specialists.
+`~/.claude/skills/` and installs the extra specialists.
 
 - **Cloud environments:** add this to the environment's setup script (the repository must be
   public for a setup script to clone it):
@@ -89,11 +89,12 @@ The source of truth is the Git repository. `bash install.sh` copies the skill in
 | `visual-direction-research` | Copied into `vendor/`, pinned to a reviewed commit | Re-copy from upstream, review the diff, update `SOURCE.md` |
 | `design-taste-frontend` (Taste Skill) | Cloned by `install.sh`, pinned to tag v2.5.1 and its commit | Review the new release, then change `TASTE_TAG` and `TASTE_COMMIT` in `install.sh` |
 
+| Emil Kowalski's animation skills (`animate`, `choreograph`, `gestures` and eight more) | Fetched by `install.sh` from `emilkowalski/skills`, pinned to a reviewed commit | Review upstream changes, then change `EMIL_COMMIT` in `install.sh` |
 | `frontend-design` | Claude plugin, enabled per account | Plugin directory |
 
 A missing specialist is not an error: the skill says what is missing and uses a fallback.
-Not installed: Emil Kowalski's animation skill (picked up automatically if you add it), Awwwards
-MCP, Mobbin, design-ref. There is no separate accessibility or performance audit skill;
+Not installed: Awwwards MCP, Mobbin, design-ref, and the non-web skills in Emil Kowalski's
+repository. There is no separate accessibility or performance audit skill;
 `impeccable audit` and the QA checklist cover both.
 
 ## Where it is available

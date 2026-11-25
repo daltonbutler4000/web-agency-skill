@@ -6,8 +6,8 @@ bring a recommendation. Never require a specialist skill to be named.
 
 Motion has to earn its place: it directs attention, shows a change of state, or carries the
 brand's character as approved in the art direction. Craft (timing, easing, choreography, review)
-comes from the motion specialist in [specialists.md](specialists.md), normally
-`impeccable animate`. This file decides the *technology* and the non-negotiables.
+comes from the motion specialists in [specialists.md](specialists.md): `impeccable animate` for
+page-level and scroll-driven motion, Emil Kowalski's skills for component and interaction motion. This file decides the *technology* and the non-negotiables.
 
 ## Handling a request
 
