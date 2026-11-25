@@ -23,9 +23,10 @@ with the date. Never record a preference inferred from a single project.
 
 **Tools and stack** (detail and selection rules in [stack.md](stack.md))
 - Uses Figma, with growing interest in designing directly in code.
-- Content-led client sites: Astro, TypeScript, Lumos evaluated first as the design system
-  (revised 2026-11-25; earlier the same day the default was Tailwind and shadcn/ui), React where
-  interaction needs it, Sanity when a structured CMS is needed, GitHub, Vercel.
+- Content-led client sites: Astro, TypeScript, plain CSS with tokens by default, Lumos as an
+  option to trial where a site needs many standard components (settled 2026-11-25 after
+  considering Tailwind with shadcn/ui and Lumos-first), React where interaction needs it, Sanity
+  when a structured CMS is needed, GitHub, Vercel.
 - One styling system per project; Lumos, Tailwind and shadcn/ui are not combined.
 - Technology decisions are written into each project's `CLAUDE.md`.
 - Has shipped Astro sites on Cloudflare Workers, and plain Astro with plain CSS (no Tailwind, no
@@ -43,6 +44,8 @@ with the date. Never record a preference inferred from a single project.
   component interaction; native CSS for simple states; native scrolling unless Lenis is justified.
 - Premium, purposeful motion; the simplest reliable solution.
 
+- Does not want to pick between technologies and takes the agent's lead: expects one clear
+  recommendation with a plain-language reason (stated 2026-11-25).
 - Wants framework and animation-library choices run past them first, and to be told what is
   being used, not have it happen in the background (stated 2026-11-25).
 

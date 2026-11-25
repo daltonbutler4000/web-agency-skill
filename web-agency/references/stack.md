@@ -20,8 +20,8 @@ Marketing, editorial, portfolio, property and other content-led client websites.
 |---|---|---|
 | Framework | **Astro** (Vite is its dev and build tooling; no separate setup) | Always |
 | Language | **TypeScript**, strict | Always |
-| Design system, styling, components | **Lumos** (Astro-native: tokens, cascade, utility classes, accessible components) | Evaluate first for every new site. See *Styling system* below |
-| Interactive components | Lumos or Astro components; **React** islands | React only when a component needs client state Astro and CSS cannot give |
+| Design system, styling, components | **Plain CSS with design tokens** and bespoke Astro components | The default. See *Styling system* below |
+| Interactive components | Astro components and native elements; **React** islands | React only when a component needs client state Astro and CSS cannot give |
 | Scroll and sequence animation | **GSAP** (ScrollTrigger, SplitText) | See [motion.md](motion.md) |
 | Component animation | **Motion** (formerly Framer Motion) | See [motion.md](motion.md) |
 | CMS | **Sanity** | Someone will edit content. No editor, no CMS: use Astro content collections |
@@ -36,15 +36,19 @@ when a real requirement appears. Astro already runs on Vite: never add a separat
 
 | Option | Choose it when |
 |---|---|
-| **Lumos** (preferred for new marketing, editorial, portfolio and property sites) | A new Astro site without heavy React. It brings design tokens, fluid type and spacing, layout utilities and accessible components (nav, modal, tabs, accordion, slider, forms), so no Tailwind or shadcn/ui is needed. |
+| **Plain CSS with tokens** and bespoke Astro components (default) | New marketing, editorial, portfolio and property sites. Tokens as CSS custom properties, fluid type and spacing with `clamp()`, cascade layers, native elements (`<dialog>`, `<details>`, popover) for interaction. Nothing to override, nothing to upgrade, and the result is the client's own system. Proven on the designer's shipped work. |
+| **Lumos** (Astro-native tokens, utilities and accessible components) | Worth proposing when a site needs many standard interactive components (tabs, sliders, complex forms, modals) on a short timeline, or when importing an existing Webflow site. Not yet used by the designer: treat the first project as a trial and say so. |
 | **Tailwind CSS + shadcn/ui** | The site is React-heavy (dashboards, complex interactive interfaces), or the project already uses them. |
-| **Plain CSS with tokens** (the lean variant below) | A very small site, or a design so bespoke that a component framework would mostly be overridden. |
+
+Why plain CSS is the default: the work is bespoke, so a component framework would mostly be
+restyled; the agent writes components quickly, so a framework saves little; and fewer
+dependencies means fewer upgrades and breaking changes on client sites.
 
 Never combine them: no Tailwind inside a Lumos project, no shadcn/ui beside Lumos components, no
 second token system. An existing project keeps the system it has; replacing a styling system is
 a migration and needs approval.
 
-**Evaluating Lumos** for a new site: read the current official documentation
+**Evaluating Lumos** when the conditions above apply: read the current official documentation
 (https://lumosframework.com/docs/) before proposing it, since it moves quickly and has had
 breaking changes between releases. Check that its components cover what the sitemap needs and
 that the approved direction can be expressed through its tokens and cascade. Then put the
@@ -56,7 +60,7 @@ Code through `.claude/skills` (for example Figma import, Webflow import, version
 audit). They are project-level, so they appear only inside a Lumos project. When present, use
 them for those jobs instead of improvising, and follow its upgrade skill for version changes.
 
-**Lumos is a starting point, not a look.** Set its tokens (colour, type families, scale, spacing,
+**Lumos, when used, is a starting point, not a look.** Set its tokens (colour, type families, scale, spacing,
 radii) from the approved direction and restyle its components to the client's identity. The rule
 for third-party components below applies to Lumos as much as to shadcn/ui.
 
@@ -67,10 +71,8 @@ platform offers alongside it (D1 database, R2 storage, KV, Cloudflare Access to 
 site private), or when the client's domain and DNS are there. A project on either host stays on
 it. Name the host in the stack proposal.
 
-**The lean variant.** A small site can be plain Astro components and plain CSS with tokens: no
-Lumos or Tailwind, no React, content in files instead of a CMS. This is a legitimate choice the designer
-has used, not a shortfall; offer it in the stack proposal when the site is small and no editor
-needs a CMS.
+**Keep it lean.** A small site needs no React and no CMS: content can live in files until
+someone actually has to edit it.
 
 ## Profile 2: web applications
 
@@ -85,10 +87,11 @@ way you went and why.
 
 ## Before adding any library or framework
 
-**Nothing is chosen in the background.** The designer wants to know which framework and which
-libraries are in play before they are used. Name the choice up front; where it introduces
-something new to the project, wait for agreement. Keep it short: the proposal, the reason, and
-the alternative you rejected, not a survey.
+**Nothing is chosen in the background, and the designer is not asked to choose.** The designer
+relies on you for technology decisions and wants to know what is in play before it is used. So
+bring one clear recommendation, in plain language: what you will use, what it does for this
+project, and what you ruled out. Never a menu of options to pick from, and no jargon without a
+half-line explanation. Where it introduces something new to the project, wait for a yes.
 
 1. **Inspect the project:** `package.json`, the lockfile (which package manager), framework
    config, the styling system (Lumos, Tailwind, plain CSS), existing components, existing motion

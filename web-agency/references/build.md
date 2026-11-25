@@ -6,7 +6,7 @@ Motion has its own file: [motion.md](motion.md).
 ## Choose the stack per project
 
 Use what the project already runs on. For a new site, recommend a stack from
-[stack.md](stack.md) and say why: Astro (with Lumos evaluated first) for content-led sites,
+[stack.md](stack.md) and say why: Astro with plain CSS and tokens for content-led sites,
 Next.js with Tailwind and shadcn/ui for web applications, one styling system, and only the
 layers the project needs. The same file holds the rules for adding
 any dependency; read it before installing anything.
@@ -28,7 +28,7 @@ Impeccable maintains it):
 
 - **Tokens:** colour, type scale (fluid, with `clamp()`), spacing scale, radii, shadows,
   breakpoints, motion durations and easings, as CSS custom properties in the project's one
-  styling system (Lumos tokens, a Tailwind theme, or plain CSS). No one-off values in components
+  styling system (plain CSS, Lumos tokens, or a Tailwind theme). No one-off values in components
   without a comment saying why.
 - **Components:** the reusable set the sitemap needs, each with its variants and states (hover,
   focus, active, disabled, loading, error, empty).
