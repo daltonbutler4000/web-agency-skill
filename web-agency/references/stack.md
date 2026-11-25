@@ -27,11 +27,23 @@ Marketing, editorial, portfolio, property and other content-led client websites.
 | Component animation | **Motion** (formerly Framer Motion) | See [motion.md](motion.md) |
 | CMS | **Sanity** | Someone will edit content. No editor, no CMS: use Astro content collections |
 | Source control | **GitHub** | Always |
-| Hosting | **Vercel** | Always, unless the client hosts elsewhere |
+| Hosting | **Vercel**; **Cloudflare Workers** as the established alternative | Always. See *Hosting* below |
 
 A site with no interactive components ships no React. A site with one simple reveal ships no
 animation library. Start from Astro, TypeScript and Tailwind; add each further layer when a real
 requirement appears.
+
+**Hosting.** Vercel is the default for a new site. Cloudflare Workers (static assets served by
+a Worker, deployed with Wrangler) is the alternative the designer has already shipped Astro
+sites on. Prefer it when the project already lives on Cloudflare, when the site needs what the
+platform offers alongside it (D1 database, R2 storage, KV, Cloudflare Access to keep a staging
+site private), or when the client's domain and DNS are there. A project on either host stays on
+it. Name the host in the stack proposal.
+
+**The lean variant.** A small site can be plain Astro components and plain CSS with tokens: no
+Tailwind, no React, content in files instead of a CMS. This is a legitimate choice the designer
+has used, not a shortfall; offer it in the stack proposal when the site is small and no editor
+needs a CMS.
 
 ## Profile 2: web applications
 
@@ -107,6 +119,8 @@ the alternative you rejected, not a survey.
 - **GSAP** and all its plugins (ScrollTrigger, SplitText, ScrollSmoother and the rest) are free,
   including for commercial client work, under GSAP's own standard licence. It is not an
   open-source licence; read its current terms once per project.
+- **Cloudflare:** Workers has a free tier with usage limits; check them against expected traffic
+  and who owns the account.
 - **Vercel:** the Hobby plan is for non-commercial use. A client site needs a paid plan, normally
   on the client's own account.
 - **Sanity, Supabase:** hosted services with free tiers and usage-based pricing. Check the limits

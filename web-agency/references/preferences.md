@@ -25,6 +25,8 @@ with the date. Never record a preference inferred from a single project.
 - Uses Figma, with growing interest in designing directly in code.
 - Content-led client sites: Astro, TypeScript, Tailwind CSS, React where interaction needs it,
   shadcn/ui, Sanity, GitHub, Vercel.
+- Has shipped Astro sites on Cloudflare Workers, and plain Astro with plain CSS (no Tailwind, no
+  React); both remain valid options alongside the defaults.
 - Web applications: Next.js, React, Tailwind CSS, shadcn/ui, Supabase.
 - These are preferred, not mandatory: choose per project, reuse what a project already has, and
   never migrate an existing project without approval.

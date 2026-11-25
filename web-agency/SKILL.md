@@ -106,7 +106,7 @@ Preferred, never mandatory; detail in [references/stack.md](references/stack.md)
 
 - **Content-led sites** (marketing, editorial, portfolio, property): Astro, TypeScript, Tailwind
   CSS, React islands only where interaction needs them, shadcn/ui restyled to the client, GSAP
-  and Motion for motion, Sanity, GitHub, Vercel.
+  and Motion for motion, Sanity, GitHub, Vercel (Cloudflare Workers as the alternative host).
 - **Web applications:** Next.js, React, Tailwind CSS, shadcn/ui, Supabase.
 - **Motion:** the designer describes the experience; you select CSS, GSAP (ScrollTrigger,
   SplitText), Motion, Astro view transitions or Lenis using
