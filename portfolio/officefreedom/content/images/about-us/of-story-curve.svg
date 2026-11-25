@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1109px" height="557px" viewBox="0 0 1109 557" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>of-story-curve</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="of-story-curve">
+            <path d="M17.7296939,523.378557 C92.6541661,525.838185 164.04639,524.334244 237.742282,520.352239 M258.635501,520.162165 C265.067686,519.832864 271.233246,519.509737 277.154821,519.191692 M298.085441,518.030802 C382.409609,513.191515 413.125783,509.277589 478.803792,502.013396 M498.16011,499.708519 C548.21581,493.009705 620.490005,478.349157 678,459 M698.317029,451.864093 C783.745701,420.58228 860.012381,375.787025 921,322 M936.755683,307.839473 C940.968173,303.936515 945.082237,299.990314 949,296 C969.606287,275.012115 987.627872,253.915018 1003.39121,233.028219 M1016.05667,215.613715 C1027.32071,199.531298 1037.2822,183.628816 1046.09326,168.055141 M1056.14105,149.501251 C1085.50215,92.7852841 1099.86543,39.4169282 1107,1" id="Shape" stroke="#5C489C" stroke-width="4"></path>
+            <circle id="Oval" fill="#5C489C" fill-rule="nonzero" cx="7.635501" cy="523" r="7"></circle>
+            <circle id="Oval-Copy" fill="#5C489C" fill-rule="nonzero" cx="248" cy="520" r="7"></circle>
+            <circle id="Oval-Copy-2" fill="#5C489C" fill-rule="nonzero" cx="288" cy="518" r="7"></circle>
+            <circle id="Oval-Copy-3" fill="#5C489C" fill-rule="nonzero" cx="489" cy="502" r="7"></circle>
+            <circle id="Oval-Copy-4" fill="#5C489C" fill-rule="nonzero" cx="689" cy="455" r="7"></circle>
+            <circle id="Oval-Copy-5" fill="#5C489C" fill-rule="nonzero" cx="1009" cy="224" r="7"></circle>
+            <circle id="Oval-Copy-7" fill="#5C489C" fill-rule="nonzero" cx="929" cy="314" r="7"></circle>
+            <circle id="Oval-Copy-6" fill="#5C489C" fill-rule="nonzero" cx="1051" cy="159" r="7"></circle>
+            <g id="1993" transform="translate(1.635501, 541.000000)" fill="#5C489C" font-family="MaisonNeue-Bold, Maison Neue" font-size="15" font-weight="bold">
+                <text>
+                    <tspan x="0.36449913" y="15">1993</tspan>
+                </text>
+            </g>
+            <g id="1999" transform="translate(238.635501, 541.000000)" fill="#5C489C" font-family="MaisonNeue-Bold, Maison Neue" font-size="15" font-weight="bold">
+                <text>
+                    <tspan x="0.364499" y="15">1999</tspan>
+                </text>
+            </g>
+            <g id="2000" transform="translate(282.635501, 541.000000)" fill="#5C489C" font-family="MaisonNeue-Bold, Maison Neue" font-size="15" font-weight="bold">
+                <text>
+                    <tspan x="0.364499" y="15">2000</tspan>
+                </text>
+            </g>
+            <g id="2005" transform="translate(481.635501, 519.000000)" fill="#5C489C" font-family="MaisonNeue-Bold, Maison Neue" font-size="15" font-weight="bold">
+                <text>
+                    <tspan x="0.364499" y="15">2005</tspan>
+                </text>
+            </g>
+            <g id="2010" transform="translate(681.635501, 473.000000)" fill="#5C489C" font-family="MaisonNeue-Bold, Maison Neue" font-size="15" font-weight="bold">
+                <text>
+                    <tspan x="0.364499" y="15">2010</tspan>
+                </text>
+            </g>
+            <g id="2016" transform="translate(922.635501, 330.000000)" fill="#5C489C" font-family="MaisonNeue-Bold, Maison Neue" font-size="15" font-weight="bold">
+                <text>
+                    <tspan x="0.364499" y="15">2016</tspan>
+                </text>
+            </g>
+            <g id="2018" transform="translate(1003.635501, 242.000000)" fill="#5C489C" font-family="MaisonNeue-Bold, Maison Neue" font-size="15" font-weight="bold">
+                <text>
+                    <tspan x="0.3645" y="15">2018</tspan>
+                </text>
+            </g>
+            <line x1="8.00000013" y1="497" x2="8.00000013" y2="430" id="Line" stroke="#CFD0DD" stroke-width="2" stroke-linecap="square" stroke-dasharray="0,6"></line>
+            <line x1="247" y1="496" x2="247" y2="398" id="Line-Copy" stroke="#CFD0DD" stroke-width="2" stroke-linecap="square" stroke-dasharray="0,6"></line>
+            <line x1="489" y1="483" x2="489" y2="398" id="Line-Copy-2" stroke="#CFD0DD" stroke-width="2" stroke-linecap="square" stroke-dasharray="0,6"></line>
+            <line x1="688" y1="435" x2="688" y2="312" id="Line-Copy-3" stroke="#CFD0DD" stroke-width="2" stroke-linecap="square" stroke-dasharray="0,6"></line>
+            <line x1="928" y1="292" x2="928" y2="213" id="Line-Copy-4" stroke="#CFD0DD" stroke-width="2" stroke-linecap="square" stroke-dasharray="0,6"></line>
+            <line x1="1051" y1="134" x2="1051" y2="-9.09494702e-13" id="Line-Copy-6" stroke="#CFD0DD" stroke-width="2" stroke-linecap="square" stroke-dasharray="0,6"></line>
+            <g id="2019" transform="translate(1046.635501, 177.000000)" fill="#5C489C" font-family="MaisonNeue-Bold, Maison Neue" font-size="15" font-weight="bold">
+                <text>
+                    <tspan x="0.3645" y="15">2019</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
