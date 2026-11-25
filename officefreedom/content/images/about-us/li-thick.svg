@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 14</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFB7F5" offset="1.66279561%"></stop>
+            <stop stop-color="#EE89DC" offset="100%"></stop>
+        </linearGradient>
+        <path d="M12.8979052,22.3199981 C12.6159983,22.3199981 12.3517106,22.215855 12.1578996,22.0249261 L7.54167433,17.3384884 C7.10119482,16.9392734 7.08357564,16.2623435 7.50643597,15.8284141 C7.91167712,15.3944847 8.59882516,15.3771275 9.03930467,15.7936997 L12.4221873,18.1716329 C12.6159983,18.3452047 12.9155244,18.3104903 13.074097,18.1022042 L21.0908241,8.34747105 C21.4432077,7.87882729 22.1303558,7.77468423 22.6060737,8.13918494 C23.0817915,8.48632846 23.1875066,9.16325835 22.8175038,9.63190211 L13.761245,21.8860687 C13.5674341,22.1290691 13.2855272,22.2852837 12.9860011,22.3026409 C12.9507627,22.3199981 12.9331436,22.3199981 12.8979052,22.3199981 Z" id="path-2"></path>
+        <filter x="-75.8%" y="-83.3%" width="251.5%" height="266.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.42332597   0 0 0 0 0.32037892   0 0 0 0 0.73216712  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="about-us-NEW" transform="translate(-801.000000, -3652.000000)">
+            <g id="Group-11" transform="translate(802.000000, 3101.000000)">
+                <g id="Group-14" transform="translate(0.000000, 552.299990)">
+                    <circle id="Oval" fill="#745DB9" cx="15.1199987" cy="15.1199987" r="15.1199987"></circle>
+                    <g id="Path" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

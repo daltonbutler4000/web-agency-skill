@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Path</title>
+    <defs>
+        <linearGradient x1="50%" y1="1.66279561%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#8169D1" offset="0%"></stop>
+            <stop stop-color="#6F58B9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage---RS2" transform="translate(-317.000000, -590.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M322.755461,604 C322.470706,604 322.203749,603.89875 322.00798,603.713124 L317.345126,599.156865 C316.900197,598.768739 316.8824,598.110613 317.309532,597.688737 C317.718866,597.266861 318.412955,597.249986 318.857884,597.654987 L322.274938,599.966867 C322.470706,600.135617 322.773258,600.101867 322.933432,599.899367 L331.031137,590.415598 C331.38708,589.959972 332.081169,589.858721 332.561693,590.213097 C333.042216,590.550598 333.148999,591.208724 332.775258,591.66435 L323.627521,603.578124 C323.431753,603.814375 323.146998,603.96625 322.844447,603.983125 C322.808852,604 322.791055,604 322.755461,604 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

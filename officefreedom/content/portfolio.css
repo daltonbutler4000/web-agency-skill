@@ -1,0 +1,2 @@
+/* Portfolio copy: static stand-in for the interactive maps */
+#map-view-canvas, #mapMobile, #map, .map-canvas { background: #e8e4f3 url("images/view-map@2x.jpg") center / cover no-repeat; }
