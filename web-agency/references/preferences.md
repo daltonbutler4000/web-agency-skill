@@ -38,6 +38,9 @@ with the date. Never record a preference inferred from a single project.
   component interaction; native CSS for simple states; native scrolling unless Lenis is justified.
 - Premium, purposeful motion; the simplest reliable solution.
 
+- Wants framework and animation-library choices run past them first, and to be told what is
+  being used, not have it happen in the background (stated 2026-11-25).
+
 **Specialist skills**
 - Wants the relevant specialist applied automatically, and keeps the option to name a skill or a
   combination when exploring alternative directions.

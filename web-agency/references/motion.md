@@ -1,7 +1,8 @@
 # Motion: from a described experience to the right technique
 
-The designer describes what the experience should feel like, in plain language. You choose the
-implementation. Never ask which library to use, and never require a specialist skill to be named.
+The designer describes what the experience should feel like, in plain language. You work out the
+implementation and tell them what it is before building it. Never ask an open "which library?";
+bring a recommendation. Never require a specialist skill to be named.
 
 Motion has to earn its place: it directs attention, shows a change of state, or carries the
 brand's character as approved in the art direction. Craft (timing, easing, choreography, review)
@@ -16,9 +17,14 @@ comes from the motion specialist in [specialists.md](specialists.md), normally
 2. **Inspect the project:** which motion tools are installed, how existing animation is written,
    whether the target is an Astro component or a React island, whether page transitions are on.
 3. **Choose the technique** from the table, bending it to what the project already has.
-4. **Build it** with the motion specialist's guidance, inside the rules at the end of this file.
-5. **Verify in a browser:** normal and reduced motion, a phone width, and with a slow first load.
-6. **Report in two lines:** how you read the request, what you used and why. Offer one dial the
+4. **Say what you will use before building**, in one or two lines: your reading of the request,
+   the technique, and why ("Subtle parallax on the hero image: GSAP ScrollTrigger, already in the
+   project"). If the tool is already installed or is native CSS, continue without waiting. If it
+   means adding a library, or there is a real choice between two (GSAP or Motion, CSS or a
+   library), put the choice to the designer with your recommendation and wait for a yes.
+5. **Build it** with the motion specialist's guidance, inside the rules at the end of this file.
+6. **Verify in a browser:** normal and reduced motion, a phone width, and with a slow first load.
+7. **Report in two lines:** what was built and with what. Offer one dial the
    designer can turn ("stronger / quieter", "slower", "only on desktop").
 
 Ask a question only when two readings would produce visibly different results and the direction

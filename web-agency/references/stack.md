@@ -45,6 +45,11 @@ way you went and why.
 
 ## Before adding any library or framework
 
+**Nothing is chosen in the background.** The designer wants to know which framework and which
+libraries are in play before they are used. Name the choice up front; where it introduces
+something new to the project, wait for agreement. Keep it short: the proposal, the reason, and
+the alternative you rejected, not a survey.
+
 1. **Inspect the project:** `package.json`, the lockfile (which package manager), framework and
    Tailwind config, existing components, existing motion code. On a first visit record the result
    in `agency/00-audit.md`.
@@ -65,7 +70,9 @@ way you went and why.
 
 | Case | Rule |
 |---|---|
-| A library from the preferred profile, needed for the task, nothing equivalent present | Install it. Log it in `agency/decisions.md` and name it in the report. |
+| A library from the preferred profile, needed for the task, nothing equivalent present | Say what you propose and why in one or two lines, and wait for a yes before installing. Log it in `agency/decisions.md`. |
+| The framework and stack for a new project | Propose it (profile, the layers you would include and leave out, why) and wait for a yes before scaffolding. |
+| A tool the project already has | No approval needed, but say which one you are using before you start. |
 | A library outside the profile, or a second tool for a job already covered | Ask first, with the reason and the cost. |
 | Smooth scrolling (Lenis), WebGL, video backgrounds, anything that changes how the whole site scrolls or loads | Ask first. See [motion.md](motion.md). |
 | A framework, CMS, database or hosting platform added to or replaced in an existing project | Approval required, always. |

@@ -31,21 +31,25 @@ describes outcomes; choosing the library and the specialist is your job, not the
 ## Direct requests
 
 Most day-to-day asks are not a stage: "add subtle parallax to the hero", "make the navigation
-feel more luxurious", "this section looks generic". Do not walk the stages or ask which tool to
-use. Do the four checks above (briefly), then:
+feel more luxurious", "this section looks generic". Do not walk the stages or ask an open
+"which tool?": work out the answer and tell the designer before you build. Do the four checks above (briefly), then:
 
 1. Read the intent against the approved direction (`agency/04-art-direction.md`) if one exists.
 2. Inspect the project's dependencies and how similar things are already built.
 3. Choose the technology: [references/motion.md](references/motion.md) for anything that moves,
    [references/stack.md](references/stack.md) for everything else. Simplest reliable solution;
    reuse before adding.
-4. Apply the matching specialist from *Route by task* in
+4. **Tell the designer the plan first**, in one or two lines: how you read the request, which
+   technology and which specialist skill you will use, and why. Nothing is chosen silently. If
+   it only uses what the project already has, carry on. If it adds a framework or library, or
+   there is a genuine choice between two, recommend one and wait for a yes.
+5. Apply the matching specialist from *Route by task* in
    [references/specialists.md](references/specialists.md).
-5. Implement, verify in a browser (including reduced motion), and report in two or three lines:
-   how you read the request, what you used and why, and one way to dial it up or down.
+6. Implement, verify in a browser (including reduced motion), and report briefly: what was built,
+   with what, and one way to dial it up or down.
 
-Stop to ask only where [stack.md](references/stack.md) requires approval, or when the request
-would change the approved direction.
+Also stop where [stack.md](references/stack.md) requires approval, or when the request would
+change the approved direction.
 
 ## Pick the mode
 
@@ -107,6 +111,8 @@ Preferred, never mandatory; detail in [references/stack.md](references/stack.md)
 - **Motion:** the designer describes the experience; you select CSS, GSAP (ScrollTrigger,
   SplitText), Motion, Astro view transitions or Lenis using
   [references/motion.md](references/motion.md).
+- **Run it past the designer.** The framework for a new project and any new library are proposed
+  with a reason and agreed before use; tools already in the project are named before use.
 - **Before adding anything:** inspect the project, reuse what it has, prefer native HTML, CSS and
   Astro, one tool per job, check current docs, compatibility and licence. No framework, CMS or
   host is migrated or replaced without a stated reason and approval.

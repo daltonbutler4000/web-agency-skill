@@ -30,9 +30,11 @@ Reveal the headline as I scroll.
 Make the transition between these sections more cinematic.
 ```
 
-The skill inspects the project, picks the technique (native CSS, GSAP ScrollTrigger or SplitText,
-Motion, Astro view transitions, Lenis only where justified), applies the relevant specialist
-skill, verifies the result in a browser and tells you what it used. Prefix with `/web-agency` if
+The skill inspects the project, works out the technique (native CSS, GSAP ScrollTrigger or
+SplitText, Motion, Astro view transitions, Lenis only where justified) and tells you what it
+plans to use before building. A new framework or library waits for your yes; tools already in the
+project are named and used. It then applies the relevant specialist skill and verifies the result
+in a browser. Prefix with `/web-agency` if
 it does not pick the request up on its own.
 
 To explore alternatives, name the skills: "try this hero with Taste and with Impeccable", or
