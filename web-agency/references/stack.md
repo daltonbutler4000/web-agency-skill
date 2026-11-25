@@ -20,9 +20,8 @@ Marketing, editorial, portfolio, property and other content-led client websites.
 |---|---|---|
 | Framework | **Astro** (Vite is its dev and build tooling; no separate setup) | Always |
 | Language | **TypeScript**, strict | Always |
-| Styling | **Tailwind CSS**, driven by the project's design tokens | Always |
-| Interactive components | **React** islands | A component needs client state Astro and CSS cannot give |
-| UI primitives | **shadcn/ui** (source copied into the repo, then restyled) | An accessible primitive is needed: dialog, menu, tabs, combobox, form |
+| Design system, styling, components | **Lumos** (Astro-native: tokens, cascade, utility classes, accessible components) | Evaluate first for every new site. See *Styling system* below |
+| Interactive components | Lumos or Astro components; **React** islands | React only when a component needs client state Astro and CSS cannot give |
 | Scroll and sequence animation | **GSAP** (ScrollTrigger, SplitText) | See [motion.md](motion.md) |
 | Component animation | **Motion** (formerly Framer Motion) | See [motion.md](motion.md) |
 | CMS | **Sanity** | Someone will edit content. No editor, no CMS: use Astro content collections |
@@ -30,8 +29,36 @@ Marketing, editorial, portfolio, property and other content-led client websites.
 | Hosting | **Vercel**; **Cloudflare Workers** as the established alternative | Always. See *Hosting* below |
 
 A site with no interactive components ships no React. A site with one simple reveal ships no
-animation library. Start from Astro, TypeScript and Tailwind; add each further layer when a real
-requirement appears.
+animation library. Start from Astro, TypeScript and one styling system; add each further layer
+when a real requirement appears. Astro already runs on Vite: never add a separate Vite setup.
+
+### Styling system: choose exactly one
+
+| Option | Choose it when |
+|---|---|
+| **Lumos** (preferred for new marketing, editorial, portfolio and property sites) | A new Astro site without heavy React. It brings design tokens, fluid type and spacing, layout utilities and accessible components (nav, modal, tabs, accordion, slider, forms), so no Tailwind or shadcn/ui is needed. |
+| **Tailwind CSS + shadcn/ui** | The site is React-heavy (dashboards, complex interactive interfaces), or the project already uses them. |
+| **Plain CSS with tokens** (the lean variant below) | A very small site, or a design so bespoke that a component framework would mostly be overridden. |
+
+Never combine them: no Tailwind inside a Lumos project, no shadcn/ui beside Lumos components, no
+second token system. An existing project keeps the system it has; replacing a styling system is
+a migration and needs approval.
+
+**Evaluating Lumos** for a new site: read the current official documentation
+(https://lumosframework.com/docs/) before proposing it, since it moves quickly and has had
+breaking changes between releases. Check that its components cover what the sitemap needs and
+that the approved direction can be expressed through its tokens and cascade. Then put the
+recommendation (Lumos, or why not) in the stack proposal. Scaffold with its own creator as the
+docs describe; do not hand-assemble it.
+
+**Lumos's own agent skills.** A Lumos project ships skills in `.agents/skills`, visible to Claude
+Code through `.claude/skills` (for example Figma import, Webflow import, version upgrade, props
+audit). They are project-level, so they appear only inside a Lumos project. When present, use
+them for those jobs instead of improvising, and follow its upgrade skill for version changes.
+
+**Lumos is a starting point, not a look.** Set its tokens (colour, type families, scale, spacing,
+radii) from the approved direction and restyle its components to the client's identity. The rule
+for third-party components below applies to Lumos as much as to shadcn/ui.
 
 **Hosting.** Vercel is the default for a new site. Cloudflare Workers (static assets served by
 a Worker, deployed with Wrangler) is the alternative the designer has already shipped Astro
@@ -41,14 +68,15 @@ site private), or when the client's domain and DNS are there. A project on eithe
 it. Name the host in the stack proposal.
 
 **The lean variant.** A small site can be plain Astro components and plain CSS with tokens: no
-Tailwind, no React, content in files instead of a CMS. This is a legitimate choice the designer
+Lumos or Tailwind, no React, content in files instead of a CMS. This is a legitimate choice the designer
 has used, not a shortfall; offer it in the stack proposal when the site is small and no editor
 needs a CMS.
 
 ## Profile 2: web applications
 
 Accounts, dashboards, user data, heavy client state: consider **Next.js, React, TypeScript,
-Tailwind CSS, shadcn/ui and Supabase** (database, auth, storage), on GitHub and Vercel. Use
+Tailwind CSS, shadcn/ui and Supabase** (database, auth, storage), on GitHub and Vercel. This is
+where Tailwind and shadcn/ui belong. Use
 Profile 1 for the marketing site of the same product unless one codebase is clearly simpler.
 
 Borderline cases (a content site with a login area, a listings site with saved searches): prefer
@@ -62,9 +90,10 @@ libraries are in play before they are used. Name the choice up front; where it i
 something new to the project, wait for agreement. Keep it short: the proposal, the reason, and
 the alternative you rejected, not a survey.
 
-1. **Inspect the project:** `package.json`, the lockfile (which package manager), framework and
-   Tailwind config, existing components, existing motion code. On a first visit record the result
-   in `agency/00-audit.md`.
+1. **Inspect the project:** `package.json`, the lockfile (which package manager), framework
+   config, the styling system (Lumos, Tailwind, plain CSS), existing components, existing motion
+   code, the project's `CLAUDE.md`, and project-level skills in `.claude/skills`. On a first visit
+   record the result in `agency/00-audit.md`.
 2. **Reuse what is there.** If the project already has a tool for the job (an animation library,
    a component set, a carousel), use it, even if it is not the preferred one.
 3. **Native first.** HTML, CSS and Astro components when they are sufficient: `<details>`,
@@ -87,18 +116,28 @@ the alternative you rejected, not a survey.
 | A tool the project already has | No approval needed, but say which one you are using before you start. |
 | A library outside the profile, or a second tool for a job already covered | Ask first, with the reason and the cost. |
 | Smooth scrolling (Lenis), WebGL, video backgrounds, anything that changes how the whole site scrolls or loads | Ask first. See [motion.md](motion.md). |
-| A framework, CMS, database or hosting platform added to or replaced in an existing project | Approval required, always. |
+| A framework, styling system, CMS, database or hosting platform added to or replaced in an existing project | Explain the benefit and the cost; approval required, always. |
+
+## Where technology decisions are recorded
+
+- **The project's `CLAUDE.md`** holds the current stack in a short "Technology" section:
+  framework, styling system, component source, animation libraries, CMS, host, and any rule that
+  follows ("Lumos project: no Tailwind"). Every session reads it, so later work stays consistent.
+  Create or update the section whenever a technology decision is agreed; keep the rest of the
+  file as it is.
+- **`agency/decisions.md`** keeps the dated log: what was decided, why, and what was rejected.
 
 ## Using the stack well
 
 - **Tokens first.** The design system's tokens (colour, type, spacing, radii, shadows, motion)
-  are defined once as CSS custom properties and mapped into Tailwind's theme. Components use the
-  theme; an arbitrary one-off value needs a comment saying why.
-- **shadcn/ui is a starting point, not a look.** Take the behaviour and accessibility; replace the
+  are defined once as CSS custom properties: in Lumos's token file on a Lumos site, or mapped
+  into Tailwind's theme on a Tailwind site. Components use them; an arbitrary one-off value needs
+  a comment saying why.
+- **shadcn/ui (React projects) is a starting point, not a look.** Take the behaviour and accessibility; replace the
   appearance. Remap its CSS variables to the project's tokens, then restyle radii, borders, type,
   spacing, focus and motion to the approved direction. A recognisable stock shadcn component in a
-  client site is a defect. Add only the components the site uses. It needs React: do not add it
-  to a site that otherwise has none when a native element would do.
+  client site is a defect. Add only the components the site uses. It needs React and Tailwind:
+  do not add it to a Lumos site or to a site that otherwise has no React.
 - **Hydration is a cost.** Astro components by default. For islands, choose the latest directive
   that works: `client:visible` or `client:idle` before `client:load`; `client:media` for
   breakpoint-specific UI. Do not hydrate an island only to animate it.
@@ -115,7 +154,7 @@ the alternative you rejected, not a survey.
 
 ## Licence and plan notes (verify; these change)
 
-- Astro, Vite, TypeScript, Tailwind CSS, React, shadcn/ui, Motion, Lenis: MIT.
+- Astro, Vite, TypeScript, Lumos, Tailwind CSS, React, shadcn/ui, Motion, Lenis: MIT.
 - **GSAP** and all its plugins (ScrollTrigger, SplitText, ScrollSmoother and the rest) are free,
   including for commercial client work, under GSAP's own standard licence. It is not an
   open-source licence; read its current terms once per project.

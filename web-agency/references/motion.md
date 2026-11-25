@@ -14,7 +14,9 @@ comes from the motion specialist in [specialists.md](specialists.md), normally
 1. **Read the intent.** Turn the phrase into concrete terms: which element, what triggers it
    (load, scroll position, scroll progress, hover, click, navigation), and how strong. Take the
    character from the approved direction in `agency/04-art-direction.md` if there is one.
-2. **Inspect the project:** which motion tools are installed, how existing animation is written,
+2. **Inspect the project:** which motion tools are installed, what the component framework
+   already provides (Lumos ships a slider, marquee, accordion and similar; use them before
+   adding anything), how existing animation is written,
    whether the target is an Astro component or a React island, whether page transitions are on.
 3. **Choose the technique** from the table, bending it to what the project already has.
 4. **Say what you will use before building**, in one or two lines: your reading of the request,

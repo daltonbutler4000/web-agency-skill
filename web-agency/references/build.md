@@ -6,17 +6,19 @@ Motion has its own file: [motion.md](motion.md).
 ## Choose the stack per project
 
 Use what the project already runs on. For a new site, recommend a stack from
-[stack.md](stack.md) and say why: Astro-based for content-led sites, Next.js-based for web
-applications, with only the layers the project needs. The same file holds the rules for adding
+[stack.md](stack.md) and say why: Astro (with Lumos evaluated first) for content-led sites,
+Next.js with Tailwind and shadcn/ui for web applications, one styling system, and only the
+layers the project needs. The same file holds the rules for adding
 any dependency; read it before installing anything.
 
 - **CMS:** the client's existing one if there is one; otherwise Sanity when someone will edit
   content. Model content from `03-strategy.md`.
 - **Existing design system or component library:** build with it, extend it, do not fork it.
-- **Third-party components** (shadcn/ui or any other) are restyled to the project's tokens and
+- **Third-party components** (Lumos, shadcn/ui or any other) are restyled to the project's tokens and
   the approved direction before they appear on a page.
 
-Record the choice and reason in `decisions.md`. Adding a framework, CMS or hosting platform to an
+Record the choice and reason in `decisions.md`, and the resulting stack in the project's
+`CLAUDE.md`. Adding a framework, CMS or hosting platform to an
 existing project, or replacing one, needs approval.
 
 ## Design system first
@@ -25,8 +27,8 @@ Before building pages, establish and write down (`05-design-system.md`, or `DESI
 Impeccable maintains it):
 
 - **Tokens:** colour, type scale (fluid, with `clamp()`), spacing scale, radii, shadows,
-  breakpoints, motion durations and easings, as CSS custom properties mapped into the Tailwind
-  theme, or the stack's equivalent. No one-off values in components
+  breakpoints, motion durations and easings, as CSS custom properties in the project's one
+  styling system (Lumos tokens, a Tailwind theme, or plain CSS). No one-off values in components
   without a comment saying why.
 - **Components:** the reusable set the sitemap needs, each with its variants and states (hover,
   focus, active, disabled, loading, error, empty).

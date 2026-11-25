@@ -19,12 +19,12 @@ instructions take over once invoked; follow them, within the standing rules in S
 | Typography, spacing, layout, colour, hierarchy on existing pages | `impeccable` with the matching command (`typeset`, `layout`, `colorize`, `bolder`, `quieter`, `distill`) | [build.md](build.md) |
 | "This looks generic / templated / AI-made" | `impeccable critique`, then the matching fix command; on a Taste-led build, its own checker as well | [quality-launch.md](quality-launch.md) |
 | Animation, parallax, scroll effects, transitions, "make it feel…" | Technique from [motion.md](motion.md); craft from `impeccable animate` (and an animation-specialist skill if one is installed, see below) | [motion.md](motion.md) |
-| Choosing or adding a framework, library, CMS or host | none | [stack.md](stack.md) |
+| Choosing or adding a framework, styling system, library, CMS or host | none; on a Lumos project, its own project-level skills for import, upgrade and audit jobs | [stack.md](stack.md) |
 | Interface copy, microcopy, errors | `impeccable clarify` | [workflow.md](workflow.md) |
 | Accessibility | `impeccable audit`, then `harden` / `adapt` | [quality-launch.md](quality-launch.md) |
 | Performance | `impeccable audit`, then `optimize` | [quality-launch.md](quality-launch.md) |
 | Responsive behaviour | `impeccable adapt` | [build.md](build.md) |
-| Implementing or syncing a Figma design | Figma connector and the skill it names | [build.md](build.md) |
+| Implementing or syncing a Figma design | Figma connector and the skill it names; on a Lumos project, with its Figma-import skill | [build.md](build.md) |
 | Final pass before review | `impeccable polish` | [quality-launch.md](quality-launch.md) |
 
 One lead per task. Bring in a second specialist only for a different job (a builder, then a
@@ -55,7 +55,7 @@ same section three ways, one per skill".
 | Design, build, refine, critique | `impeccable` | Skill `impeccable` with args `<command> [target]` | `frontend-design` for direction; manual checklists in [quality-launch.md](quality-launch.md) |
 | General visual direction guidance | `frontend-design` | Skill | Proceed from the approved direction |
 | Motion craft: timing, easing, choreography, motion review | `impeccable animate` (its motion reviewer runs on captured motion) | Skill `impeccable` with args `animate [target]` | The rules in [motion.md](motion.md); on a Taste-led build, Taste Skill's own motion reference |
-| Animation specialist (for example Emil Kowalski's animation skill) | Not bundled. If a skill whose name or description covers web animation craft appears in the session list, use it alongside `impeccable animate` for component and interaction motion | Skill | `impeccable animate` alone |
+| Animation specialist (Emil Kowalski's animation guidance) | Not bundled. If a skill whose name or description covers web animation craft appears in the session list, use it alongside `impeccable animate` for component and interaction motion | Skill | `impeccable animate` alone |
 | Accessibility and performance audit | `impeccable audit`; no separate audit skill is bundled | Skill `impeccable` with args `audit [target]` | Manual checks in [quality-launch.md](quality-launch.md); an automated scan (axe, Lighthouse) run through the pre-installed browser is a floor, not proof |
 | Read Figma designs, variables, screenshots | Figma connector (`mcp__Figma__*`) | Follow the connector's own instructions and load the skill it names before reading a design | Ask for exported frames (PNG/PDF) and a token list |
 | Browser capture and testing | Playwright (`require('playwright')`), or an in-app / Chrome browser tool | `node <skill>/scripts/capture.cjs`, or the browser tool | Ask the designer for screenshots; say that visual verification was not done |
@@ -90,6 +90,8 @@ asks or the approved direction needs it; they change the look, which is the desi
   design to pass.
 - It needs Node 22+ and Chrome/Chromium. If it cannot find a browser, set `CHROME_PATH` (cloud
   sessions: `/opt/pw-browsers/chromium`).
+- It builds on its own starter system. Do not make it the design lead on a Lumos project; use
+  `impeccable` there, and Taste Skill only for a separate exploration if the designer asks.
 - Its motion rules are stricter than [motion.md](motion.md): it ships its own motion kit, allows
   no smooth-scroll library, and allows an animation library only on tech pages. On a Taste-led
   build, start from its kit. When the designer asks for something the kit cannot do (pinned

@@ -1,6 +1,6 @@
 ---
 name: web-agency
-description: Personal digital-agency workflow and coordinator for client websites. Use to start, redesign, or build a website end to end (discovery, visual research, strategy, art direction, design, development, content, motion, critique, QA, launch), to resume one that has an `agency/` folder, and for any design, motion or front-end request on a website project described in plain language ("add subtle parallax to the hero", "make the navigation feel more luxurious", "reveal the headline as I scroll"). Chooses the technology (Astro, Tailwind, React, shadcn/ui, GSAP, Motion, Sanity, Vercel; Next.js and Supabase for apps) and the specialist skill (impeccable, design-taste-frontend, visual-direction-research, frontend-design, Figma) automatically instead of duplicating them.
+description: Personal digital-agency workflow and coordinator for client websites. Use to start, redesign, or build a website end to end (discovery, visual research, strategy, art direction, design, development, content, motion, critique, QA, launch), to resume one that has an `agency/` folder, and for any design, motion or front-end request on a website project described in plain language ("add subtle parallax to the hero", "make the navigation feel more luxurious", "reveal the headline as I scroll"). Chooses the technology (Astro, Lumos, GSAP, Motion, Sanity, Vercel; Next.js, Tailwind, shadcn/ui and Supabase for apps) and the specialist skill (impeccable, design-taste-frontend, visual-direction-research, frontend-design, Figma) automatically instead of duplicating them.
 argument-hint: "[new | redesign | figma | resume | status | <stage>] [brief, URL or Figma link]"
 allowed-tools: Read(~/.claude/skills/web-agency/**)
 ---
@@ -24,8 +24,8 @@ describes outcomes; choosing the library and the specialist is your job, not the
 3. **Check which specialists exist** in this session's skill list and tools, using
    [references/specialists.md](references/specialists.md). Tell the designer in one line what is
    missing and what you will use instead. Never assume a specialist is installed.
-4. **Existing site or codebase?** Inspect before proposing anything: stack, dependencies, CMS,
-   design tokens, components, content model, deployment. Record what you find in `agency/00-audit.md`. Working
+4. **Existing site or codebase?** Inspect before proposing anything: stack, dependencies, styling
+   system, project `CLAUDE.md` and project-level skills, CMS, design tokens, components, content model, deployment. Record what you find in `agency/00-audit.md`. Working
    infrastructure is kept unless there is a stated reason and the designer approves replacing it.
 
 ## Direct requests
@@ -104,10 +104,14 @@ keep explorations separate from the shipped pages as described in
 
 Preferred, never mandatory; detail in [references/stack.md](references/stack.md).
 
-- **Content-led sites** (marketing, editorial, portfolio, property): Astro, TypeScript, Tailwind
-  CSS, React islands only where interaction needs them, shadcn/ui restyled to the client, GSAP
-  and Motion for motion, Sanity, GitHub, Vercel (Cloudflare Workers as the alternative host).
-- **Web applications:** Next.js, React, Tailwind CSS, shadcn/ui, Supabase.
+- **Content-led sites** (marketing, editorial, portfolio, property): Astro, TypeScript, Lumos
+  evaluated first as the design system and component framework, React islands only where
+  interaction needs them, GSAP and Motion for motion, Sanity when a structured CMS is needed,
+  GitHub, Vercel (Cloudflare Workers as the alternative host).
+- **Web applications, dashboards, complex React interfaces:** Next.js, React, Tailwind CSS,
+  shadcn/ui, Supabase.
+- **One styling system per project.** Lumos, or Tailwind with shadcn/ui, or plain CSS with
+  tokens; never overlapping. No separate Vite setup: Astro already uses it.
 - **Motion:** the designer describes the experience; you select CSS, GSAP (ScrollTrigger,
   SplitText), Motion, Astro view transitions or Lenis using
   [references/motion.md](references/motion.md).
@@ -115,7 +119,9 @@ Preferred, never mandatory; detail in [references/stack.md](references/stack.md)
   with a reason and agreed before use; tools already in the project are named before use.
 - **Before adding anything:** inspect the project, reuse what it has, prefer native HTML, CSS and
   Astro, one tool per job, check current docs, compatibility and licence. No framework, CMS or
-  host is migrated or replaced without a stated reason and approval.
+  host or styling system is migrated or replaced without a stated benefit and approval.
+- **Record** the agreed stack in the project's `CLAUDE.md`; the dated reasoning in
+  `agency/decisions.md`.
 
 ## Approval checkpoints
 
