@@ -42,9 +42,10 @@ To explore alternatives, name the skills: "try this hero with Taste and with Imp
 
 ## Default stack
 
-Astro, TypeScript, Tailwind CSS, React where needed, shadcn/ui, GSAP, Motion, Sanity, GitHub and
-Vercel for content-led sites; Next.js, React, Tailwind CSS, shadcn/ui and Supabase for web
-applications. Preferred, not mandatory: an existing project keeps its stack, and nothing is added
+Astro, TypeScript, Lumos (evaluated first as the design system), React where needed, GSAP,
+Motion, Sanity, GitHub and Vercel for content-led sites; Next.js, React, Tailwind CSS, shadcn/ui
+and Supabase for web applications. One styling system per project, never Lumos and Tailwind
+together. The agreed stack is written into each project's `CLAUDE.md`. Preferred, not mandatory: an existing project keeps its stack, and nothing is added
 without checking what is already there. Details in `references/stack.md`.
 
 ## What to expect

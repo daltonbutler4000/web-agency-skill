@@ -23,8 +23,11 @@ with the date. Never record a preference inferred from a single project.
 
 **Tools and stack** (detail and selection rules in [stack.md](stack.md))
 - Uses Figma, with growing interest in designing directly in code.
-- Content-led client sites: Astro, TypeScript, Tailwind CSS, React where interaction needs it,
-  shadcn/ui, Sanity, GitHub, Vercel.
+- Content-led client sites: Astro, TypeScript, Lumos evaluated first as the design system
+  (revised 2026-11-25; earlier the same day the default was Tailwind and shadcn/ui), React where
+  interaction needs it, Sanity when a structured CMS is needed, GitHub, Vercel.
+- One styling system per project; Lumos, Tailwind and shadcn/ui are not combined.
+- Technology decisions are written into each project's `CLAUDE.md`.
 - Has shipped Astro sites on Cloudflare Workers, and plain Astro with plain CSS (no Tailwind, no
   React); both remain valid options alongside the defaults.
 - Web applications: Next.js, React, Tailwind CSS, shadcn/ui, Supabase.
